@@ -12,6 +12,9 @@
     "pretest": "npm run lint",
     "test": "./node_modules/.bin/babel-node ./node_modules/.bin/babel-istanbul cover ./node_modules/.bin/_mocha -- --recursive"
   },
+  "engines": {
+    "node": "5.4.1"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/eveporcello/moonhighway.git"
