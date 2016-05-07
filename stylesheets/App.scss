@@ -1,0 +1,11 @@
+@import "global";
+
+html, body {
+  min-height: 100%;
+  height: auto;
+}
+
+body {
+  background-color: lighten($blue-a, 15%);
+  color: white;
+}
