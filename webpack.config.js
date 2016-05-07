@@ -1,6 +1,7 @@
 var webpack = require("webpack");
 var path = require("path");
 var autoprefixer = require("autoprefixer");
+var Bump = require("bump-webpack-plugin");
 
 module.exports = {
     entry: "./index.js",
