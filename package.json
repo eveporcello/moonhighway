@@ -32,6 +32,7 @@
     "react-icons": "^2.0.1",
     "react-redux": "^4.4.5",
     "redux": "^3.5.2",
+    "webpack": "^1.13.0",
     "redux-thunk": "^2.0.1"
   },
   "devDependencies": {
@@ -57,7 +58,6 @@
     "sass-loader": "^3.2.0",
     "sinon": "^1.17.4",
     "style-loader": "^0.13.1",
-    "webpack": "^1.13.0",
     "webpack-dev-server": "^1.14.1"
   }
 }
