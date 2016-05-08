@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "./node_modules/.bin/eslint .",
-    "prestart": "webpack",
+    "prestart": "./node_modules/.bin/webpack",
     "start": "./node_modules/.bin/httpster -d ./dist/ -p 3000",
     "dev": "open http://localhost:3333 & ./node_modules/.bin/webpack-dev-server",
     "shallow-test": "./node_modules/.bin/mocha --compilers js:babel-core/register --recursive --watch",
