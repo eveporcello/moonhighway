@@ -4,27 +4,27 @@ const HomeDeck = () =>
     <Deck slides={[
         {
             title: "Updating Engineers",
-            background: "/img/temp_home.png",
+            background: "/img/bgHome.png",
             text: "Home Page"
         },
         {
             title: "React",
-            background: "/img/temp_react.png",
+            background: "/img/bgReact.png",
             text: "React Page"
         },
         {
             title: "Node js",
-            background: "/img/temp_node.png",
+            background: "/img/bgNode.png",
             text: "Node js Page"
         },
         {
             title: "HTML6 and CSS4",
-            background: "/img/temp_html.png",
+            background: "/img/bgHTML.png",
             text: "Design Page"
         },
         {
             title: "Continueous Delivery",
-            background: "/img/temp_cd.png",
+            background: "/img/bgCD.png",
             text: "Work Page"
         }
     ]}/>
