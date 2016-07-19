@@ -1,11 +1,30 @@
 @import "global";
 
-html, body {
-  min-height: 100%;
-  height: auto;
+html, body,
+#react-container,
+div.deck {
+  @include clear;
+  @include stretch;
 }
 
-body {
-  background-color: lighten($blue-a, 15%);
-  color: white;
+h1, h2, h3, h4,
+p, td, span, div {
+  @include clear;
+}
+
+section.slide {
+
+  @include stretch;
+
+  background-size: cover;
+  background-attachment: fixed;
+
+  overflow-x: hidden;
+  position: relative;
+  background-repeat: no-repeat;
+
+  >h1:first-child {
+    display: none;
+  }
+
 }

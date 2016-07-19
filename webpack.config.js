@@ -37,11 +37,11 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpack.optimize.UglifyJsPlugin({
+        /*new webpack.optimize.UglifyJsPlugin({
             sourceMap: true,
             warnings: false,
             mangle: false
-        })
+        })*/
     ],
     sassLoader: {
         includePaths: [path.resolve(__dirname, './stylesheets')]

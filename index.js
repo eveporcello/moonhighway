@@ -1,8 +1,11 @@
 import React from 'react'
 import {render} from 'react-dom'
-import App from './components/App'
+import {HomeDeck} from './components/UI'
 import '!style!css!sass!postcss-loader!./stylesheets/App.scss'
 
-window.React = React;
+window.React = React
 
-render(<App />, document.getElementById('react-container'));
+render(
+    <HomeDeck />,
+    document.getElementById('react-container')
+)
