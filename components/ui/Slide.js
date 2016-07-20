@@ -1,10 +1,10 @@
 import { PropTypes } from 'react'
 
-const Slide = ({title, background, children}) =>
+const Slide = ({title, background, text}) =>
     <section className="slide" style={{backgroundImage: `url(${background})`}}>
         <h1>{title}</h1>
         <div className="content">
-            {children}
+            {text}
         </div>
     </section>
 

@@ -11,21 +11,3 @@ h1, h2, h3, h4,
 p, td, span, div {
   @include clear;
 }
-
-section.slide {
-
-  @include stretch;
-
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: bottom right;
-
-  overflow-x: hidden;
-  position: relative;
-  background-repeat: no-repeat;
-
-  >h1:first-child {
-    display: none;
-  }
-
-}
