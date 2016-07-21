@@ -2,6 +2,12 @@ import { Component, Children, cloneElement } from 'react'
 import skrollr from 'skrollr'
 import '!style!css!sass!postcss-loader!../../stylesheets/relax.scss'
 
+export const convertToScrollPosition = (percentage, scrollRange) => {
+    const range = scrollRange[1] - scrollRange[0]
+    const point = percentage*range
+    return point + scrollRange[0]
+}
+
 export class Relax extends Component {
 
     constructor(props) {
@@ -18,6 +24,7 @@ export class Relax extends Component {
     scrollScreen(el, index) {
         const { screen } = this.state
         const { length } = this.props.children
+        const scrollRange = [screen.height*index, screen.height*(index+1)]
 
         let relaxConfig = {
             'data-0': 'top: 0px'
@@ -27,12 +34,12 @@ export class Relax extends Component {
             relaxConfig[`data-${screen.height}`] = `top: -${screen.height}px`
         } else  {
             if (index !== (length - 1)) {
-                relaxConfig[`data-${screen.height*index}`] = `top: 0px`
-                relaxConfig[`data-${screen.height*(index+1)}`] = `top: -${screen.height}px`
+                relaxConfig[`data-${scrollRange[0]}`] = `top: 0px`
+                relaxConfig[`data-${scrollRange[1]}`] = `top: -${screen.height}px`
             }
         }
 
-        return cloneElement(el, {relaxConfig, index})
+        return cloneElement(el, {relaxConfig, index, scrollRange})
     }
 
     componentWillMount() {
