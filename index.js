@@ -1,11 +1,10 @@
 import React from 'react'
 import {render} from 'react-dom'
-import {HomeDeck} from './components/UI'
-import '!style!css!sass!postcss-loader!./stylesheets/App.scss'
+import { HomePage } from './components/home'
 
 window.React = React
 
 render(
-    <HomeDeck />,
+    <HomePage />,
     document.getElementById('react-container')
 )
