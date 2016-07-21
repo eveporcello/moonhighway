@@ -1,8 +1,8 @@
 const LearnHTML = ({relaxConfig, index}) =>
     <section className="slide"
              style={{
-                backgroundImage: `url(/img/bgHTML.png)`,
-                zIndex: 1000-index
+                 backgroundImage: `url(/img/bgHTML.png)`,
+                 zIndex: 1000-index
              }}
              {...relaxConfig}>
         <h1>HTML &amp; CSS</h1>

@@ -1,8 +1,8 @@
 const Home = ({relaxConfig, index}) =>
     <section className="slide"
              style={{
-                backgroundImage: `url(/img/bgHome.png)`,
-                zIndex: 1000-index
+                 backgroundImage: `url(/img/bgHome.png)`,
+                 zIndex: 1000-index
              }}
              {...relaxConfig}>
         <h1>Moon Highway</h1>

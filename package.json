@@ -8,9 +8,9 @@
     "prestart": "./node_modules/.bin/webpack",
     "start": "node ./bin/www",
     "dev": "open http://localhost:3333 & ./node_modules/.bin/webpack-dev-server",
-    "shallow-test": "./node_modules/.bin/mocha --compilers js:babel-core/register --recursive --watch",
+    "shallow-test": "./node_modules/.bin/mocha --compilers js:babel-core/register --recursive --watch  --require ./test/setup.js",
     "pretest": "npm run lint",
-    "test": "./node_modules/.bin/babel-node ./node_modules/.bin/babel-istanbul cover ./node_modules/.bin/_mocha -- --recursive"
+    "test": "./node_modules/.bin/babel-node ./node_modules/.bin/babel-istanbul cover ./node_modules/.bin/_mocha -- --recursive --require ./test/setup.js"
   },
   "engines": {
     "node": "5.4.1"
@@ -59,6 +59,7 @@
     "eslint-plugin-react": "^5.0.1",
     "expect": "^1.20.0",
     "file-loader": "^0.8.5",
+    "jsdom": "^9.4.1",
     "mocha": "^2.4.5",
     "node-sass": "^3.7.0",
     "postcss-loader": "^0.9.1",

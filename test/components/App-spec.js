@@ -1,12 +1,17 @@
 import expect from 'expect'
 import {shallow} from 'enzyme'
-import App from '../../components/App'
+import { HomePage } from '../../components/home'
 
-describe("App Component", () => {
-    it("Renders Moon Highway Website", () => {
-        const wrapper = shallow(<App />);
-        expect(wrapper.find('h1').text()).toEqual("Moon Highway Website");
-    });
-});
+describe("<HomePage /> Component", () => {
+
+    it("TODO: Make Test", () => {
+
+        //
+        //  TODO: Write tests
+        //
+
+    })
+
+})
 
 
