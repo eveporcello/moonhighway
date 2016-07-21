@@ -1,19 +1,22 @@
+import { Component } from 'react'
 import skrollr from 'skrollr'
 
-// http://output.jsbin.com/libud
-// http://output.jsbin.com/libud/edit?html,css,js
+//
+// TODO: Maybe add as inline styles when this component renders
+//
 
-export const Relax = ({children}) =>
-    <div className="relax-root">
-        {children}
-    </div>
+import '!style!css!sass!postcss-loader!../../stylesheets/relax.scss'
 
-export const Scrolladex = ({children}) =>
-    <div className="scrolladex">
-        {children}
-    </div>
-
-export const ScrollScreen = ({children}) =>
-    <div className="scroll-screen">
-        {children}
-    </div>
+export class Relax extends Component {
+    componentDidMount() {
+        window.skr = skrollr.init({ edgeStrategy: 'set' })
+    }
+    render() {
+        const { children } = this.props
+        return (
+            <div className="relax-root">
+                {children}
+            </div>
+        )
+    }
+}

@@ -1,5 +1,5 @@
 import Deck from './Deck'
-import { Relax, ScrollScreen } from '../relax'
+import { Relax } from '../relax'
 import Slide from './Slide'
 
 const slides = [
@@ -33,9 +33,7 @@ const slides = [
 const HomeDeck = () =>
     <Relax scrollHeight={5000}>
         {slides.map((slide, i) =>
-            <ScrollScreen key={i}>
-                <Slide {...slide} />
-            </ScrollScreen>
+            <Slide key={i} {...slide} />
         )}
     </Relax>
 

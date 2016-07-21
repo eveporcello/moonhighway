@@ -1,13 +1,37 @@
 @import "global";
 
-html, body,
-#react-container,
-div.deck {
-  @include clear;
-  @include stretch;
+html, body, #react-container, div.relax-root {
+  width:100%;
+
+  /* Set Height to 1000px to allow for scrolling */
+
+  height:1000px;
+  padding:0;
+  margin:0;
+  overflow-x:hidden;
+
+
+  border: 0;
+  vertical-align: baseline;
+  line-height: 1;
+  min-height:100%;
+  font-family:Artial, Verdana, sans-serif;
 }
 
-h1, h2, h3, h4,
-p, td, span, div {
-  @include clear;
+/************ MOVE IT *****************/
+
+#intro {
+  text-align:center;
+  border-radius:1em;
+  transform-origin:0 0;
+  box-sizing: border-box;
 }
+
+#intro .arrows {
+  font-size:2em;
+  color:#09f;
+}
+
+
+
+

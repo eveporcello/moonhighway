@@ -7,6 +7,8 @@ $blue-c: #323949;
 @mixin clear {
   padding: 0;
   margin: 0;
+  border: 0;
+  outline: none;
 }
 
 @mixin stretch {
