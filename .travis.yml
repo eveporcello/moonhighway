@@ -3,6 +3,10 @@ node_js:
   - 5.0
   - 5.2
 
+branches:
+ only:
+ - staging
+
 deploy:
   provider: heroku
   email: eve@moonhighway.com, alex@moonhighway.com
