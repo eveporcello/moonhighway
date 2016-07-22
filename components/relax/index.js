@@ -52,6 +52,10 @@ export class Relax extends Component {
         }
     }
 
+    componentDidUpdate() {
+        window.skr.refresh()
+    }
+
     componentDidMount() {
         window.skr = skrollr.init({ edgeStrategy: 'set' })
     }
