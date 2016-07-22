@@ -11,3 +11,4 @@ deploy:
   app: staging-moonhighway
   on:
     repo: eveporcello/moonhighway
+    branch: staging

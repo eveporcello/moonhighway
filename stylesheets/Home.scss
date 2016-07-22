@@ -1,23 +1,8 @@
 @import "global";
 
-html, body, #react-container, div.relax-root {
-  width:100%;
-
-  /* Set Height to 1000px to allow for scrolling */
-
-  height:1000px;
-  padding:0;
-  margin:0;
-  overflow-x:hidden;
-
-
-  border: 0;
-  vertical-align: baseline;
-  line-height: 1;
-  min-height:100%;
-  font-family:Artial, Verdana, sans-serif;
+html,
+body,
+#react-container,
+div.relax-root {
+  @include clear;
 }
-
-
-
-
