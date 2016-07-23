@@ -2,7 +2,7 @@ import { Component, Children, cloneElement } from 'react'
 import skrollr from 'skrollr'
 import Hammer from 'hammerjs'
 import { DownButton } from '../ui'
-import { StackCycle } from '../../lib'
+import { StackCycle, isMobile } from '../../lib'
 import '!style!css!sass!postcss-loader!../../stylesheets/relax.scss'
 
 const duration = 500
@@ -123,13 +123,19 @@ export class Relax extends Component {
     componentDidMount() {
         const direction = Hammer.DIRECTION_VERTICAL
         this.skr = skrollr.init({edgeStrategy: 'set'})
-        this.mc = new Hammer(this.refs.root)
-        this.mc.get('pan').set({direction});
-        this.mc.on("panend", e =>
-            (e.additionalEvent === 'pandown') ?
-                this.prevScreen() :
-                this.nextScreen()
-        )
+        if (isMobile()) {
+            this.mc = new Hammer(this.refs.root)
+            this.mc.get('pan').set({direction});
+            this.mc.on("panend", e =>
+                (e.additionalEvent === 'pandown') ?
+                    this.prevScreen() :
+                    this.nextScreen()
+            )
+        } else {
+            //
+            //  TODO: handle laptop/desktop scroll
+            //
+        }
     }
 
     componentWillUnmount() {
