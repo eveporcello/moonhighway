@@ -1,3 +1,5 @@
+import '../stylesheets/App.scss'
+
 const App = () =>
     <h1>Hello World</h1>
 

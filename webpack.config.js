@@ -1,5 +1,4 @@
 var webpack = require("webpack");
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
@@ -33,16 +32,15 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                loader: ExtractTextPlugin.extract("style-loader", "css-loader!autoprefixer-loader")
+                loader: 'style-loader!css-loader!autoprefixer-loader'
             },
             {
                 test: /\.scss/,
-                loader: ExtractTextPlugin.extract("style-loader", "css-loader!autoprefixer-loader!sass-loader")
+                loader: 'style-loader!css-loader!autoprefixer-loader!sass-loader'
             }
         ]
     },
     plugins: [
-        new ExtractTextPlugin("bundle.min.css"),
         //new webpack.DefinePlugin({
         //    "process.env": {
         //        NODE_ENV: JSON.stringify("production")
