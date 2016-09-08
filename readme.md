@@ -8,7 +8,7 @@ Rebuild Goals
 
 ~~1. base webpack~~
 ~~2. base scss~~
-3. base tests
+~~3. base tests~~ (__ISPARTA CODE COVERAGE NOT WORKING__)
 4. Import images and Components
 5. Site Working
 6. Import Tests - passing
