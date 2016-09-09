@@ -5,6 +5,7 @@ const LearnCD = ({relaxConfig, index}) =>
                  zIndex: 1000-index
              }}
              {...relaxConfig}>
+        <h1>Learn Build Tools</h1>
     </section>
 
 export default LearnCD

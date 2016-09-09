@@ -5,6 +5,7 @@ const LearnNode = ({relaxConfig, index}) =>
                  zIndex: 1000-index
              }}
              {...relaxConfig}>
+        <h1>Learn Node</h1>
     </section>
 
 export default LearnNode

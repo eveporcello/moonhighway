@@ -37,6 +37,10 @@ module.exports = {
             {
                 test: /\.scss/,
                 loader: 'style-loader!css-loader!autoprefixer-loader!sass-loader'
+            },
+            {
+                test: /\.(png|jpg|jpeg|gif|woff|woff2|svg)$/,
+                loader: 'url-loader?limit=8192'
             }
         ]
     },

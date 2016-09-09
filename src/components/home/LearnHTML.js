@@ -5,6 +5,7 @@ const LearnHTML = ({relaxConfig, index}) =>
                  zIndex: 1000-index
              }}
              {...relaxConfig}>
+        <h1>Learn HTML</h1>
     </section>
 
 export default LearnHTML
