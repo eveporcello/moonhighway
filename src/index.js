@@ -1,10 +1,10 @@
 import React from 'react'
 import { render } from 'react-dom'
-import App from './components/App'
+import { HomePage } from './components/home'
 
 window.React = React
 
 render(
-    <App />,
+    <HomePage />,
     document.getElementById('react-container')
 )

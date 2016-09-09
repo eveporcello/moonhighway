@@ -1,0 +1,29 @@
+@import "global";
+
+div.down-button {
+  font-size: 4em;
+  color: white;
+  z-index: 1001;
+  position: fixed;
+  bottom: .5em;
+  left: 50%;
+  margin-left: -.5em;
+  cursor: pointer;
+
+  >div:first-child {
+    background-color: black;
+    opacity: .4;
+    border-radius: .2em;
+    height: 1em;
+    width: 1em;
+  }
+
+  >svg {
+    transform: rotate(180deg);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+
+}
+
