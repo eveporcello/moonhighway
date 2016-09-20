@@ -17,5 +17,5 @@ export const notFound = (req, res, next) => {
     next(err)
 }
 
-export const error = error =>
-    res.status(error.status || 500).json(err)
+export const error = (error, req, res, next) =>
+    res.status(error.status || 500).json(error)
