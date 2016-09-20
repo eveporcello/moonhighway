@@ -23,6 +23,16 @@ div.relax-root {
   @include clear;
 }
 
+section {
+  >h1 {
+   display: none;
+  }
+  >img {
+    width: 80%;
+    margin: 10%;
+  }
+}
+
 /* Hiding the scrollbar */
 
 html {
