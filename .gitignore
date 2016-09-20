@@ -1,3 +1,5 @@
+
+
 # Logs
 logs
 *.log
@@ -34,4 +36,5 @@ node_modules
 
 .idea/
 coverage/
-dist/assets/
+build/client/assets/
+build/server

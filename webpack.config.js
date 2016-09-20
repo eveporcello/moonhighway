@@ -4,7 +4,7 @@ var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 module.exports = {
     entry: "./src/index.js",
     output: {
-        path: "dist/assets",
+        path: "build/client/assets",
         filename: "bundle.min.js",
         publicPath: "/assets",
         sourceMapFilename: 'bundle.min.map'
@@ -12,7 +12,7 @@ module.exports = {
     devtool: '#source-map',
     devServer: {
         inline: true,
-        contentBase: './dist',
+        contentBase: './build/client',
         port: 3333
     },
     module: {
@@ -45,16 +45,16 @@ module.exports = {
         ]
     },
     plugins: [
-        //new webpack.DefinePlugin({
-        //    "process.env": {
-        //        NODE_ENV: JSON.stringify("production")
-        //    }
-        //}),
-        //new webpack.optimize.UglifyJsPlugin({
-        //    sourceMap: true,
-        //    warnings: false,
-        //    mangle: false
-        //}),
+        new webpack.DefinePlugin({
+            "process.env": {
+                NODE_ENV: JSON.stringify("production")
+            }
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+            sourceMap: true,
+            warnings: false,
+            mangle: false
+        }),
         new OptimizeCssAssetsPlugin({
             assetNameRegExp: /\.optimize\.css$/g,
             cssProcessor: require('cssnano'),

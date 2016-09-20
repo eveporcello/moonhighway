@@ -5,8 +5,8 @@
   "main": "./src/index.js",
   "scripts": {
     "lint": "./node_modules/.bin/eslint .",
-    "prestart": "./node_modules/.bin/webpack",
-    "start": "./node_modules/.bin/httpster -d ./dist/ -p 3000",
+    "prestart": "./node_modules/.bin/webpack --config webpack.server.config --progress; ./node_modules/.bin/webpack --progress;",
+    "start": "node ./build/server",
     "dev": "open http://localhost:3333 & ./node_modules/.bin/webpack-dev-server",
     "test": "./node_modules/.bin/babel-node ./node_modules/.bin/isparta cover ./node_modules/.bin/_mocha -- --require ./test/setup.js --require ./node_modules/ignore-styles --recursive",
     "shallow-test": "mocha --compilers js:babel-core/register --require ./test/setup.js --require ./node_modules/ignore-styles --recursive",
@@ -32,11 +32,15 @@
   },
   "homepage": "http://staging-moonhighway.herokuapp.com",
   "dependencies": {
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.14.0",
     "hammerjs": "^2.0.8",
-    "httpster": "^1.0.3",
+    "morgan": "^1.7.0",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
     "react-icons": "^2.2.1",
+    "serve-favicon": "^2.3.0",
     "skrollr": "^0.6.26"
   },
   "devDependencies": {
