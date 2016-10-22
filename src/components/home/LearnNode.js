@@ -1,10 +1,10 @@
-const LearnNode = ({relaxConfig, index}) =>
+const LearnNode = ({screenConfig, index}) =>
     <section className="slide"
              style={{
                  backgroundImage: `url(/img/bgNode.png)`,
                  zIndex: 1000-index
              }}
-             {...relaxConfig}>
+             {...screenConfig}>
         <h1>Learn Node</h1>
         <img src="/img/node.png" />
         <p>Test-driven, Universal Updates</p>

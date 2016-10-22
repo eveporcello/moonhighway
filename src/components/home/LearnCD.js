@@ -1,10 +1,10 @@
-const LearnCD = ({relaxConfig, index}) =>
+const LearnCD = ({screenConfig, index}) =>
     <section className="slide"
              style={{
                  backgroundImage: `url(/img/bgCD.png)`,
                  zIndex: 1000-index
              }}
-             {...relaxConfig}>
+             {...screenConfig}>
         <h1>Learn Build Tools</h1>
         <img src="/img/cd.png" />
         <p>Automated, Certified Quality for the Real World</p>

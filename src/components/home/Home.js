@@ -1,15 +1,21 @@
 let logoConfig = {
     '0%': {
-        transform: 'rotate(0deg)'
+        transform: 'rotate(0deg)',
+        top: '0%',
+        width: '80%'
     },
     '20%': {
-        transform: 'rotate(-20deg)'
+        transform: 'rotate(-20deg)',
+        top: '90%'
     },
     '40%': {
-        transform: 'rotate(20deg)'
+        transform: 'rotate(20deg)',
+        width: '100%',
+        top: '90%'
     },
     '80%': {
-        transform: 'rotate(0deg)'
+        transform: 'rotate(0deg)',
+        width: '10%'
     }
 }
 

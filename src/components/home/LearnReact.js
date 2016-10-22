@@ -1,10 +1,10 @@
-const LearnReact = ({relaxConfig, index}) =>
+const LearnReact = ({screenConfig, index}) =>
     <section className="slide"
              style={{
                  backgroundImage: `url(/img/bgReact.png)`,
                  zIndex: 1000-index
              }}
-             {...relaxConfig}>
+             {...screenConfig}>
         <img src="/img/react.png" />
         <p>Declarative, Functional Upgrades</p>
         <ul>

@@ -2,13 +2,13 @@ import TwitterIcon from 'react-icons/lib/fa/twitter'
 import FacebookIcon from 'react-icons/lib/fa/facebook'
 import GithubIcon from 'react-icons/lib/fa/github'
 
-const Contact = ({relaxConfig, index}) =>
+const Contact = ({screenConfig, index}) =>
     <section className="slide"
              style={{
                  backgroundImage: `url(/img/bgContact.png)`,
                  zIndex: 1000-index
              }}
-             {...relaxConfig}>
+             {...screenConfig}>
         <h1>Contact Us</h1>
         <p>For migration and installation instructions, please get in touch.</p>
         <p>
