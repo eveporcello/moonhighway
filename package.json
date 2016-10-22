@@ -10,7 +10,8 @@
     "dev": "open http://localhost:3333 & ./node_modules/.bin/webpack-dev-server",
     "shallow-test": "./node_modules/.bin/mocha --compilers js:babel-core/register --recursive --watch  --require ./test/setup.js",
     "pretest": "npm run lint",
-    "test": "./node_modules/.bin/babel-node ./node_modules/.bin/babel-istanbul cover ./node_modules/.bin/_mocha -- --recursive --require ./test/setup.js"
+    "old-test": "./node_modules/.bin/babel-node ./node_modules/.bin/babel-istanbul cover ./node_modules/.bin/_mocha -- --recursive --require ./test/setup.js",
+    "test" : "npm run shallow-test"
   },
   "engines": {
     "node": "5.4.1"
