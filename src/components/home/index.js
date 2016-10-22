@@ -1,4 +1,4 @@
-import { Relax } from '../relax'
+import { Rellax } from '../relax'
 import Home from './Home'
 import LearnReact from './LearnReact'
 import LearnNode from './LearnNode'
@@ -8,11 +8,11 @@ import Contact from './Contact'
 import '../../stylesheets/Home.scss'
 
 export const HomePage = () =>
-    <Relax>
+    <Rellax>
         <Home />
         <LearnReact />
         <LearnNode />
         <LearnHTML />
         <LearnCD />
         <Contact />
-    </Relax>
+    </Rellax>

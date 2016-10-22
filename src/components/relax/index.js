@@ -3,17 +3,92 @@ import skrollr from 'skrollr'
 import Hammer from 'hammerjs'
 import { DownButton } from '../ui'
 import { StackCycle, isMobile } from '../../lib'
+import { compose } from 'redux'
 import '../../stylesheets/relax.scss'
 
+/**
+ * Durations for animations to other screens
+ * @type {number}
+ */
 const duration = 500
 
-export const convertToScrollPosition = (percentage, scrollRange) => {
-    const range = scrollRange[1] - scrollRange[0]
-    const point = percentage * range
-    return point + scrollRange[0]
+/**
+ * Calculates the default screenheight from breakpoints
+ * @param breakpoints
+ */
+const screenHeight = breakpoints => breakpoints[1] - breakpoints[0]
+
+/**
+ * Returns a scale function that can be used to convert a string percentage
+ * and current breakpoint index into a scroll pixle value.
+ * @param breakpoints (array) The current screen breakpoints
+ */
+export const skrollScale = breakpoints => (p = '0%', currentBreakpoint = 0) => {
+    p = p.replace('%', '')
+    p = parseFloat(p / 100)
+    let h = p * screenHeight(breakpoints)
+    h = Math.round(h + breakpoints[currentBreakpoint])
+    return (h <= breakpoints[breakpoints.length - 1]) ? h : breakpoints[breakpoints.length - 1]
 }
 
-export class Relax extends Component {
+export const simpleSkrollScale = max => (p = '0%') => {
+    p = p.replace('%', '')
+    p = parseFloat(p / 100)
+    return Math.round(p * max)
+}
+
+/**
+ * Converts camel case text to train case text (JS to CSS)
+ * @param text
+ */
+const camelToTrain = text => text.replace(/([A-Z])/g, "-$1").toLowerCase()
+
+/**
+ * Converts a JavaScript style object into a CSS String
+ * @param o
+ */
+export const jsObjToCSSString = (o = {}) =>
+    Object.keys(o)
+        .map(key => ({key, value: o[key]}))
+        .map(({key, value}) =>
+            ({
+                key: camelToTrain(key),
+                value
+            })
+        )
+        .reduce((css, {key, value}) => `${css} ${key}: ${value}; `.trim(), '')
+
+
+/**
+ * A function that converts a JavaScript animation object into
+ * Skrollr properties given specific screen breakpoings
+ * @param breakpoints
+ * @param type
+ * @returns {Function}
+ */
+export const skrollrAttributes = bp => {
+
+    const scale = (Array.isArray(bp)) ?
+        skrollScale(bp) :
+        simpleSkrollScale(bp)
+
+    return (config = {}, index = 0) =>
+        Object.keys(config)
+            .map(percent => ({
+                key: `data-${scale(percent, index)}`,
+                css: config[percent]
+            }))
+            .reduce((skrollProps,
+                    { key, css }, i) =>
+                    ({...skrollProps, [key]: jsObjToCSSString(css)}),
+                {}
+            )
+}
+
+/**
+ * A component that wraps screens, handles navigation, handles skrollr, magic...
+ */
+export class Rellax extends Component {
 
     constructor(props) {
         super(props)
@@ -38,21 +113,34 @@ export class Relax extends Component {
         const { screen } = this.state
         const { length } = this.props.children
         const scrollRange = [screen.height * index, screen.height * (index + 1)]
+        const breakpoints = this.getBreakpoints()
+        const maxHeight = breakpoints[breakpoints.length-1] + screen.height
+        const screenScale = skrollrAttributes(breakpoints)
+        const fullScale = skrollrAttributes(maxHeight)
 
-        let relaxConfig = {
+        let screenConfig = {
             'data-0': 'top: 0px'
         }
 
         if (index === 0) {
-            relaxConfig[`data-${screen.height}`] = `top: -${screen.height}px`
+            screenConfig[`data-${screen.height}`] = `top: -${screen.height}px`
         } else {
             if (index !== (length - 1)) {
-                relaxConfig[`data-${scrollRange[0]}`] = `top: 0px`
-                relaxConfig[`data-${scrollRange[1]}`] = `top: -${screen.height}px`
+                screenConfig[`data-${scrollRange[0]}`] = `top: 0px`
+                screenConfig[`data-${scrollRange[1]}`] = `top: -${screen.height}px`
             }
         }
 
-        return cloneElement(el, {relaxConfig, index, scrollRange})
+        // 1a - Scroll config is added to the element as properties here
+
+        return cloneElement(el, {
+            screenConfig,
+            index,
+            scrollRange,
+            breakpoints,
+            screenScale,
+            fullScale
+        })
     }
 
     getBreakpoints() {
@@ -121,6 +209,11 @@ export class Relax extends Component {
     }
 
     componentDidMount() {
+
+        // 2 - Hammer js and Skrollr are initialized here, after DOM is setup
+        //     a. The skrollr.init() causes the drag and scroll behave to work
+        //     a. Once released Hammer JS gets the direction and moves the screen
+
         const direction = Hammer.DIRECTION_VERTICAL
         this.skr = skrollr.init({edgeStrategy: 'set'})
         if (isMobile()) {
@@ -147,6 +240,9 @@ export class Relax extends Component {
     }
 
     render() {
+
+        // 1 - When teh DOM is Rendered the scrollr config is added via this.scrollScreen
+
         const { children } = this.props
         const { screenIndex } = this.state.current
         return (
