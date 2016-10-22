@@ -8,8 +8,7 @@
     "prestart": "./node_modules/.bin/webpack --config webpack.server.config --progress; ./node_modules/.bin/webpack --progress;",
     "start": "node ./build/server",
     "dev": "open http://localhost:3333 & ./node_modules/.bin/webpack-dev-server",
-    "old-test": "./node_modules/.bin/babel-node ./node_modules/.bin/isparta cover ./node_modules/.bin/_mocha -- --require ./test/setup.js --require ./node_modules/ignore-styles --recursive",
-    "test": "npm run shallow-test",
+    "test": "./node_modules/.bin/babel-node ./node_modules/.bin/isparta cover ./node_modules/.bin/_mocha -- --require ./test/setup.js --require ./node_modules/ignore-styles --recursive",
     "shallow-test": "mocha --compilers js:babel-core/register --require ./test/setup.js --require ./node_modules/ignore-styles --recursive",
     "posttest": "npm run lint",
     "coverage": "open ./coverage/lcov-report/index.html"
@@ -63,6 +62,7 @@
     "ignore-styles": "^4.0.0",
     "isparta": "^4.0.0",
     "istanbul": "0.4.4",
+    "jsdom": "^9.8.0",
     "json-loader": "^0.5.4",
     "mocha": "^2.5.3",
     "node-sass": "^3.8.0",
