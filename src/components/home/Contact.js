@@ -8,27 +8,27 @@ const Contact = ({screenConfig, index}) =>
                  backgroundImage: `url(/img/bgContact.png)`,
                  zIndex: 1000-index
              }}
-             {...screenConfig}>
+        {...screenConfig}>
         <div className="box">
-        <h1>Contact Us</h1>
-        <p>For migration and installation instructions, please get in touch.</p>
-        <p>
-            <a href="mailto:info@moonhighway.com">info@moonhighway.com</a>
-            <a href="tel:5305233084">530.523.3084</a>
-            <span>PO BOX 1578, Tahoe City, CA 96145</span>
-            <form action="javascript:void(0)">
-                <fieldset>
-                    <p>Add Options</p>
-                </fieldset>
-                <input type="text" />
-                <textarea></textarea>
-                <button>send</button>
-            </form>
-            <TwitterIcon />
-            <FacebookIcon />
-            <GithubIcon />
-        </p>
-            </div>
+            <h1>Contact Us</h1>
+            <p>For migration and installation instructions, please get in touch.</p>
+            <p>
+                <a href="mailto:info@moonhighway.com">info@moonhighway.com</a>
+                <a href="tel:5305233084">530.523.3084</a>
+                <span>PO BOX 1578, Tahoe City, CA 96145</span>
+                <form action="javascript:void(0)">
+                    <fieldset>
+                        <p>Add Options</p>
+                    </fieldset>
+                    <input type="text"/>
+                    <textarea></textarea>
+                    <button>send</button>
+                </form>
+                <TwitterIcon />
+                <FacebookIcon />
+                <GithubIcon />
+            </p>
+        </div>
     </section>
 
 export default Contact

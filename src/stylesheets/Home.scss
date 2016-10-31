@@ -37,22 +37,6 @@ section {
       margin: 7% 17.5%;
     }
 
-    div.icons {
-      font-size: 2.7em;
-      position: absolute;
-      bottom: 1.8em;
-      width: 100%;
-      text-align: center;
-
-      a {
-        margin: 0 .1em;
-        color: lightgrey;
-      }
-
-      a, svg {
-        cursor: pointer;
-      }
-    }
   }
 
   &.node {
@@ -63,7 +47,7 @@ section {
 
   &.html {
     div.box {
-      border-color: white;
+      border-color: lightgrey;
       top: 37%;
     }
   }
