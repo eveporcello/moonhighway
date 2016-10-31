@@ -1,1 +1,84 @@
 @import "global";
+
+
+section {
+
+  >img {
+    width: 90%;
+    margin: 5%;
+  }
+
+  >div.box {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: .5em double $star-blue;
+    border-left: none;
+    border-right: none;
+    width: 90%;
+    font-size: 90%;
+    left: 5%;
+    top: 25%;
+
+    h1, p, li {
+      text-shadow: 1px 1px 3px black;
+      padding: 0 0.25em;
+    }
+
+  }
+
+  &.home {
+
+    div.box {
+      top: 42%;
+    }
+
+    >img {
+      width: 65%;
+      margin: 7% 17.5%;
+    }
+
+    div.icons {
+      font-size: 2.7em;
+      position: absolute;
+      bottom: 1.8em;
+      width: 100%;
+      text-align: center;
+
+      a {
+        margin: 0 .1em;
+        color: lightgrey;
+      }
+
+      a, svg {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &.node {
+    div.box {
+      border-color: rgb(6,181,137);
+    }
+  }
+
+  &.html {
+    div.box {
+      border-color: white;
+      top: 37%;
+    }
+  }
+
+  &.cd {
+    div.box {
+      top: 40%;
+    }
+  }
+
+  &.contact {
+    div.box {
+      border-color: white;
+      top: 5%;
+    }
+  }
+
+}

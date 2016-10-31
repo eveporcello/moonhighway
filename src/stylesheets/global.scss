@@ -4,6 +4,10 @@ $blue-a: #00a2ff;
 $blue-b: #247DB1;
 $blue-c: #323949;
 
+$star-blue: #0164e0;
+
+$main-font: "Source Sans Pro", sans;
+
 @mixin clear {
   padding: 0;
   margin: 0;
@@ -23,14 +27,9 @@ div.relax-root {
   @include clear;
 }
 
-section {
-  >h1 {
-   display: none;
-  }
-  >img {
-    width: 80%;
-    margin: 10%;
-  }
+body {
+  font-family: $main-font;
+  font-size: 100%;
 }
 
 /* Hiding the scrollbar */

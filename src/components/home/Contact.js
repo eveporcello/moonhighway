@@ -3,12 +3,13 @@ import FacebookIcon from 'react-icons/lib/fa/facebook'
 import GithubIcon from 'react-icons/lib/fa/github'
 
 const Contact = ({screenConfig, index}) =>
-    <section className="slide"
+    <section className="slide contact"
              style={{
                  backgroundImage: `url(/img/bgContact.png)`,
                  zIndex: 1000-index
              }}
              {...screenConfig}>
+        <div className="box">
         <h1>Contact Us</h1>
         <p>For migration and installation instructions, please get in touch.</p>
         <p>
@@ -27,6 +28,7 @@ const Contact = ({screenConfig, index}) =>
             <FacebookIcon />
             <GithubIcon />
         </p>
+            </div>
     </section>
 
 export default Contact
