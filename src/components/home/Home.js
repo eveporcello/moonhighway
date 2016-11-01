@@ -2,33 +2,33 @@ import GithubIcon from 'react-icons/lib/go/mark-github'
 import TwitterIcon from 'react-icons/lib/fa/twitter'
 import FacebookIcon from 'react-icons/lib/fa/facebook'
 
-//
-//Removed Sample App But here is the code
-//
-//let logoConfig = {
-//    '0%': {
-//        transform: 'rotate(0deg)',
-//        top: '0%',
-//        width: '80%'
-//    },
-//    '20%': {
-//        transform: 'rotate(-20deg)',
-//        top: '90%'
-//    },
-//    '40%': {
-//        transform: 'rotate(20deg)',
-//        width: '100%',
-//        top: '90%'
-//    },
-//    '80%': {
-//        transform: 'rotate(0deg)',
-//        width: '10%'
-//    }
-//}
-//
-//  {...screenScale(logoConfig)}
+let stayInPlace = {
+    '0%': {
+        top: '7%'
+    },
+    '100%': {
+        top: '107%'
+    }
+}
 
-const Home = ({index, screenConfig, screenScale}) =>
+let collapseWhen = {
+    '2.5%': {
+        'left': '5%',
+        'height': '140px',
+        'top': '45%'
+    },
+    '50%': {
+        'left': '5%',
+        'height': '0',
+        'top': '95%'
+    },
+    '60%': {
+        'left': '105%'
+    }
+
+}
+
+const Home = ({index, screenConfig, screenScale, fullScale}) =>
     <section className="slide home"
              style={{
                  backgroundImage: `url(/img/bgHome.png)`,
@@ -36,9 +36,9 @@ const Home = ({index, screenConfig, screenScale}) =>
              }}
         {...screenConfig}>
 
-        <img src="/img/logo.png"/>
+        <img src="/img/logo.png" {...screenScale(stayInPlace)} />
 
-        <div className="box">
+        <div className="box" {...screenScale(collapseWhen)}>
             <h1>Updates, Upgrades, and Patches for Your Engineers</h1>
             <p>Customized software development training for engineers of all skill levels</p>
         </div>

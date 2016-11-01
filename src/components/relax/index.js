@@ -10,7 +10,13 @@ import '../../stylesheets/relax.scss'
  * Durations for animations to other screens
  * @type {number}
  */
-const duration = 1500
+const duration = 1000
+
+/**
+ * How many times to multiply screen height by to get scroll height
+ * @type {number}
+ */
+const scrollHeightSize = 2
 
 /**
  * Calculates the default screenheight from breakpoints
@@ -59,20 +65,17 @@ export const jsObjToCSSString = (o = {}) =>
         .reduce((css, {key, value}) => `${css} ${key}: ${value}; `.trim(), '')
 
 
-/**
+/*
  * A function that converts a JavaScript animation object into
  * Skrollr properties given specific screen breakpoings
- * @param breakpoints
- * @param type
- * @returns {Function}
  */
-export const skrollrAttributes = bp => {
+export const skrollrAttributes = (bp, index) => {
 
     const scale = (Array.isArray(bp)) ?
         skrollScale(bp) :
         simpleSkrollScale(bp)
 
-    return (config = {}, index = 0) =>
+    return (config = {}) =>
         Object.keys(config)
             .map(percent => ({
                 key: `data-${scale(percent, index)}`,
@@ -95,7 +98,7 @@ export class Rellax extends Component {
         this.state = {
             screen: {
                 height: window.innerHeight,
-                scrollHeight: window.innerHeight*3,
+                scrollHeight: window.innerHeight*scrollHeightSize,
                 width: window.innerWidth
             },
             current: {
@@ -116,7 +119,7 @@ export class Rellax extends Component {
         const scrollRange = [screen.scrollHeight * index, screen.scrollHeight * (index + 1)]
         const breakpoints = this.getBreakpoints()
         const maxHeight = breakpoints[breakpoints.length-1] + screen.scrollHeight
-        const screenScale = skrollrAttributes(breakpoints)
+        const screenScale = skrollrAttributes(breakpoints, index)
         const fullScale = skrollrAttributes(maxHeight)
 
         let screenConfig = {
