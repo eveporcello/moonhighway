@@ -64,9 +64,12 @@ export const jsObjToCSSString = (o = {}) =>
         )
         .reduce((css, {key, value}) => `${css} ${key}: ${value}; `.trim(), '')
 
-/*
+/**
  * A function that converts a JavaScript animation object into
  * Skrollr properties given specific screen breakpoings
+ * @param bp
+ * @param index
+ * @returns {Function}
  */
 export const skrollrAttributes = (bp, index) => {
 
@@ -97,7 +100,7 @@ export class Rellax extends Component {
         this.state = {
             screen: {
                 height: window.innerHeight,
-                scrollHeight: window.innerHeight*scrollHeightSize,
+                scrollHeight: window.innerHeight * scrollHeightSize,
                 width: window.innerWidth
             },
             current: {
@@ -110,6 +113,7 @@ export class Rellax extends Component {
         this.prevScreen = this.prevScreen.bind(this)
         this.getBreakpoints = this.getBreakpoints.bind(this)
         this.onResize = this.onResize.bind(this)
+        this.jumpToScreen = this.jumpToScreen.bind(this)
     }
 
     scrollScreen(el, index) {
@@ -117,7 +121,7 @@ export class Rellax extends Component {
         const scrollRange = [screen.scrollHeight * index, screen.scrollHeight * (index + 1)]
         const screenHeight = screen.height
         const breakpoints = this.getBreakpoints()
-        const maxHeight = breakpoints[breakpoints.length-1] + screen.scrollHeight
+        const maxHeight = breakpoints[breakpoints.length - 1] + screen.scrollHeight
         const screenScale = skrollrAttributes(breakpoints, index)
         const fullScale = skrollrAttributes(maxHeight)
         return cloneElement(el, {
@@ -173,6 +177,67 @@ export class Rellax extends Component {
         }))
     }
 
+    //
+    //  TODO: Make Reusable Solution for routes
+    //
+
+    jumpToScreen(path, duration=0) {
+        const { breakpoints } = this.state
+
+        switch (path) {
+
+            case '/contact':
+
+                if (duration) {
+                    this.skr.animateTo(breakpoints[5], {duration})
+                } else {
+                    scroll(0, breakpoints[5])
+                }
+
+                break;
+
+            case '/continuous-delivery':
+                if (duration) {
+                    this.skr.animateTo(breakpoints[4], {duration})
+                } else {
+                    scroll(0, breakpoints[4])
+                }
+                break;
+
+            case '/html-css':
+                if (duration) {
+                    this.skr.animateTo(breakpoints[3], {duration})
+                } else {
+                    scroll(0, breakpoints[3])
+                }
+                break;
+
+            case '/node' :
+                if (duration) {
+                    this.skr.animateTo(breakpoints[2], {duration})
+                } else {
+                    scroll(0, breakpoints[2])
+                }
+                break;
+
+            case '/react' :
+                if (duration) {
+                    this.skr.animateTo(breakpoints[1], {duration})
+                } else {
+                    scroll(0, breakpoints[1])
+                }
+                break;
+
+            default :
+                if (duration) {
+                    this.skr.animateTo(0, {duration})
+                } else {
+                    scroll(0, 0)
+                }
+                break;
+        }
+    }
+
     onResize() {
         let screen = {
                 height: window.innerHeight,
@@ -193,6 +258,10 @@ export class Rellax extends Component {
         this.setState({breakpoints})
         this.screenCycle = new StackCycle(breakpoints, 0)
         window.addEventListener('resize', this.onResize)
+    }
+
+    componentWillReceiveProps(nextProps) {
+        this.jumpToScreen(nextProps.location.pathname)
     }
 
     componentDidMount() {
@@ -216,6 +285,8 @@ export class Rellax extends Component {
             //  TODO: handle laptop/desktop scroll
             //
         }
+
+        this.jumpToScreen(this.props.location.pathname)
     }
 
     componentWillUnmount() {
