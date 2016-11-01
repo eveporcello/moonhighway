@@ -2,14 +2,29 @@ import TwitterIcon from 'react-icons/lib/fa/twitter'
 import FacebookIcon from 'react-icons/lib/fa/facebook'
 import GithubIcon from 'react-icons/lib/fa/github'
 
-const Contact = ({screenConfig, index}) =>
+export const expandBox = {
+    '-30%': {
+        height: '0%',
+        left: '-105px'
+    },
+    '-15%': {
+        height: '0%',
+        left: '5%'
+    },
+    '0%': {
+        left: '5%',
+        height: '90%'
+    }
+}
+
+const Contact = ({index, screenScale}) =>
     <section className="slide contact"
              style={{
                  backgroundImage: `url(/img/bgContact.png)`,
                  zIndex: 1000-index
              }}
-        {...screenConfig}>
-        <div className="box">
+        {...screenScale({ '0%': { top: '0px' }})}>
+        <div className="box" {...screenScale(expandBox)}>
             <h1>Contact Us</h1>
             <p>For migration and installation instructions, please get in touch.</p>
             <p>

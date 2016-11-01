@@ -1,38 +1,14 @@
-let stayInPlace = {
-    '0%': {
-        top: '2%'
-    },
-    '100%': {
-        top: '102%'
-    }
-}
+import { delaySlideScreenUp, logoInOut, expandCollapseBox } from '../../lib'
 
-let collapseWhen = {
-    '2.5%': {
-        'left': '5%',
-        'height': '140px',
-        'top': '25%'
-    },
-    '70%': {
-        'left': '5%',
-        'height': '0',
-        'top': '95%'
-    },
-    '80%': {
-        'left': '105%'
-    }
-
-}
-
-const LearnReact = ({index, screenConfig, screenScale}) =>
+const LearnReact = ({index, screenScale, screenHeight}) =>
     <section className="slide react"
              style={{
                  backgroundImage: `url(/img/bgReact.png)`,
                  zIndex: 1000-index
              }}
-        {...screenConfig}>
-        <img src="/img/react.png" {...screenScale(stayInPlace)} />
-        <div className="box" {...screenScale(collapseWhen)}>
+        {...screenScale(delaySlideScreenUp(screenHeight))}>
+        <img src="/img/react.png" {...screenScale(logoInOut)}/>
+        <div className="box" {...screenScale(expandCollapseBox)}>
             <h1>Declarative, Functional Upgrades</h1>
             <ul>
                 <li>Functional Programming</li>

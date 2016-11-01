@@ -64,7 +64,6 @@ export const jsObjToCSSString = (o = {}) =>
         )
         .reduce((css, {key, value}) => `${css} ${key}: ${value}; `.trim(), '')
 
-
 /*
  * A function that converts a JavaScript animation object into
  * Skrollr properties given specific screen breakpoings
@@ -115,32 +114,16 @@ export class Rellax extends Component {
 
     scrollScreen(el, index) {
         const { screen } = this.state
-        const { length } = this.props.children
         const scrollRange = [screen.scrollHeight * index, screen.scrollHeight * (index + 1)]
+        const screenHeight = screen.height
         const breakpoints = this.getBreakpoints()
         const maxHeight = breakpoints[breakpoints.length-1] + screen.scrollHeight
         const screenScale = skrollrAttributes(breakpoints, index)
         const fullScale = skrollrAttributes(maxHeight)
-
-        let screenConfig = {
-            'data-0': 'top: 0px'
-        }
-
-        if (index === 0) {
-            screenConfig[`data-${screen.scrollHeight}`] = `top: -${screen.height}px`
-        } else {
-            if (index !== (length - 1)) {
-                screenConfig[`data-${scrollRange[0]}`] = `top: 0px`
-                screenConfig[`data-${scrollRange[1]}`] = `top: -${screen.height}px`
-            }
-        }
-
-        // 1a - Scroll config is added to the element as properties here
-
         return cloneElement(el, {
-            screenConfig,
             index,
             scrollRange,
+            screenHeight,
             breakpoints,
             screenScale,
             fullScale
