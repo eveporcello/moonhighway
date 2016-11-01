@@ -5,14 +5,18 @@ import LearnNode from './LearnNode'
 import LearnHTML from './LearnHTML'
 import LearnCD from './LearnCD'
 import Contact from './Contact'
+import { SocialIcons } from '../ui'
 import '../../stylesheets/Home.scss'
 
 export const HomePage = () =>
-    <Rellax>
-        <Home />
-        <LearnReact />
-        <LearnNode />
-        <LearnHTML />
-        <LearnCD />
-        <Contact />
-    </Rellax>
+    <div className="home-page">
+        <Rellax>
+            <Home />
+            <LearnReact />
+            <LearnNode />
+            <LearnHTML />
+            <LearnCD />
+            <Contact />
+        </Rellax>
+        <SocialIcons ignoreRellax={true}/>
+    </div>
