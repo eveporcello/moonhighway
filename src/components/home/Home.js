@@ -6,10 +6,10 @@ import FacebookIcon from 'react-icons/lib/fa/facebook'
 const Home = ({index, screenScale, screenHeight}) =>
         <section className="slide home"
                  style={{
-                 backgroundImage: `url(/img/bgHome.png)`,
-                 zIndex: 1000-index
-             }}
-            {...screenScale(delaySlideScreenUp(screenHeight))}>
+                     backgroundImage: `url(/img/bgHome.png)`,
+                     zIndex: 1000-index
+                 }}
+                 {...screenScale(delaySlideScreenUp(screenHeight))}>
 
             <img src="/img/logo.png" {...screenScale(logoOut)}/>
 

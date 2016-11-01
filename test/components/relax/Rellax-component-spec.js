@@ -27,12 +27,7 @@ describe("<Rellax /> Screen Wrap Component", () => {
 
     it("passes correct breakpoints to child screens", () =>
         expect(wrapper.find(MockScreenB).props().breakpoints)
-            .to.deep.equal([0, 768, 1536])
-    )
-
-    it("passes screenConfig object to child screens", () =>
-        expect(typeof wrapper.find(MockScreenA).props().screenConfig)
-            .to.equal("object")
+            .to.deep.equal([0, 1536, 3072])
     )
 
     it("passes screenScale function to each component", () =>
