@@ -10,7 +10,7 @@ import '../../stylesheets/relax.scss'
  * Durations for animations to other screens
  * @type {number}
  */
-const duration = 500
+const duration = 1500
 
 /**
  * Calculates the default screenheight from breakpoints
