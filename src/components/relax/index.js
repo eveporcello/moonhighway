@@ -95,6 +95,7 @@ export class Rellax extends Component {
         this.state = {
             screen: {
                 height: window.innerHeight,
+                scrollHeight: window.innerHeight*3,
                 width: window.innerWidth
             },
             current: {
@@ -112,9 +113,9 @@ export class Rellax extends Component {
     scrollScreen(el, index) {
         const { screen } = this.state
         const { length } = this.props.children
-        const scrollRange = [screen.height * index, screen.height * (index + 1)]
+        const scrollRange = [screen.scrollHeight * index, screen.scrollHeight * (index + 1)]
         const breakpoints = this.getBreakpoints()
-        const maxHeight = breakpoints[breakpoints.length-1] + screen.height
+        const maxHeight = breakpoints[breakpoints.length-1] + screen.scrollHeight
         const screenScale = skrollrAttributes(breakpoints)
         const fullScale = skrollrAttributes(maxHeight)
 
@@ -123,7 +124,7 @@ export class Rellax extends Component {
         }
 
         if (index === 0) {
-            screenConfig[`data-${screen.height}`] = `top: -${screen.height}px`
+            screenConfig[`data-${screen.scrollHeight}`] = `top: -${screen.height}px`
         } else {
             if (index !== (length - 1)) {
                 screenConfig[`data-${scrollRange[0]}`] = `top: 0px`
@@ -146,7 +147,7 @@ export class Rellax extends Component {
     getBreakpoints() {
         const { children } = this.props
         const { screen } = this.state
-        return Children.map(children, (child, i) => i * screen.height)
+        return Children.map(children, (child, i) => i * screen.scrollHeight)
     }
 
     nextScreen() {
