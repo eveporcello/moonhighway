@@ -1,8 +1,9 @@
 import { Component, Children, cloneElement } from 'react'
+import { hashHistory } from 'react-router'
 import skrollr from 'skrollr'
 import Hammer from 'hammerjs'
 import { DownButton } from '../ui'
-import { StackCycle, isMobile } from '../../lib'
+import { isMobile } from '../../lib'
 import { compose } from 'redux'
 import '../../stylesheets/relax.scss'
 
@@ -113,7 +114,7 @@ export class Rellax extends Component {
         this.prevScreen = this.prevScreen.bind(this)
         this.getBreakpoints = this.getBreakpoints.bind(this)
         this.onResize = this.onResize.bind(this)
-        this.jumpToScreen = this.jumpToScreen.bind(this)
+        this.goToScreen = this.goToScreen.bind(this)
     }
 
     scrollScreen(el, index) {
@@ -124,6 +125,18 @@ export class Rellax extends Component {
         const maxHeight = breakpoints[breakpoints.length - 1] + screen.scrollHeight
         const screenScale = skrollrAttributes(breakpoints, index)
         const fullScale = skrollrAttributes(maxHeight)
+
+        if (el.props.route) {
+            this.routes = {
+                ...this.routes,
+                [el.props.route]: index
+            }
+            this.paths = {
+                ...this.paths,
+                [index]: el.props.route
+            }
+        }
+
         return cloneElement(el, {
             index,
             scrollRange,
@@ -141,101 +154,44 @@ export class Rellax extends Component {
     }
 
     nextScreen() {
-        const current = {
-            breakpoint: this.screenCycle.next(),
-            screenIndex: this.screenCycle.currentIndex(),
-            transitioning: true
+        if (!this.state.current.transitioning) {
+            const { current } = this.state
+            const { children } = this.props
+            const screenIndex = ((current.screenIndex + 1) < children.length ) ?
+                current.screenIndex + 1 :
+                current.screenIndex
+            const breakpoint = this.state.breakpoints[screenIndex]
+            if (screenIndex !== current.screenIndex) {
+                this.setState({current: {breakpoint, screenIndex, transitioning: true}})
+                hashHistory.push(this.paths[screenIndex])
+            }
         }
-        this.setState({current})
-        setTimeout(() => this.skr.animateTo(current.breakpoint, {
-            duration,
-            easing: 'swing',
-            done: () => this.setState({
-                current: {
-                    ...current,
-                    transitioning: false
-                }
-            })
-        }))
     }
 
     prevScreen() {
-        const current = {
-            breakpoint: this.screenCycle.prev(),
-            screenIndex: this.screenCycle.currentIndex()
+        if (!this.state.current.transitioning) {
+            const { current } = this.state
+            const screenIndex = (current.screenIndex) ?
+                current.screenIndex - 1 : 0
+            const breakpoint = this.state.breakpoints[screenIndex]
+            if (screenIndex !== current.screenIndex) {
+                this.setState({current: {breakpoint, screenIndex, transitioning: true}})
+                hashHistory.push(this.paths[screenIndex])
+            }
         }
-        this.setState({current})
-        setTimeout(() => this.skr.animateTo(current.breakpoint, {
+    }
+
+    goToScreen(index, duration = 1) {
+        this.skr.animateTo(this.state.breakpoints[index], {
             duration,
             easing: 'swing',
             done: () => this.setState({
                 current: {
-                    ...current,
+                    ...this.state.current,
                     transitioning: false
                 }
             })
-        }))
-    }
-
-    //
-    //  TODO: Make Reusable Solution for routes
-    //
-
-    jumpToScreen(path, duration=0) {
-        const { breakpoints } = this.state
-
-        switch (path) {
-
-            case '/contact':
-
-                if (duration) {
-                    this.skr.animateTo(breakpoints[5], {duration})
-                } else {
-                    scroll(0, breakpoints[5])
-                }
-
-                break;
-
-            case '/continuous-delivery':
-                if (duration) {
-                    this.skr.animateTo(breakpoints[4], {duration})
-                } else {
-                    scroll(0, breakpoints[4])
-                }
-                break;
-
-            case '/html-css':
-                if (duration) {
-                    this.skr.animateTo(breakpoints[3], {duration})
-                } else {
-                    scroll(0, breakpoints[3])
-                }
-                break;
-
-            case '/node' :
-                if (duration) {
-                    this.skr.animateTo(breakpoints[2], {duration})
-                } else {
-                    scroll(0, breakpoints[2])
-                }
-                break;
-
-            case '/react' :
-                if (duration) {
-                    this.skr.animateTo(breakpoints[1], {duration})
-                } else {
-                    scroll(0, breakpoints[1])
-                }
-                break;
-
-            default :
-                if (duration) {
-                    this.skr.animateTo(0, {duration})
-                } else {
-                    scroll(0, 0)
-                }
-                break;
-        }
+        })
     }
 
     onResize() {
@@ -244,7 +200,6 @@ export class Rellax extends Component {
                 width: window.innerWidth
             },
             breakpoints = this.getBreakpoints();
-        this.screenCycle = new StackCycle(breakpoints, this.state.current.screenIndex)
         const current = {
             ...this.state.current,
             breakpoint: this.screenCycle.current()
@@ -256,12 +211,15 @@ export class Rellax extends Component {
     componentWillMount() {
         const breakpoints = this.getBreakpoints()
         this.setState({breakpoints})
-        this.screenCycle = new StackCycle(breakpoints, 0)
         window.addEventListener('resize', this.onResize)
     }
 
     componentWillReceiveProps(nextProps) {
-        this.jumpToScreen(nextProps.location.pathname)
+        const screenIndex = this.routes[nextProps.location.pathname]
+        this.setState({
+            current: {screenIndex}
+        })
+        this.goToScreen(screenIndex, 1000)
     }
 
     componentDidMount() {
@@ -286,7 +244,15 @@ export class Rellax extends Component {
             //
         }
 
-        this.jumpToScreen(this.props.location.pathname)
+        const screenIndex = this.routes[this.props.location.pathname] || this.state.current.screenIndex
+        this.setState({current: {screenIndex}})
+        setTimeout(() => this.goToScreen(screenIndex), 5)
+    }
+
+    shouldComponentUpdate(nextProps) {
+        const hasNewScreen = this.props.children.length !== nextProps.children.length
+        const isNewPath = this.props.location.pathname !== nextProps.location.pathname
+        return hasNewScreen || isNewPath
     }
 
     componentWillUnmount() {
