@@ -20,6 +20,7 @@ $main-font: "Source Sans Pro", sans;
   width: 100%;
 }
 
+
 html,
 body,
 #react-container,
@@ -40,9 +41,10 @@ body {
 /* Hiding the scrollbar */
 
 html {
-  overflow: scroll;
+  overflow: -moz-scrollbars-none;
   overflow-x: hidden;
 }
+
 ::-webkit-scrollbar {
   width: 0;
   background: transparent;

@@ -115,6 +115,8 @@ export class Rellax extends Component {
         this.getBreakpoints = this.getBreakpoints.bind(this)
         this.onResize = this.onResize.bind(this)
         this.goToScreen = this.goToScreen.bind(this)
+        this.onWheel = this.onWheel.bind(this)
+        this.onArrowKeys = this.onArrowKeys.bind(this)
     }
 
     scrollScreen(el, index) {
@@ -158,7 +160,7 @@ export class Rellax extends Component {
             const { current } = this.state
             const { children } = this.props
             const screenIndex = ((current.screenIndex + 1) < children.length ) ?
-                current.screenIndex + 1 :
+            current.screenIndex + 1 :
                 current.screenIndex
             const breakpoint = this.state.breakpoints[screenIndex]
             if (screenIndex !== current.screenIndex) {
@@ -172,7 +174,7 @@ export class Rellax extends Component {
         if (!this.state.current.transitioning) {
             const { current } = this.state
             const screenIndex = (current.screenIndex) ?
-                current.screenIndex - 1 : 0
+            current.screenIndex - 1 : 0
             const breakpoint = this.state.breakpoints[screenIndex]
             if (screenIndex !== current.screenIndex) {
                 this.setState({current: {breakpoint, screenIndex, transitioning: true}})
@@ -208,6 +210,33 @@ export class Rellax extends Component {
 
     }
 
+    onWheel(e) {
+        if (this.webkitWheelTimeout) {
+            clearTimeout(this.webkitWheelTimeout)
+        }
+        this.webkitWheelTimeout = setTimeout(
+            () => (e.deltaY > 0) ?
+                this.nextScreen() :
+                this.prevScreen(),
+            50
+        )
+    }
+
+    onArrowKeys(e) {
+        switch(e.key) {
+            case " " :
+                return this.nextScreen()
+            case "ArrowDown" :
+                return this.nextScreen()
+            case "ArrowRight" :
+                return this.nextScreen()
+            case "ArrowUp" :
+                return this.prevScreen()
+            case "ArrowLeft" :
+                return this.prevScreen()
+        }
+    }
+
     componentWillMount() {
         const breakpoints = this.getBreakpoints()
         this.setState({breakpoints})
@@ -223,11 +252,6 @@ export class Rellax extends Component {
     }
 
     componentDidMount() {
-
-        // 2 - Hammer js and Skrollr are initialized here, after DOM is setup
-        //     a. The skrollr.init() causes the drag and scroll behave to work
-        //     a. Once released Hammer JS gets the direction and moves the screen
-
         const direction = Hammer.DIRECTION_VERTICAL
         this.skr = skrollr.init({edgeStrategy: 'set'})
         if (isMobile()) {
@@ -239,10 +263,10 @@ export class Rellax extends Component {
                     this.nextScreen()
             )
         } else {
-            //
-            //  TODO: handle laptop/desktop scroll
-            //
+            window.addEventListener("wheel", this.onWheel, false)
         }
+
+        window.addEventListener("keydown", this.onArrowKeys, false)
 
         const screenIndex = this.routes[this.props.location.pathname] || this.state.current.screenIndex
         this.setState({current: {screenIndex}})
@@ -256,7 +280,8 @@ export class Rellax extends Component {
     }
 
     componentWillUnmount() {
-        window.removeEventListener('resize', this.onResize)
+        window.removeEventListener("wheel", this.onWheel)
+        window.removeEventListener("keydown", this.onArrowKeys)
     }
 
     componentDidUpdate() {
