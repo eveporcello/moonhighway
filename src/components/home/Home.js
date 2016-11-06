@@ -3,9 +3,9 @@ import { delaySlideScreenUp, logoOut, collapseBox } from '../../lib'
 const Home = ({index, screenScale, screenHeight}) =>
     <section className="slide home"
              style={{
-                     backgroundImage: `url(/img/bgHome.png)`,
-                     zIndex: 1000-index
-                 }}
+                 backgroundImage: `url(/img/bgHome.png)`,
+                 zIndex: 1000-index
+             }}
         {...screenScale(delaySlideScreenUp(screenHeight))}>
 
         <img src="/img/logo.png" {...screenScale(logoOut)}/>
