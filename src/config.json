@@ -13,5 +13,19 @@
       "/img/node.png",
       "/img/react.png"
     ]
+  },
+  "contact": {
+    "subjects": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Node.js",
+      "React",
+      "Flux",
+      "Redux",
+      "Continuous Delivery",
+      "TDD, BDD",
+      "Git"
+    ]
   }
 }

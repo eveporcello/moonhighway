@@ -1,0 +1,120 @@
+@import "global";
+
+section.contact {
+  display: flex;
+
+  h1 {
+    margin: 0;
+    padding: .2em !important;
+    flex-basis: calc(50% - .4em);
+    text-transform: capitalize;
+  }
+
+  p {
+    flex-basis: 100%;
+    padding: 0 1em !important;
+    margin: 0;
+    font-size: 1.2em;
+
+    &:first-of-type {
+      font-size: 118%;
+    }
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+
+    a {
+      color: white;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    span:last-of-type {
+      display: block;
+      flex-basis: 100%;
+    }
+  }
+
+  >div.box {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  div.social-icons {
+    flex-basis: calc(50% - .2em);
+    display: flex;
+    justify-content: flex-end;
+
+    a {
+      color: white;
+      font-size: 1.5em;
+      margin: .2em;
+    }
+
+  }
+
+  form {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 60%;
+    margin: 0;
+    padding: 0;
+
+    p {
+      text-transform: capitalize;
+      flex-basis: 10%;
+    }
+
+    input, textarea {
+      display: block;
+      margin: .5em;
+      width: 90%;
+      font-size: 1.25em;
+      padding: .25em;
+    }
+
+    textarea {
+      flex-grow: 1;
+    }
+
+    button {
+      background-color: #26101c;
+      border: none;
+      border-radius: .25em;
+      text-transform: capitalize;
+      color: white;
+      font-size: 1em;
+      padding :.5em;
+      margin: .5em;
+    }
+
+    div.options {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      font-size: 1.3em;
+      padding: .25em;
+      background-color: #26101c;
+      columns: 2;
+
+      div {
+        margin: .5em .25em;
+
+        span.selected {
+          font-weight: bold;
+        }
+      }
+    }
+
+  }
+
+}
