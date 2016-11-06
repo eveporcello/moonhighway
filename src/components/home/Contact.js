@@ -33,10 +33,10 @@ message: ${_message.value}
     return (
         <section className="slide contact"
                  style={{
-                 backgroundImage: `url(/img/bgContact.png)`,
-                 zIndex: 1000-index
-             }}
-            {...screenScale({'0%': {top: '0px'}})}>
+                     backgroundImage: `url(/img/bgContact.png)`,
+                     zIndex: 1000-index
+                 }}
+                 {...screenScale({'0%': {top: '0px'}})}>
             <div className="box" {...screenScale(expandBox)}>
                 <h1>Contact Us</h1>
                 <SocialIcons />
@@ -54,7 +54,7 @@ message: ${_message.value}
                         Choose all that apply
                     </ExpandableSelectList>
                     <input ref={i => _email = i} type="email" placeholder="email" required/>
-                    <textarea ref={i => _message = i} placeholder="Other thoughts or topics of interest?" />
+                    <textarea ref={i => _message = i} placeholder="Other thoughts or topics of interest?"/>
                     <button>SEND</button>
                 </form>
             </div>
