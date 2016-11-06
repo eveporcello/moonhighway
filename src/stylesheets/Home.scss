@@ -4,7 +4,11 @@
 body #react-container section {
 
   overflow: hidden;
+
   background-position: center -140px;
+  @media only screen and (orientation : landscape) {
+    background-position: center -250px;
+  }
 
   >img {
     /*width: 90%;
@@ -19,11 +23,18 @@ body #react-container section {
     border: .5em double $star-blue;
     border-left: none;
     border-right: none;
+
     width: 90%;
+    top: 25%;
+    @media only screen and (orientation : landscape) {
+      width: 55%;
+      top: 35%;
+    }
+
     /* font-size: 90% */
     font-size: 114%;
-    left: 5%;
-    top: 25%;
+
+
     overflow: hidden;
 
     ul {
@@ -42,6 +53,9 @@ body #react-container section {
     div.box {
       /* top: 42; */
       top: 40%;
+      @media only screen and (orientation : landscape) {
+        top: 50%;
+      }
     }
 
     >img {
@@ -65,12 +79,18 @@ body #react-container section {
     div.box {
       border-color: lightgrey;
       top: 40%;
+      @media only screen and (orientation : landscape) {
+        top: 50%;
+      }
     }
   }
 
   &.cd {
     div.box {
       top: 40%;
+      @media only screen and (orientation : landscape) {
+        top: 53%;
+      }
     }
   }
 

@@ -33,6 +33,10 @@ body {
   /* font-size: 100% */
 
   font-size: 75%;
+
+  @media only screen and (orientation : landscape) {
+    font-size: 50%;
+  }
 }
 
 /* Hiding the scrollbar */
