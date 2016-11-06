@@ -52,7 +52,7 @@ export const logoInOut = {
 export const collapseBox = {
     '0%': {
         left: '5%',
-        height: '150px'
+        height: '10em'
     },
     '15%': {
         height: '0px',
@@ -66,19 +66,19 @@ export const collapseBox = {
 
 export const expandCollapseBox = {
     '-30%': {
-        height: '0px',
+        height: '0em',
         left: '-105px'
     },
     '-15%': {
-        height: '0px',
+        height: '0em',
         left: '5%'
     },
     '0%': {
         left: '5%',
-        height: '150px'
+        height: '10em'
     },
     '15%': {
-        height: '0px',
+        height: '0em',
         left: '5%'
     },
     '30%': {

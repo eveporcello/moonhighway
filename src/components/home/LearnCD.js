@@ -9,7 +9,7 @@ const LearnCD = ({index, screenScale, screenHeight}) =>
         {...screenScale(delaySlideScreenUp(screenHeight))}>
         <img src="/img/cd.png"  {...screenScale(logoInOut)}/>
         <div className="box" {...screenScale(expandCollapseBox)}>
-            <h1>Automated, Certified, Quality for the Real World</h1>
+            <h1>Automated, Certified Quality</h1>
             <ul>
                 <li>Test-driven Development</li>
                 <li>Behavior-driven Development</li>

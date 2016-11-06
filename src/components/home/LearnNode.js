@@ -9,7 +9,7 @@ const LearnNode = ({index, screenScale, screenHeight}) =>
         {...screenScale(delaySlideScreenUp(screenHeight))}>
         <img src="/img/node.png"  {...screenScale(logoInOut)}/>
         <div className="box" {...screenScale(expandCollapseBox)}>
-            <h1>Test-driven, Universal Updates</h1>
+            <h1>Universal, Test Driven Updates</h1>
             <ul>
                 <li>Service-oriented Architecture</li>
                 <li>NoSQL Databases</li>

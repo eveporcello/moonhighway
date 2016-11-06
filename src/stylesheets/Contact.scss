@@ -14,12 +14,7 @@ section.contact {
     flex-basis: 100%;
     padding: 0 1em !important;
     margin: 0;
-    font-size: 1.2em;
-
-    &:first-of-type {
-      font-size: 118%;
-    }
-
+    font-size: 1em;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -78,7 +73,7 @@ section.contact {
       display: block;
       margin: .5em;
       width: 90%;
-      font-size: 1.25em;
+      font-size: .75em;
       padding: .25em;
     }
 
@@ -92,7 +87,7 @@ section.contact {
       border-radius: .25em;
       text-transform: capitalize;
       color: white;
-      font-size: 1em;
+      font-size: .75em;
       padding :.5em;
       margin: .5em;
     }

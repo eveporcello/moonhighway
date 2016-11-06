@@ -1,7 +1,25 @@
 @import "global";
 
+div.home-page>div.social-icons {
+  position: fixed;
+  z-index: 1001;
+  font-size: 2em;
+  bottom: 1.5em;
+  width: 100%;
+  text-align: center;
+
+  a {
+    margin: 0 .1em;
+    color: white;
+  }
+
+  a, svg {
+    cursor: pointer;
+  }
+}
+
 div.down-button {
-  font-size: 3.5em;
+  font-size: 2.5em;
   color: white;
   z-index: 1001;
   position: fixed;

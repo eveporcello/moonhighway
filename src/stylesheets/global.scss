@@ -28,13 +28,11 @@ div.relax-root {
   @include clear;
 }
 
-body > h1:first-child {
-  dispaly: none;
-}
-
 body {
   font-family: $main-font;
-  font-size: 100%;
+  /* font-size: 100% */
+
+  font-size: 75%;
 }
 
 /* Hiding the scrollbar */

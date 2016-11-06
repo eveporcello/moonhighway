@@ -1,13 +1,16 @@
 @import "global";
 
 
-section {
+body #react-container section {
 
   overflow: hidden;
+  background-position: center -140px;
 
   >img {
-    width: 90%;
-    margin: 5%;
+    /*width: 90%;
+    margin: 5%;*/
+    width: 75%;
+    margin: 2% 12.5%;
   }
 
   >div.box {
@@ -17,10 +20,15 @@ section {
     border-left: none;
     border-right: none;
     width: 90%;
-    font-size: 90%;
+    /* font-size: 90% */
+    font-size: 114%;
     left: 5%;
     top: 25%;
     overflow: hidden;
+
+    ul {
+      font-size: 1.3em;
+    }
 
     h1, p, li {
       text-shadow: 1px 1px 3px black;
@@ -32,13 +40,16 @@ section {
   &.home {
 
     div.box {
-      top: 42%;
+      /* top: 42; */
+      top: 40%;
     }
 
     >img {
       position: absolute;
-      width: 65%;
-      margin: 0 17.5%;
+      /* width: 65%; */
+      /* margin: 0 17.5%; */
+      width: 50%;
+      margin: 0 25%;
       top: 4%;
     }
 
@@ -53,7 +64,7 @@ section {
   &.html {
     div.box {
       border-color: lightgrey;
-      top: 37%;
+      top: 40%;
     }
   }
 
@@ -70,22 +81,4 @@ section {
     }
   }
 
-}
-
-div.home-page>div.social-icons {
-  position: fixed;
-  z-index: 1001;
-  font-size: 2.5em;
-  bottom: 1.8em;
-  width: 100%;
-  text-align: center;
-
-  a {
-    margin: 0 .1em;
-    color: white;
-  }
-
-  a, svg {
-    cursor: pointer;
-  }
 }

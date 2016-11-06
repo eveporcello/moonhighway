@@ -9,7 +9,7 @@ const LearnReact = ({index, screenScale, screenHeight}) =>
         {...screenScale(delaySlideScreenUp(screenHeight))}>
         <img src="/img/react.png" {...screenScale(logoInOut)}/>
         <div className="box" {...screenScale(expandCollapseBox)}>
-            <h1>Declarative, Functional Upgrades</h1>
+            <h1>Declarative Upgrades</h1>
             <ul>
                 <li>Functional Programming</li>
                 <li>Unidirectional Dataflow</li>
