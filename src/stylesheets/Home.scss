@@ -5,16 +5,34 @@ body #react-container section {
 
   overflow: hidden;
 
-  background-position: center -140px;
-  @media only screen and (orientation : landscape) {
-    background-position: center -250px;
+  background-position: bottom right;
+  @media only screen
+  and (max-height: 400px)
+  and (orientation : portrait) {
+    background-position-y: -140px
+  }
+  @media only screen
+  and (max-width: 400px)
+  and (orientation : landscape) {
+    background-position-y: -275px;
+  }
+  @media only screen
+  and (max-width: 460px)
+  and (min-width: 400px)
+  and (orientation : landscape) {
+    background-position-y: -413px;
   }
 
   >img {
-    /*width: 90%;
-    margin: 5%;*/
     width: 75%;
     margin: 2% 12.5%;
+    @media only screen
+    and (max-width: 460px)
+    and (min-width: 400px)
+    and (orientation : landscape) {
+      width: 65%;
+      margin: 2% 5%;
+    }
   }
 
   >div.box {
@@ -29,6 +47,9 @@ body #react-container section {
     @media only screen and (orientation : landscape) {
       width: 55%;
       top: 35%;
+    }
+    @media only screen and (min-height : 450px) {
+      top: 22%;
     }
 
     /* font-size: 90% */
@@ -51,20 +72,33 @@ body #react-container section {
   &.home {
 
     div.box {
-      /* top: 42; */
       top: 40%;
-      @media only screen and (orientation : landscape) {
-        top: 50%;
-      }
+      @media only screen and (orientation : landscape) { top: 37%; }
     }
 
     >img {
       position: absolute;
-      /* width: 65%; */
-      /* margin: 0 17.5%; */
+      top: 4%;
       width: 50%;
       margin: 0 25%;
-      top: 4%;
+      @media only screen and (min-height : 450px)
+      and (orientation : portrait) {
+        width: 60%;
+        margin: 0 20%;
+      }
+      @media only screen
+      and (max-width: 399px)
+      and (orientation : landscape) {
+        width: 80%;
+        margin: 0 10%;
+      }
+      @media only screen
+      and (max-width: 460px)
+      and (min-width: 400px)
+      and (orientation : landscape) {
+        width: 65%;
+        margin: 0 5%;
+      }
     }
 
   }
@@ -76,20 +110,60 @@ body #react-container section {
   }
 
   &.html {
+
+    >img {
+      @media only screen
+      and (max-width: 460px)
+      and (min-width: 400px)
+      and (orientation : landscape) {
+        width: 50%;
+        margin: 0% 8%;
+      }
+    }
+
     div.box {
       border-color: lightgrey;
       top: 40%;
       @media only screen and (orientation : landscape) {
         top: 50%;
       }
+      @media only screen and (min-height : 450px) {
+        top: 30%;
+      }
+      @media only screen
+      and (max-width: 460px)
+      and (min-width: 400px)
+      and (orientation : landscape) {
+        top: 38%;
+      }
     }
   }
 
   &.cd {
+
+    >img {
+      @media only screen
+      and (max-width: 460px)
+      and (min-width: 400px)
+      and (orientation : landscape) {
+        width: 50%;
+        margin: 0% 8%;
+      }
+    }
+
     div.box {
       top: 40%;
       @media only screen and (orientation : landscape) {
         top: 53%;
+      }
+      @media only screen and (min-height : 450px) {
+        top: 34%;
+      }
+      @media only screen
+      and (max-width: 460px)
+      and (min-width: 400px)
+      and (orientation : landscape) {
+        top: 42%;
       }
     }
   }

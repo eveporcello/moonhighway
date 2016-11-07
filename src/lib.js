@@ -25,11 +25,21 @@ export const delaySlideScreenUp = h =>
     })
 
 export const logoOut = {
-    '30%': {
-        top: '4%'
+    portrait: {
+        '30%': {
+            top: '4%'
+        },
+        '70%': {
+            top: '104%'
+        }
     },
-    '70%': {
-        top: '104%'
+    landscape: {
+        '30%': {
+            top: '6%'
+        },
+        '70%': {
+            top: '110%'
+        }
     }
 }
 

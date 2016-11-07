@@ -1,6 +1,8 @@
 {
   "preload": {
     "images": [
+      "/img/logo.png",
+      "/img/logo-long.png",
       "/img/bgCD.png",
       "/img/bgContact.png",
       "/img/bgHome.png",
@@ -9,7 +11,6 @@
       "/img/bgReact.png",
       "/img/cd.png",
       "/img/html.png",
-      "/img/logo.png",
       "/img/node.png",
       "/img/react.png"
     ]

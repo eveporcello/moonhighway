@@ -34,9 +34,19 @@ body {
 
   font-size: 75%;
 
-  @media only screen and (orientation : landscape) {
+  @media only screen
+  and (max-width: 399px)
+  and (orientation : landscape) {
     font-size: 50%;
   }
+
+  @media only screen
+  and (max-width: 460px)
+  and (min-width: 400px)
+  and (orientation : landscape) {
+    font-size: 65%;
+  }
+
 }
 
 /* Hiding the scrollbar */

@@ -96,10 +96,14 @@ section.contact {
       position: absolute;
       left: 0;
       width: 100%;
-      font-size: .9em;
       padding: .25em;
       background-color: #26101c;
       columns: 2;
+
+      font-size: .9em;
+      @media only screen and (min-height : 450px) {
+        font-size: 1em;
+      }
 
       div {
         margin: .5em .25em;
