@@ -4,35 +4,40 @@
 body #react-container section {
 
   overflow: hidden;
-
   background-position: bottom right;
-  @media only screen
-  and (max-height: 400px)
-  and (orientation : portrait) {
-    background-position-y: -140px
-  }
-  @media only screen
-  and (max-width: 400px)
-  and (orientation : landscape) {
-    background-position-y: -275px;
-  }
-  @media only screen
-  and (max-width: 460px)
-  and (min-width: 400px)
-  and (orientation : landscape) {
-    background-position-y: -413px;
-  }
+
+  @include iPhone4 { background-position-y: -140px }
+  @include iPhone4landscape { background-position-y: -275px; }
+  @include iPhone5 { background-position-y: -85px; }
+  @include iPhone5landscape { background-position-y: -413px; }
 
   >img {
     width: 75%;
     margin: 2% 12.5%;
-    @media only screen
-    and (max-width: 460px)
-    and (min-width: 400px)
-    and (orientation : landscape) {
-      width: 65%;
-      margin: 2% 5%;
+    @include iPhone4landscape { width: 65%; margin: 2% 5%; }
+  }
+
+  &.home>img {
+      position: absolute;
+      top: 4%;
+      width: 50%;
+      margin: 0 25%;
+      @include iPhone5 { width: 60%; margin: 0 20%; }
+      @include iPhone4landscape { width: 80%; margin: 0 10%; }
+      @include iPhone5landscape { width: 65%; margin: 0 5%; }
     }
+
+  &.react>img,
+  &.node>img {
+    @include iPhone5landscape { width: 60%; margin: 2% 6%; }
+  }
+
+  &.html>img {
+    @include iPhone5landscape { width: 50%; margin: 0% 8%; }
+  }
+
+  &.cd>img {
+    @include iPhone5landscape { width: 50%; margin: 0% 8%; }
   }
 
   >div.box {
@@ -41,138 +46,45 @@ body #react-container section {
     border: .5em double $star-blue;
     border-left: none;
     border-right: none;
+    overflow: hidden;
+    font-size: 114%;
+
+    ul {  font-size: 1.3em; }
+    h1, p, li { text-shadow: 1px 1px 3px black; padding: 0 0.25em; }
 
     width: 90%;
     top: 25%;
-    @media only screen and (orientation : landscape) {
-      width: 55%;
-      top: 35%;
-    }
-    @media only screen and (min-height : 450px) {
-      top: 22%;
-    }
-
-    /* font-size: 90% */
-    font-size: 114%;
-
-
-    overflow: hidden;
-
-    ul {
-      font-size: 1.3em;
-    }
-
-    h1, p, li {
-      text-shadow: 1px 1px 3px black;
-      padding: 0 0.25em;
-    }
-
+    @include landscape { width: 55%; top: 35%; }
+    @include iPhone5 { top: 22%; }
   }
 
-  &.home {
-
-    div.box {
-      top: 40%;
-      @media only screen and (orientation : landscape) { top: 37%; }
-    }
-
-    >img {
-      position: absolute;
-      top: 4%;
-      width: 50%;
-      margin: 0 25%;
-      @media only screen and (min-height : 450px)
-      and (orientation : portrait) {
-        width: 60%;
-        margin: 0 20%;
-      }
-      @media only screen
-      and (max-width: 399px)
-      and (orientation : landscape) {
-        width: 80%;
-        margin: 0 10%;
-      }
-      @media only screen
-      and (max-width: 460px)
-      and (min-width: 400px)
-      and (orientation : landscape) {
-        width: 65%;
-        margin: 0 5%;
-      }
-    }
-
+  &.home div.box {
+    top: 40%;
+    @media only screen and (orientation : landscape) { top: 37%; }
   }
 
-  &.node {
-    div.box {
-      border-color: rgb(6,181,137);
-    }
+  &.node div.box {
+    border-color: rgb(6,181,137);
   }
 
-  &.html {
-
-    >img {
-      @media only screen
-      and (max-width: 460px)
-      and (min-width: 400px)
-      and (orientation : landscape) {
-        width: 50%;
-        margin: 0% 8%;
-      }
-    }
-
-    div.box {
-      border-color: lightgrey;
-      top: 40%;
-      @media only screen and (orientation : landscape) {
-        top: 50%;
-      }
-      @media only screen and (min-height : 450px) {
-        top: 30%;
-      }
-      @media only screen
-      and (max-width: 460px)
-      and (min-width: 400px)
-      and (orientation : landscape) {
-        top: 38%;
-      }
-    }
+  &.html div.box {
+    border-color: lightgrey;
+    top: 40%;
+    @include landscape { top: 45%; }
+    @include iPhone5 { top: 30%; }
+    @include iPhone5landscape { top: 38%; }
   }
 
-  &.cd {
-
-    >img {
-      @media only screen
-      and (max-width: 460px)
-      and (min-width: 400px)
-      and (orientation : landscape) {
-        width: 50%;
-        margin: 0% 8%;
-      }
-    }
-
-    div.box {
-      top: 40%;
-      @media only screen and (orientation : landscape) {
-        top: 53%;
-      }
-      @media only screen and (min-height : 450px) {
-        top: 34%;
-      }
-      @media only screen
-      and (max-width: 460px)
-      and (min-width: 400px)
-      and (orientation : landscape) {
-        top: 42%;
-      }
-    }
+  &.cd div.box {
+    top: 40%;
+    @include landscape { top: 48%; }
+    @include iPhone5 { top: 34%; }
+    @include iPhone5landscape { top: 41%; }
   }
 
-  &.contact {
-    div.box {
-      border-color: white;
-      top: 5%;
-    }
+  &.contact div.box {
+    border-color: white;
+    top: 5%;
   }
 
 }

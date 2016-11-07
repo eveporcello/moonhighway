@@ -1,12 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat|Source+Sans+Pro);
 
-$blue-a: #00a2ff;
-$blue-b: #247DB1;
-$blue-c: #323949;
+/* Global Variables */
 
 $star-blue: #0164e0;
-
 $main-font: "Source Sans Pro", sans;
+
+/* General Mixins */
 
 @mixin clear {
   padding: 0;
@@ -20,6 +19,49 @@ $main-font: "Source Sans Pro", sans;
   width: 100%;
 }
 
+/* Media Query Mixins */
+
+@mixin landscape() {
+  @media only screen and (orientation : landscape) {
+    @content
+  }
+}
+
+@mixin iPhone4() {
+  @media only screen
+  and (max-height: 400px)
+  and (orientation : portrait) {
+    @content
+  }
+}
+
+@mixin iPhone4landscape() {
+  @media only screen
+  and (max-width: 399px)
+  and (orientation : landscape) {
+      @content
+  }
+}
+
+@mixin iPhone5() {
+  @media only screen
+  and (min-height : 450px)
+  and (orientation : portrait) {
+    @content
+  }
+}
+
+@mixin iPhone5landscape() {
+  @media only screen
+  and (max-width: 460px)
+  and (min-width: 400px)
+  and (orientation : landscape) {
+    @content
+  }
+}
+
+/* Main Page Setup : iPhone 4 vertical is the default */
+
 html,
 body,
 #react-container,
@@ -30,23 +72,9 @@ div.relax-root {
 
 body {
   font-family: $main-font;
-  /* font-size: 100% */
-
   font-size: 75%;
-
-  @media only screen
-  and (max-width: 399px)
-  and (orientation : landscape) {
-    font-size: 50%;
-  }
-
-  @media only screen
-  and (max-width: 460px)
-  and (min-width: 400px)
-  and (orientation : landscape) {
-    font-size: 65%;
-  }
-
+  @include iPhone4landscape { font-size: 50%; }
+  @include iPhone5landscape { font-size: 65%; }
 }
 
 /* Hiding the scrollbar */
