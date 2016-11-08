@@ -298,13 +298,15 @@ export class Rellax extends Component {
         const { screenIndex } = this.state.current
         return (
             <div ref="root" className="relax-root">
-                {(children.length !== screenIndex + 1) ?
-                    <DownButton onClick={this.nextScreen}/> :
-                    null
-                }
+
                 {Children.map(children, this.scrollScreen)}
             </div>
         )
     }
 
 }
+
+//{(children.length !== screenIndex + 1) ?
+//    <DownButton onClick={this.nextScreen}/> :
+//    null
+//}

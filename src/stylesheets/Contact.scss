@@ -101,9 +101,8 @@ section.contact {
       columns: 2;
 
       font-size: .9em;
-      @media only screen and (min-height : 450px) {
-        font-size: 1em;
-      }
+      @include iPhone5 { font-size: 1em; }
+      @include iPhone6landscape { font-size: 1em; }
 
       div {
         margin: .5em .25em;

@@ -3,10 +3,12 @@
 div.home-page>div.social-icons {
   position: fixed;
   z-index: 1001;
-  font-size: 2em;
-  bottom: 1.5em;
   width: 100%;
   text-align: center;
+  bottom: 1.5em;
+
+  font-size: 2em;
+  @include iPhone6 { font-size: 2.5em; }
 
   a {
     margin: 0 .1em;
@@ -19,14 +21,16 @@ div.home-page>div.social-icons {
 }
 
 div.down-button {
-  font-size: 2.5em;
   color: white;
   z-index: 1001;
   position: fixed;
-  bottom: .2em;
   left: 50%;
   margin-left: -.5em;
   cursor: pointer;
+  bottom: .2em;
+
+  font-size: 2.5em;
+  @include iPhone6 { font-size: 3em; }
 
   >div:first-child {
     background-color: black;

@@ -27,6 +27,12 @@ $main-font: "Source Sans Pro", sans;
   }
 }
 
+@mixin portrait() {
+  @media only screen and (orientation : portrait) {
+    @content
+  }
+}
+
 @mixin iPhone4() {
   @media only screen
   and (max-height: 400px)
@@ -45,7 +51,8 @@ $main-font: "Source Sans Pro", sans;
 
 @mixin iPhone5() {
   @media only screen
-  and (min-height : 450px)
+  and (min-height: 400px)
+  and (max-height : 570px)
   and (orientation : portrait) {
     @content
   }
@@ -53,8 +60,42 @@ $main-font: "Source Sans Pro", sans;
 
 @mixin iPhone5landscape() {
   @media only screen
-  and (max-width: 460px)
-  and (min-width: 400px)
+  and (max-width: 570px)
+  and (min-width: 459px)
+  and (orientation : landscape) {
+    @content
+  }
+}
+
+@mixin iPhone6() {
+  @media only screen
+  and (min-height : 570px)
+  and (orientation : portrait) {
+    @content
+  }
+}
+
+@mixin iPhone6landscape() {
+  @media only screen
+  and (max-width: 700px)
+  and (min-width: 570px)
+  and (orientation : landscape) {
+    @content
+  }
+}
+
+@mixin iPhone6Plus() {
+  @media only screen
+  and (min-height : 570px)
+  and (orientation : portrait) {
+    @content
+  }
+}
+
+@mixin iPhone6Pluslandscape() {
+  @media only screen
+  and (max-width: 700px)
+  and (min-width: 570px)
   and (orientation : landscape) {
     @content
   }
@@ -74,7 +115,10 @@ body {
   font-family: $main-font;
   font-size: 75%;
   @include iPhone4landscape { font-size: 50%; }
-  @include iPhone5landscape { font-size: 65%; }
+  @include iPhone6 { font-size: 88%; }
+  @include iPhone6landscape { font-size: 69%; }
+  @include iPhone6Plus { font-size: 96%; }
+  @include iPhone6Pluslandscape { font-size: 80%; }
 }
 
 /* Hiding the scrollbar */
