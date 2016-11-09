@@ -8,7 +8,7 @@
     "prestart": "./node_modules/.bin/webpack --config webpack.server.config --progress; ./node_modules/.bin/webpack --progress;",
     "start": "node ./build/server",
     "dev": "open http://localhost:3333 & ./node_modules/.bin/webpack-dev-server",
-    "test": "./node_modules/.bin/babel-node ./node_modules/.bin/isparta cover ./node_modules/.bin/_mocha -- --require ./test/setup.js --require ./node_modules/ignore-styles --recursive",
+    "test": "./node_modules/.bin/mocha --compilers js:babel-core/register --require ./test/setup.js --require ./node_modules/ignore-styles --recursive",
     "shallow-test": "mocha --compilers js:babel-core/register --require ./test/setup.js --require ./node_modules/ignore-styles --recursive",
     "posttest": "npm run lint",
     "coverage": "open ./coverage/lcov-report/index.html"

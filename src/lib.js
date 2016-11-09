@@ -10,6 +10,19 @@ export const isMobile = () => {
     return check;
 }
 
+export const screenLayout = () =>
+    (window.innerWidth >= window.innerHeight) ?
+        "landscape" : "portrait"
+
+export const screenSize = () =>
+    (screenLayout() === 'portrait') ?
+        (window.innerWidth <= 420) ?
+            "sm" : (window.innerWidth <= 780) ?
+                "md" : "lg" :
+        (window.innerWidth <= 750) ?
+            "sm" : (window.innerWidth <= 1080) ?
+                "md" : "lg"
+
 /**
  * Relax Animation that delays the screenSlide
  * @param h

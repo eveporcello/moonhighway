@@ -1,6 +1,6 @@
-import { Rellax } from '../../../src/components/relax'
-import { mount } from 'enzyme'
-import { expect } from 'chai'
+//import { Rellax } from '../../../src/components/relax'
+//import { mount } from 'enzyme'
+//import { expect } from 'chai'
 
 
 // Removed test because adding router breaks Rellax component Spec

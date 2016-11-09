@@ -6,6 +6,7 @@ import FacebookIcon from 'react-icons/lib/fa/facebook'
 import DownTriangle from 'react-icons/lib/go/triangle-down'
 import Box from 'react-icons/lib/md/check-box-outline-blank'
 import Check from 'react-icons/lib/md/check-box'
+import { screenLayout } from '../../lib'
 
 import '../../stylesheets/ui.scss'
 
@@ -17,6 +18,15 @@ export const DownButton = ({onClick=f=>f}) =>
 
 DownButton.propTypes = {
     onClick: PropTypes.func
+}
+
+export const ResponsiveImg = (props) =>
+    <img src={(screenLayout() === "portrait") ? props.portrait : props.landscape}
+        {...props} />
+
+ResponsiveImg.propTypes = {
+    portrait: PropTypes.string.isRequired,
+    landscape: PropTypes.string.isRequired
 }
 
 export const SocialIcons = () =>

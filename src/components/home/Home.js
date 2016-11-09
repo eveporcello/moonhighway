@@ -1,12 +1,5 @@
-import { delaySlideScreenUp, logoOut, collapseBox } from '../../lib'
-
-const screenLayout = () =>
-    (window.innerWidth >= window.innerHeight) ?
-        "landscape" : "portrait"
-
-const ResponsiveImg = (props) =>
-    <img src={(screenLayout() === "portrait") ? props.portrait : props.landscape}
-         {...props} />
+import { delaySlideScreenUp, logoOut, collapseBox, screenLayout } from '../../lib'
+import { ResponsiveImg } from '../ui'
 
 const Home = ({index, screenScale, screenHeight}) =>
     <section className="slide home"
