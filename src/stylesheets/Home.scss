@@ -1,78 +1,24 @@
 @import "global";
 
-
 body #react-container section {
 
   overflow: hidden;
   background-position: bottom right;
   background-size: cover;
 
-  @include landscape {
-    background-position-y: -552px;
-  }
+  @include backgroundImage(home);
+  @include backgroundImage(react);
+  @include backgroundImage(node);
+  @include backgroundImage(html);
+  @include backgroundImage(cd);
+  @include backgroundImage(contact);
 
-  /*@include iPhone4landscape { background-position-y: -275px; }
-  @include iPhone5landscape { background-position-y: -413px; }
-
-  @include iPhone4 { background-position-y: -140px }
-
-  @include iPhone5 { background-position-y: -85px; }
-
-  @include iPhone6landscape { background-position-y: -516px; }
-  @include iPhone6Pluslandscape { background-position-y: -591px; }*/
-
-  >img {
+  > img {
     width: 75%;
     margin: 2% 12.5%;
-    @include iPhone4landscape { width: 65%; margin: 2% 5%; }
-    @include iPhone6landscape { width: 59%; margin: 2% 5%; }
-    @include iPhone6Pluslandscape { width: 60%; margin: 2% 5%; }
-
-
-    @include landscape { background-color: grey; }
-    @include iPhone4 { background-color: lightblue; }
-    @include iPhone4landscape { background-color: darkblue; }
-    @include iPhone5 { background-color: palevioletred; }
-    @include iPhone5landscape { background-color: darkred; }
-    @include iPhone6 { background-color: lightgreen; }
-    @include iPhone6landscape { background-color: darkgreen; }
-    @include iPhone6Plus { background-color: purple; }
-    @include iPhone6Pluslandscape { background-color: yellow; }
-
   }
 
-  &.home>img {
-      position: absolute;
-      top: 4%;
-      width: 50%;
-      margin: 0 25%;
-      @include iPhone5 { width: 60%; margin: 0 20%; }
-      @include iPhone4landscape { width: 80%; margin: 0 10%; }
-      @include iPhone5landscape { width: 65%; margin: 0 5%; }
-      @include iPhone6landscape { width: 59%; margin: 2% 5%; }
-      @include iPhone6Pluslandscape { width: 60%; margin: 0% 5%; }
-    }
-
-  &.react>img,
-  &.node>img {
-    @include iPhone5landscape { width: 60%; margin: 2% 6%; }
-    @include iPhone6landscape { width: 59%; margin: 2% 5%; }
-    @include iPhone6Pluslandscape { width: 60%; margin: 2% 5%; }
-  }
-
-  &.html>img {
-    @include iPhone5landscape { width: 50%; margin: 0% 8%; }
-    @include iPhone6landscape { width: 50%; margin: 0% 5%; }
-    @include iPhone6Pluslandscape { width: 50%; margin: 0% 5%; }
-  }
-
-  &.cd>img {
-    @include iPhone5landscape { width: 50%; margin: 0% 8%; }
-    @include iPhone6landscape { width: 47%; margin: 1% 5%; }
-    @include iPhone6Pluslandscape { width: 50%; margin: 0% 5%; }
-  }
-
-  >div.box {
+  > div.box {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.3);
     border: .5em double $star-blue;
@@ -80,50 +26,18 @@ body #react-container section {
     border-right: none;
     overflow: hidden;
     font-size: 114%;
-
-    ul {  font-size: 1.3em; }
-    h1, p, li { text-shadow: 1px 1px 3px black; padding: 0 0.25em; }
-
     width: 90%;
     top: 25%;
-    @include landscape { width: 55%; top: 35%; }
-    @include iPhone5 { top: 22%; }
-    @include iPhone6landscape { width: 49%; top: 33%; }
-    @include iPhone6Pluslandscape { width: 49%; top: 35%; }
-  }
 
-  &.home div.box {
-    top: 40%;
-    @media only screen and (orientation : landscape) { top: 37%; }
-    @include iPhone6Pluslandscape { top: 33%; }
-  }
+    ul {
+      font-size: 1.3em;
+    }
 
-  &.node div.box {
-    border-color: rgb(6,181,137);
-  }
+    h1, p, li {
+      text-shadow: 1px 1px 3px black;
+      padding: 0 0.25em;
+    }
 
-  &.html div.box {
-    border-color: lightgrey;
-    top: 40%;
-    @include landscape { top: 45%; }
-    @include iPhone5 { top: 30%; }
-    @include iPhone5landscape { top: 38%; }
-    @include iPhone6landscape { top: 40%; }
-    @include iPhone6Pluslandscape { top: 39%; }
-  }
-
-  &.cd div.box {
-    top: 40%;
-    @include landscape { top: 48%; }
-    @include iPhone5 { top: 34%; }
-    @include iPhone5landscape { top: 41%; }
-    @include iPhone6landscape { top: 43%; }
-    @include iPhone6Pluslandscape { top: 43%; }
-  }
-
-  &.contact div.box {
-    border-color: white;
-    top: 5%;
   }
 
 }

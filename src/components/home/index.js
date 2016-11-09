@@ -7,7 +7,8 @@ import LearnHTML from './LearnHTML'
 import LearnCD from './LearnCD'
 import Contact from './Contact'
 import { SocialIcons } from '../ui'
-import '../../stylesheets/Home.scss'
+import '../../stylesheets/page.scss'
+import '../../stylesheets/home.scss'
 
 export class HomePage extends Component {
 

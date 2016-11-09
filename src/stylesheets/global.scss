@@ -19,129 +19,73 @@ $main-font: "Source Sans Pro", sans;
   width: 100%;
 }
 
-/* Media Query Mixins */
+/* Responsive Mixins */
 
-@mixin landscape() {
-  @media only screen and (orientation : landscape) {
+@mixin bigScreen() {
+  @media screen
+  and (min-aspect-ratio: 13/8) {
     @content
   }
 }
 
 @mixin portrait() {
-  @media only screen and (orientation : portrait) {
+  @media only screen
+  and (orientation: portrait) {
     @content
   }
 }
 
-@mixin iPhone4() {
+@mixin md_portrait() {
   @media only screen
-  and (max-height: 400px)
-  and (orientation : portrait) {
+  and (min-width: 420px)
+  and (max-width: 780px)
+  and (orientation: portrait) {
     @content
   }
 }
 
-@mixin iPhone4landscape() {
+@mixin lg_portrait() {
   @media only screen
-  and (max-width: 399px)
-  and (orientation : landscape) {
-      @content
-  }
-}
-
-@mixin iPhone5() {
-  @media only screen
-  and (min-height: 400px)
-  and (max-height : 570px)
-  and (orientation : portrait) {
+  and (min-width: 780px)
+  and (orientation: portrait) {
     @content
   }
 }
 
-@mixin iPhone5landscape() {
+@mixin landscape() {
   @media only screen
-  and (max-width: 570px)
-  and (min-width: 459px)
-  and (orientation : landscape) {
+  and (orientation: landscape) {
     @content
   }
 }
 
-@mixin iPhone6() {
-  @media only screen
-  and (min-height : 570px)
-  and (orientation : portrait) {
+@mixin md_landscape() {
+  @media screen
+  and (min-width: 750px)
+  and (max-width: 1080px)
+  and (orientation: landscape) {
     @content
   }
 }
 
-@mixin iPhone6landscape() {
-  @media only screen
-  and (max-width: 700px)
-  and (min-width: 570px)
-  and (orientation : landscape) {
+@mixin lg_landscape() {
+  @media screen
+  and (min-width: 1080px)
+  and (orientation: landscape) {
     @content
   }
 }
 
-@mixin iPhone6Plus() {
-  @media only screen
-  and (min-height : 570px)
-  and (orientation : portrait) {
-    @content
-  }
-}
+/* Responsive Resources */
 
-@mixin iPhone6Pluslandscape() {
-  @media only screen
-  and (max-width: 700px)
-  and (min-width: 570px)
-  and (orientation : landscape) {
-    @content
-  }
-}
-
-/* Main Page Setup : iPhone 4 vertical is the default */
-
-html,
-body,
-#react-container,
-div.home-page,
-div.relax-root {
-  @include clear;
-}
-
-body {
-  font-family: $main-font;
-  font-size: 75%;
-  @include iPhone4landscape { font-size: 50%; }
-  @include iPhone6 { font-size: 88%; }
-  @include iPhone6landscape { font-size: 69%; }
-  @include iPhone6Plus { font-size: 96%; }
-  @include iPhone6Pluslandscape { font-size: 80%; }
-}
-
-/* Hiding the scrollbar */
-
-html {
-  overflow: -moz-scrollbars-none;
-  overflow-x: hidden;
-}
-
-::-webkit-scrollbar {
-  width: 0;
-  background: transparent;
-}
-
-.fadeIn {
-  animation: fadeOverlayOut 1s forwards;
-}
-
-@keyframes fadeOverlayOut {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
+@mixin backgroundImage($screen) {
+  &.#{$screen} {
+    background-image: url('/img/bg/sm/portrait/' + $screen + '.jpg');
+    @include landscape { background-image: url('/img/bg/sm/landscape/' + $screen + '.jpg'); }
+    @include md_portrait { background-image: url('/img/bg/md/portrait/' + $screen + '.jpg'); }
+    @include md_landscape { background-image: url('/img/bg/md/landscape/' + $screen + '.jpg'); }
+    @include lg_portrait { background-image: url('/img/bg/lg/portrait/' + $screen + '.jpg'); }
+    @include lg_landscape { background-image: url('/img/bg/lg/landscape/' + $screen + '.jpg'); }
+    @include bigScreen { background-position-y: 50%; }
   }
 }

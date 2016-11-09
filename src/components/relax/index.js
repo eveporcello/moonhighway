@@ -197,19 +197,19 @@ export class Rellax extends Component {
     }
 
     onResize() {
-        //let screen = {
-        //        height: window.innerHeight,
-        //        width: window.innerWidth
-        //    },
-        //    breakpoints = this.getBreakpoints();
-        //const current = {
-        //    ...this.state.current,
-        //    breakpoint: breakpoints[this.state.current.screenIndex]
-        //}
-        //this.setState({screen, breakpoints, current})
-        clearTimeout(this.to)
-        document.getElementById('react-container').innerHTML = '<img src="/img/logo.png" />'
-        this.to = setTimeout(() => location.reload(), 100)
+        let screen = {
+                height: window.innerHeight,
+                width: window.innerWidth
+            },
+            breakpoints = this.getBreakpoints();
+        const current = {
+            ...this.state.current,
+            breakpoint: breakpoints[this.state.current.screenIndex]
+        }
+        this.setState({screen, breakpoints, current})
+        //clearTimeout(this.to)
+        //document.getElementById('react-container').innerHTML = '<img src="/img/logo.png" />'
+        //this.to = setTimeout(() => location.reload(), 100)
     }
 
     onWheel(e) {

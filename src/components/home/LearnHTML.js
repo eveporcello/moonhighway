@@ -2,10 +2,7 @@ import { delaySlideScreenUp, logoInOut, expandCollapseBox } from '../../lib'
 
 const LearnHTML = ({index, screenScale, screenHeight}) =>
     <section className="slide html"
-             style={{
-                 backgroundImage: `url(/img/bgHTML.png)`,
-                 zIndex: 1000-index
-             }}
+             style={{ zIndex: 1000-index }}
         {...screenScale(delaySlideScreenUp(screenHeight))}>
     </section>
 

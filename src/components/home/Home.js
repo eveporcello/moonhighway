@@ -10,10 +10,7 @@ const ResponsiveImg = (props) =>
 
 const Home = ({index, screenScale, screenHeight}) =>
     <section className="slide home"
-             style={{
-                 backgroundImage: `url(/img/bgHome.png)`,
-                 zIndex: 1000-index
-             }}
+             style={{ zIndex: 1000-index }}
         {...screenScale(delaySlideScreenUp(screenHeight))}>
     </section>
 

@@ -36,7 +36,7 @@ section.contact {
     }
   }
 
-  >div.box {
+  > div.box {
     display: flex;
     flex-wrap: wrap;
   }
@@ -88,7 +88,7 @@ section.contact {
       text-transform: capitalize;
       color: white;
       font-size: .75em;
-      padding :.5em;
+      padding: .5em;
       margin: .5em;
     }
 
@@ -99,10 +99,7 @@ section.contact {
       padding: .25em;
       background-color: #26101c;
       columns: 2;
-
       font-size: .9em;
-      @include iPhone5 { font-size: 1em; }
-      @include iPhone6landscape { font-size: 1em; }
 
       div {
         margin: .5em .25em;

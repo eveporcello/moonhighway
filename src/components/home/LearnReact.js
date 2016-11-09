@@ -2,10 +2,7 @@ import { delaySlideScreenUp, logoInOut, expandCollapseBox } from '../../lib'
 
 const LearnReact = ({index, screenScale, screenHeight}) =>
     <section className="slide react"
-             style={{
-                 backgroundImage: `url(/img/bgReact.png)`,
-                 zIndex: 1000-index
-             }}
+             style={{ zIndex: 1000-index }}
         {...screenScale(delaySlideScreenUp(screenHeight))}>
 
     </section>
