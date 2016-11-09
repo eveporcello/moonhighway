@@ -197,19 +197,9 @@ export class Rellax extends Component {
     }
 
     onResize() {
-        let screen = {
-                height: window.innerHeight,
-                width: window.innerWidth
-            },
-            breakpoints = this.getBreakpoints();
-        const current = {
-            ...this.state.current,
-            breakpoint: breakpoints[this.state.current.screenIndex]
-        }
-        this.setState({screen, breakpoints, current})
-        //clearTimeout(this.to)
-        //document.getElementById('react-container').innerHTML = '<img src="/img/logo.png" />'
-        //this.to = setTimeout(() => location.reload(), 100)
+        clearTimeout(this.to)
+        document.getElementById('react-container').innerHTML = '<img src="/img/titles/logo.png" />'
+        this.to = setTimeout(() => location.reload(), 500)
     }
 
     onWheel(e) {
@@ -243,6 +233,9 @@ export class Rellax extends Component {
         const breakpoints = this.getBreakpoints()
         this.setState({breakpoints})
         window.addEventListener('resize', this.onResize)
+        if (this.props.location.pathname === '/contact') {
+            this.setState({ current: { screenIndex: 5 }})
+        }
     }
 
     componentWillReceiveProps(nextProps) {
@@ -267,12 +260,10 @@ export class Rellax extends Component {
         } else {
             window.addEventListener("wheel", this.onWheel, false)
         }
-
         window.addEventListener("keydown", this.onArrowKeys, false)
-
         const screenIndex = this.routes[this.props.location.pathname] || this.state.current.screenIndex
         this.setState({current: {screenIndex}})
-        setTimeout(() => this.goToScreen(screenIndex), 5)
+        setTimeout(() => this.goToScreen(this.state.screenIndex), 5)
     }
 
     shouldComponentUpdate(nextProps) {
@@ -291,22 +282,17 @@ export class Rellax extends Component {
     }
 
     render() {
-
-        // 1 - When teh DOM is Rendered the scrollr config is added via this.scrollScreen
-
         const { children } = this.props
         const { screenIndex } = this.state.current
         return (
             <div ref="root" className="relax-root">
-
+                {(children.length !== screenIndex + 1) ?
+                    <DownButton onClick={this.nextScreen}/> :
+                    null
+                }
                 {Children.map(children, this.scrollScreen)}
             </div>
         )
     }
 
 }
-
-//{(children.length !== screenIndex + 1) ?
-//    <DownButton onClick={this.nextScreen}/> :
-//    null
-//}

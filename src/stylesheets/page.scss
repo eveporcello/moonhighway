@@ -10,7 +10,12 @@ div.relax-root {
 
 body {
   font-family: $main-font;
-  font-size: 100%;
+  font-size: 70%;
+
+  @media screen and (min-width: 750px) {
+    font-size: 100%;
+  }
+
 }
 
 /* Hiding the scrollbar */

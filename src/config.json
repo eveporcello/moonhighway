@@ -9,12 +9,12 @@
       "react.jpg"
     ],
     "titles": [
-      "/img/logo.jpg",
-      "/img/logo-long.jpg",
-      "/img/cd.jpg",
-      "/img/html.jpg",
-      "/img/node.jpg",
-      "/img/react.jpg"
+      "logo.png",
+      "logo-long.png",
+      "cd.png",
+      "html.png",
+      "node.png",
+      "react.png"
     ]
   },
   "contact": {

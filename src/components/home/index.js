@@ -28,10 +28,8 @@ export class HomePage extends Component {
                     <LearnCD route="/continuous-delivery" />
                     <Contact route="/contact" />
                 </Rellax>
-
+                <SocialIcons ignoreRellax={true}/>
             </div>
         )
     }
 }
-
-// <SocialIcons ignoreRellax={true}/>
