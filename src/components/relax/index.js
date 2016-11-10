@@ -263,7 +263,7 @@ export class Rellax extends Component {
         window.addEventListener("keydown", this.onArrowKeys, false)
         const screenIndex = this.routes[this.props.location.pathname] || this.state.current.screenIndex
         this.setState({current: {screenIndex}})
-        setTimeout(() => this.goToScreen(this.state.screenIndex), 5)
+        setTimeout(() => this.goToScreen(screenIndex), 5)
     }
 
     shouldComponentUpdate(nextProps) {

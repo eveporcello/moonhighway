@@ -4,11 +4,12 @@ const LearnCD = ({index, screenScale, screenHeight}) =>
     <section className="slide cd"
              style={{ zIndex: 1000-index }}
         {...screenScale(delaySlideScreenUp(screenHeight))}>
+        <img src="/img/titles/cd.png"  {...screenScale(logoInOut)}/>
     </section>
 
 export default LearnCD
 
-//<img src="/img/cd.png"  {...screenScale(logoInOut)}/>
+
 //<div className="box" {...screenScale(expandCollapseBox)}>
 //<h1>Automated, Certified Quality</h1>
 //<ul>

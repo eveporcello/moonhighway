@@ -13,10 +13,17 @@
             background-color: #7ABCFF;
         }
         body > h1 { display: none; }
-
-        #react-container>img:first-child {
-            width: 65%;
-            margin: 7% 17.5%;
+        @media screen and (orientation: portrait) {
+            #react-container > img:first-child {
+                width: 65%;
+                margin: 7% 17.5%;
+            }
+        }
+        @media screen and (orientation: landscape) {
+            #react-container>img:first-child {
+                width: 50%;
+                margin: 8% 25%;
+            }
         }
     </style>
 </head>

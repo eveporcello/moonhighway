@@ -21,7 +21,8 @@ export const screenSize = () =>
                 "md" : "lg" :
         (window.innerWidth <= 750) ?
             "sm" : (window.innerWidth <= 1080) ?
-                "md" : "lg"
+                "md" : (window.innerWidth <= 1500) ?
+                    "lg" : "xl"
 
 /**
  * Relax Animation that delays the screenSlide

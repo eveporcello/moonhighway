@@ -4,11 +4,12 @@ const LearnNode = ({index, screenScale, screenHeight}) =>
     <section className="slide node"
              style={{ zIndex: 1000-index }}
         {...screenScale(delaySlideScreenUp(screenHeight))}>
+        <img src="/img/titles/node.png"  {...screenScale(logoInOut)}/>
     </section>
 
 export default LearnNode
 
-//<img src="/img/node.png"  {...screenScale(logoInOut)}/>
+
 //<div className="box" {...screenScale(expandCollapseBox)}>
 //<h1>Universal, Test Driven Updates</h1>
 //<ul>

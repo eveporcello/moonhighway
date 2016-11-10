@@ -13,10 +13,33 @@ body #react-container section {
   @include backgroundImage(cd);
   @include backgroundImage(contact);
 
-  > img {
-    width: 75%;
-    margin: 2% 12.5%;
-  }
+  @include titleImagePortrait(home);
+  @include titleImagePortrait(react);
+  @include titleImagePortrait(node);
+  @include titleImagePortrait(html);
+  @include titleImagePortrait(cd);
+  @include titleImageMDPortrait(home, 40%, 10%, 17%);
+  @include titleImageMDPortrait(react);
+  @include titleImageMDPortrait(node);
+  @include titleImageMDPortrait(html);
+  @include titleImageMDPortrait(cd);
+  @include titleImageLGPortrait(home, 30%, 5%, 16%);
+  @include titleImageLGPortrait(react);
+  @include titleImageLGPortrait(node);
+  @include titleImageLGPortrait(html);
+  @include titleImageLGPortrait(cd);
+
+  @include titleImageLandscape(home, 50%);
+  @include titleImageLandscape(react);
+  @include titleImageLandscape(node);
+  @include titleImageLandscape(html);
+  @include titleImageLandscape(cd, 38%);
+
+  @include titleImageWideScreen(home);
+  @include titleImageWideScreen(react);
+  @include titleImageWideScreen(node);
+  @include titleImageWideScreen(html);
+  @include titleImageWideScreen(cd);
 
   > div.box {
     position: absolute;

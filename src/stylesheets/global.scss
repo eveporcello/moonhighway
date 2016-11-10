@@ -71,10 +71,44 @@ $main-font: "Source Sans Pro", sans;
 @mixin lg_landscape() {
   @media screen
   and (min-width: 1080px)
+  and (max-width: 1500px)
   and (orientation: landscape) {
     @content
   }
 }
+
+@mixin wideScreen() {
+  @media screen
+  and (min-aspect-ratio: 4/2) {
+    @content
+  }
+}
+
+@mixin md_wideScreen() {
+  @media screen
+  and (min-width: 750px)
+  and (max-width: 1080px)
+  and (min-aspect-ratio: 4/2) {
+    @content
+  }
+}
+
+@mixin lg_wideScreen() {
+  @media screen
+  and (min-width: 1080px)
+  and (min-aspect-ratio: 4/2) {
+    @content
+  }
+}
+
+@mixin xl {
+  @media screen
+  and (min-width: 1500px)
+  and (orientation: landscape) {
+    @content
+  }
+}
+
 
 /* Responsive Resources */
 
@@ -86,6 +120,90 @@ $main-font: "Source Sans Pro", sans;
     @include md_landscape { background-image: url('/img/bg/md/landscape/' + $screen + '.jpg'); }
     @include lg_portrait { background-image: url('/img/bg/lg/portrait/' + $screen + '.jpg'); }
     @include lg_landscape { background-image: url('/img/bg/lg/landscape/' + $screen + '.jpg'); }
+    @include xl { background-image: url('/img/bg/xl/landscape/' + $screen + '.jpg'); }
     @include bigScreen { background-position-y: 50%; }
   }
 }
+
+@mixin titleImagePortrait($screen, $width: 75%, $top: 2%, $left: 12.5%) {
+  @include portrait {
+    &.#{$screen} img:first-of-type {
+      width: $width;
+      margin: $top $left;
+    }
+  }
+}
+
+@mixin titleImageMDPortrait($screen, $width: 50%, $top: 10%, $left: 10%) {
+  @include md_portrait {
+    &.#{$screen} img:first-of-type {
+      width: $width;
+      margin: $top $left;
+    }
+  }
+}
+
+@mixin titleImageLGPortrait($screen, $width: 50%, $top: 10%, $left: 10%) {
+  @include lg_portrait {
+    &.#{$screen} img:first-of-type {
+      width: $width;
+      margin: $top $left;
+    }
+  }
+}
+
+
+@mixin titleImageLandscape($screen, $width: 40%, $top: 1%, $left: 10%) {
+  @include landscape {
+    &.#{$screen} img:first-of-type {
+      width: $width;
+      margin: $top $left;
+    }
+  }
+}
+
+@mixin titleImageMDLandscape($screen, $width: 40%, $top: 1%, $left: 10%) {
+  @include md_landscape {
+    &.#{$screen} img:first-of-type {
+      width: $width;
+      margin: $top $left;
+    }
+  }
+}
+
+@mixin titleImageLGLandscape($screen, $width: 40%, $top: 1%, $left: 10%) {
+  @include lg_landscape {
+    &.#{$screen} img:first-of-type {
+      width: $width;
+      margin: $top $left;
+    }
+  }
+}
+
+@mixin titleImageWideScreen($screen, $width: 32%, $top: 1%, $left: 8%) {
+  @include wideScreen {
+    &.#{$screen} img:first-of-type {
+      width: $width;
+      margin: $top $left;
+    }
+  }
+}
+
+@mixin titleImageMDWideScreen($screen, $width: 32%, $top: 1%, $left: 8%) {
+  @include md_wideScreen {
+    &.#{$screen} img:first-of-type {
+      width: $width;
+      margin: $top $left;
+    }
+  }
+}
+
+@mixin titleImageLGWideScreen($screen, $width: 32%, $top: 1%, $left: 8%) {
+  @include lg_wideScreen {
+    &.#{$screen} img:first-of-type {
+      width: $width;
+      margin: $top $left;
+    }
+  }
+}
+

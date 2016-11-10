@@ -4,11 +4,12 @@ const LearnHTML = ({index, screenScale, screenHeight}) =>
     <section className="slide html"
              style={{ zIndex: 1000-index }}
         {...screenScale(delaySlideScreenUp(screenHeight))}>
+        <img src="/img/titles/html.png"  {...screenScale(logoInOut)}/>
     </section>
 
 export default LearnHTML
 
-//<img src="/img/html.png"  {...screenScale(logoInOut)}/>
+
 //<div className="box" {...screenScale(expandCollapseBox)}>
 //<h1>Responsive, Accessible Patches</h1>
 //<ul>
