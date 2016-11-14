@@ -29,17 +29,17 @@ body #react-container section {
   @include titleImageLGPortrait(html);
   @include titleImageLGPortrait(cd);
 
-  @include titleImageLandscape(home, 50%);
+  @include titleImageLandscape(home, 50%, 1%);
   @include titleImageLandscape(react);
   @include titleImageLandscape(node);
-  @include titleImageLandscape(html);
-  @include titleImageLandscape(cd, 38%);
+  @include titleImageLandscape(html, 55%, 5%, 5%);
+  @include titleImageLandscape(cd, 55%);
 
   @include titleImageWideScreen(home);
   @include titleImageWideScreen(react);
   @include titleImageWideScreen(node);
-  @include titleImageWideScreen(html);
-  @include titleImageWideScreen(cd);
+  @include titleImageWideScreen(html, 50%, 4%, 7%);
+  @include titleImageWideScreen(cd, 50%, 4%, 7%);
 
   > div.box {
     position: absolute;

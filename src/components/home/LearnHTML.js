@@ -1,10 +1,13 @@
-import { delaySlideScreenUp, logoInOut, expandCollapseBox } from '../../lib'
+import { delaySlideScreenUp, logoInOut, expandCollapseBox, screenLayout } from '../../lib'
+import { ResponsiveImg } from '../ui'
 
 const LearnHTML = ({index, screenScale, screenHeight}) =>
     <section className="slide html"
              style={{ zIndex: 1000-index }}
         {...screenScale(delaySlideScreenUp(screenHeight))}>
-        <img src="/img/titles/html.png"  {...screenScale(logoInOut)}/>
+        <ResponsiveImg portrait="/img/titles/html.png"
+                       landscape="/img/titles/html-long.png"
+            {...screenScale(logoInOut[screenLayout()])} />
     </section>
 
 export default LearnHTML

@@ -1,10 +1,13 @@
-import { delaySlideScreenUp, logoInOut, expandCollapseBox } from '../../lib'
+import { delaySlideScreenUp, logoInOut, expandCollapseBox, screenLayout } from '../../lib'
+import { ResponsiveImg } from '../ui'
 
 const LearnCD = ({index, screenScale, screenHeight}) =>
     <section className="slide cd"
              style={{ zIndex: 1000-index }}
         {...screenScale(delaySlideScreenUp(screenHeight))}>
-        <img src="/img/titles/cd.png"  {...screenScale(logoInOut)}/>
+        <ResponsiveImg portrait="/img/titles/cd.png"
+                       landscape="/img/titles/cd-long.png"
+            {...screenScale(logoInOut[screenLayout()])} />
     </section>
 
 export default LearnCD

@@ -4,7 +4,7 @@ const LearnReact = ({index, screenScale, screenHeight}) =>
     <section className="slide react"
              style={{ zIndex: 1000-index }}
         {...screenScale(delaySlideScreenUp(screenHeight))}>
-        <img src="/img/titles/react.png" {...screenScale(logoInOut)}/>
+        <img src="/img/titles/react.png" {...screenScale(logoInOut["portrait"])}/>
     </section>
 
 export default LearnReact
