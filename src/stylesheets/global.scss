@@ -171,7 +171,7 @@ $main-font: "Source Sans Pro", sans;
   }
 }
 
-@mixin titleImageLGLandscape($screen, $width: 40%, $top: 1%, $left: 10%) {
+@mixin titleImageLGLandscape($screen, $width: 30%, $top: 4%, $left: 12%) {
   @include lg_landscape {
     &.#{$screen} img:first-of-type {
       width: $width;
@@ -207,3 +207,11 @@ $main-font: "Source Sans Pro", sans;
   }
 }
 
+@mixin titleImageXL($screen, $width: 32%, $top: 3%, $left: 15%) {
+  @include xl {
+    &.#{$screen} img:first-of-type {
+      width: $width;
+      margin: $top $left;
+    }
+  }
+}

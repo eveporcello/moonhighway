@@ -11,5 +11,5 @@ const titles = C.preload.titles.map(t => '/img/titles/' + t)
 window.React = React
 
 preload([...backgrounds, ...titles]).then(() => {
-    render(routes, document.getElementById('react-container'))
+    setTimeout(() => render(routes, document.getElementById('react-container')), 50)
 })

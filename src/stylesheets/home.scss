@@ -34,12 +34,17 @@ body #react-container section {
   @include titleImageLandscape(node);
   @include titleImageLandscape(html, 55%, 5%, 5%);
   @include titleImageLandscape(cd, 55%);
+  @include titleImageLGLandscape(home, 42%, 1%, 13%);
+  @include titleImageLGLandscape(react);
+  @include titleImageLGLandscape(node);
+  @include titleImageLGLandscape(html, 44%, 4%, 7%);
+  @include titleImageLGLandscape(cd, 44%, 4%, 7%);
 
-  @include titleImageWideScreen(home);
-  @include titleImageWideScreen(react);
-  @include titleImageWideScreen(node);
-  @include titleImageWideScreen(html, 50%, 4%, 7%);
-  @include titleImageWideScreen(cd, 50%, 4%, 7%);
+  @include titleImageXL(home);
+  @include titleImageXL(react);
+  @include titleImageXL(node);
+  @include titleImageXL(html, 50%, 4%, 7%);
+  @include titleImageXL(cd, 50%, 4%, 7%);
 
   > div.box {
     position: absolute;
