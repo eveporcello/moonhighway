@@ -18,16 +18,16 @@ body #react-container section {
   @include titleImagePortrait(node);
   @include titleImagePortrait(html);
   @include titleImagePortrait(cd);
-  @include titleImageMDPortrait(home, 40%, 10%, 17%);
+  @include titleImageMDPortrait(home, 46%, 15%, 7%);
   @include titleImageMDPortrait(react);
   @include titleImageMDPortrait(node);
-  @include titleImageMDPortrait(html);
-  @include titleImageMDPortrait(cd);
-  @include titleImageLGPortrait(home, 30%, 5%, 16%);
+  @include titleImageMDPortrait(html, 50%, 13%);
+  @include titleImageMDPortrait(cd, 50%, 15%);
+  @include titleImageLGPortrait(home, 46%, 15%, 7%);
   @include titleImageLGPortrait(react);
   @include titleImageLGPortrait(node);
-  @include titleImageLGPortrait(html);
-  @include titleImageLGPortrait(cd);
+  @include titleImageLGPortrait(html, 50%, 13%);
+  @include titleImageLGPortrait(cd, 50%, 15%);
 
   @include titleImageLandscape(home, 50%, 1%);
   @include titleImageLandscape(react);
@@ -49,13 +49,7 @@ body #react-container section {
   > div.box {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.3);
-    border: .5em double $star-blue;
-    border-left: none;
-    border-right: none;
     overflow: hidden;
-    font-size: 114%;
-    width: 90%;
-    top: 25%;
 
     ul {
       font-size: 1.3em;
@@ -67,5 +61,11 @@ body #react-container section {
     }
 
   }
+
+  @include boxPortrait(home);
+  @include boxPortrait(react, $react-blue, 20%);
+  @include boxPortrait(node, $node-green, 20%);
+  @include boxPortrait(html, $html-grey, 28%);
+  @include boxPortrait(cd, $cd-blue, 32%);
 
 }

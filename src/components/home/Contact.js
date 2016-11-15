@@ -39,28 +39,29 @@ message: ${_message.value}
     )
 }
 
+//<div className="box" {...screenScale(expandBox)}>
+//    <h1>Contact Us</h1>
+//    <SocialIcons />
+//    <p>For migration and installation instructions, please get in touch.</p>
+//    <p>
+//        <a href="mailto:info@moonhighway.com">info@moonhighway.com</a>
+//        <span>|</span>
+//        <a href="tel:5305233084">530.523.3084</a>
+//        <span>PO BOX 1578, Tahoe City, CA 96145</span>
+//    </p>
+//    <form action="javascript:void(0)" onSubmit={submit}>
+//        <p>What are you interested in learning?</p>
+//        <ExpandableSelectList ref={i=> _subjects = i}
+//                              options={C.contact.subjects}>
+//            Choose all that apply
+//        </ExpandableSelectList>
+//        <input ref={i => _email = i} type="email" placeholder="email" required/>
+//        <textarea ref={i => _message = i} placeholder="Other thoughts or topics of interest?"/>
+//        <button>SEND</button>
+//    </form>
+//</div>
+
 
 export default Contact
 
 
-//<div className="box" {...screenScale(expandBox)}>
-//<h1>Contact Us</h1>
-//<SocialIcons />
-//<p>For migration and installation instructions, please get in touch.</p>
-//<p>
-//<a href="mailto:info@moonhighway.com">info@moonhighway.com</a>
-//<span>|</span>
-//<a href="tel:5305233084">530.523.3084</a>
-//<span>PO BOX 1578, Tahoe City, CA 96145</span>
-//</p>
-//<form action="javascript:void(0)" onSubmit={submit}>
-//    <p>What are you interested in learning?</p>
-//    <ExpandableSelectList ref={i=> _subjects = i}
-//                          options={C.contact.subjects}>
-//        Choose all that apply
-//    </ExpandableSelectList>
-//    <input ref={i => _email = i} type="email" placeholder="email" required/>
-//    <textarea ref={i => _message = i} placeholder="Other thoughts or topics of interest?"/>
-//    <button>SEND</button>
-//</form>
-//</div>

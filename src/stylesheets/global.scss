@@ -3,6 +3,10 @@
 /* Global Variables */
 
 $star-blue: #0164e0;
+$react-blue: #00c2fe;
+$node-green: #008f66;
+$html-grey: #78808a;
+$cd-blue: #00d8ff;
 $main-font: "Source Sans Pro", sans;
 
 /* General Mixins */
@@ -134,7 +138,7 @@ $main-font: "Source Sans Pro", sans;
   }
 }
 
-@mixin titleImageMDPortrait($screen, $width: 50%, $top: 10%, $left: 10%) {
+@mixin titleImageMDPortrait($screen, $width: 50%, $top: 10%, $left: 5%) {
   @include md_portrait {
     &.#{$screen} img:first-of-type {
       width: $width;
@@ -143,7 +147,7 @@ $main-font: "Source Sans Pro", sans;
   }
 }
 
-@mixin titleImageLGPortrait($screen, $width: 50%, $top: 10%, $left: 10%) {
+@mixin titleImageLGPortrait($screen, $width: 50%, $top: 10%, $left: 5%) {
   @include lg_portrait {
     &.#{$screen} img:first-of-type {
       width: $width;
@@ -212,6 +216,66 @@ $main-font: "Source Sans Pro", sans;
     &.#{$screen} img:first-of-type {
       width: $width;
       margin: $top $left;
+    }
+  }
+}
+
+@mixin boxPortrait($screen, $color: $star-blue, $top: 45%, $size: 143%, $width: 90%) {
+  @include portrait {
+    &.#{$screen} div.box {
+      border-top: .5em double $color;
+      border-bottom: .5em double $color;
+      width: $width;
+      top: $top;
+
+      /* iphone 4 */
+      @media screen and (max-height: 500px)
+      and (min-height: 425px) {
+        font-size: $size - 23%;
+        top: $top + 5%;
+      }
+
+      /* iphone 5 */
+      @media screen and (max-height: 570px)
+      and (min-height: 500px) {
+        font-size: $size - 22%;
+      }
+
+      /* iphone 6 */
+      @media screen and (max-height: 675px)
+      and (min-height: 570px) {
+        font-size: $size - 20%;
+        top: $top + 3%;
+      }
+
+      /* iphone 6 plus */
+      @media screen and (max-height: 745px)
+      and (min-height: 675px) {
+        font-size: $size + 14%;
+      }
+
+      /* iPad */
+      @media screen and (max-height: 1024px)
+      and (min-height: 745px) {
+        font-size: $size - 28%;
+        width: $width - 39%;
+        top: $top + 4%;
+      }
+
+      /* Laptop */
+      @media screen and (min-height: 1025px)
+      and (min-width: 800px) {
+        font-size: $size;
+        width: $width - 39%;
+        top: $top + 4%;
+      }
+
+      /* Laptop Long */
+      @media screen and (min-height: 1025px)
+      and (max-width: 800px) {
+        font-size: $size + 76%;
+      }
+
     }
   }
 }
