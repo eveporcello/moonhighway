@@ -95,39 +95,78 @@ export const logoInOut = {
 }
 
 export const collapseBox = {
-    '0%': {
-        left: '5%',
-        height: '10em'
-    },
-    '15%': {
-        height: '0px',
-        left: '5%'
-    },
-    '30%': {
-        left: '105%'
-    }
+    portrait: {
+        '0%': {
+            left: '5%',
+            height: '10em'
+        },
+        '15%': {
+            height: '0px',
+            left: '5%'
+        },
+        '30%': {
+            left: '105%'
+        }
 
+    },
+    landscape: {
+        '0%': {
+            left: '10%',
+            height: '10em'
+        },
+        '15%': {
+            height: '0px',
+            left: '10%'
+        },
+        '30%': {
+            left: '110%'
+        }
+    }
 }
 
 export const expandCollapseBox = {
-    '-30%': {
-        height: '0em',
-        left: '-105px'
-    },
-    '-15%': {
-        height: '0em',
-        left: '5%'
-    },
-    '0%': {
-        left: '5%',
-        height: '10em'
-    },
-    '15%': {
-        height: '0em',
-        left: '5%'
-    },
-    '30%': {
-        left: '105%'
-    }
+    portrait: {
+        '-30%': {
+            height: '0em',
+            left: '-105px'
+        },
+        '-15%': {
+            height: '0em',
+            left: '5%'
+        },
+        '0%': {
+            left: '5%',
+            height: '10em'
+        },
+        '15%': {
+            height: '0em',
+            left: '5%'
+        },
+        '30%': {
+            left: '105%'
+        }
 
+    },
+    landscape: {
+        '-30%': {
+            height: '0em',
+            left: '-105px'
+        },
+        '-15%': {
+            height: '0em',
+            left: '10%'
+        },
+        '0%': {
+            left: '10%',
+            height: '10em'
+        },
+        '15%': {
+            height: '0em',
+            left: '10%'
+        },
+        '30%': {
+            left: '110%'
+        }
+
+    }
 }

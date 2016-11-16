@@ -1,11 +1,11 @@
-import { delaySlideScreenUp, logoInOut, expandCollapseBox } from '../../lib'
+import { delaySlideScreenUp, logoInOut, expandCollapseBox, screenLayout } from '../../lib'
 
 const LearnNode = ({index, screenScale, screenHeight}) =>
     <section className="slide node"
              style={{ zIndex: 1000-index }}
         {...screenScale(delaySlideScreenUp(screenHeight))}>
         <img src="/img/titles/node.png"  {...screenScale(logoInOut["portrait"])}/>
-        <div className="box" {...screenScale(expandCollapseBox)}>
+        <div className="box" {...screenScale(expandCollapseBox[screenLayout()])}>
             <h1>Universal, Test Driven Updates</h1>
             <ul>
                 <li>Service-oriented Architecture</li>

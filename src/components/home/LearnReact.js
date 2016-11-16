@@ -1,11 +1,11 @@
-import { delaySlideScreenUp, logoInOut, expandCollapseBox } from '../../lib'
+import { delaySlideScreenUp, logoInOut, expandCollapseBox, screenLayout } from '../../lib'
 
 const LearnReact = ({index, screenScale, screenHeight}) =>
     <section className="slide react"
              style={{ zIndex: 1000-index }}
         {...screenScale(delaySlideScreenUp(screenHeight))}>
         <img src="/img/titles/react.png" {...screenScale(logoInOut["portrait"])}/>
-        <div className="box" {...screenScale(expandCollapseBox)}>
+        <div className="box" {...screenScale(expandCollapseBox[screenLayout()])}>
             <h1>Declarative Upgrades</h1>
             <ul>
                 <li>Functional Programming</li>

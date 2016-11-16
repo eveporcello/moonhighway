@@ -1,19 +1,35 @@
 import C from '../../config.json'
-import { SocialIcons, ExpandableSelectList } from '../ui'
+import { SocialIcons, ExpandableSelectList, screenLayout } from '../ui'
 import '../../stylesheets/contact.scss'
 
 export const expandBox = {
-    '-30%': {
-        height: '0%',
-        left: '-105px'
+    portrait: {
+        '-30%': {
+            height: '0%',
+            left: '-105px'
+        },
+        '-15%': {
+            height: '0%',
+            left: '5%'
+        },
+        '0%': {
+            left: '5%',
+            height: '75%'
+        }
     },
-    '-15%': {
-        height: '0%',
-        left: '5%'
-    },
-    '0%': {
-        left: '5%',
-        height: '75%'
+    landscape: {
+        '-30%': {
+            height: '0%',
+            left: '-105px'
+        },
+        '-15%': {
+            height: '0%',
+            left: '5%'
+        },
+        '0%': {
+            left: '5%',
+            height: '75%'
+        }
     }
 }
 
@@ -39,7 +55,7 @@ message: ${_message.value}
     )
 }
 
-//<div className="box" {...screenScale(expandBox)}>
+//<div className="box" {...screenScale(expandBox[screenLayout()])}>
 //    <h1>Contact Us</h1>
 //    <SocialIcons />
 //    <p>For migration and installation instructions, please get in touch.</p>

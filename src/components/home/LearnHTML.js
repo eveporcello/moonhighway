@@ -8,7 +8,7 @@ const LearnHTML = ({index, screenScale, screenHeight}) =>
         <ResponsiveImg portrait="/img/titles/html.png"
                        landscape="/img/titles/html-long.png"
             {...screenScale(logoInOut[screenLayout()])} />
-        <div className="box" {...screenScale(expandCollapseBox)}>
+        <div className="box" {...screenScale(expandCollapseBox[screenLayout()])}>
             <h1>Responsive, Accessible Patches</h1>
             <ul>
                 <li>Flexbox and Animations</li>

@@ -29,11 +29,18 @@ body #react-container section {
   @include titleImageLGPortrait(html, 50%, 13%);
   @include titleImageLGPortrait(cd, 50%, 15%);
 
-  @include titleImageLandscape(home, 50%, 1%);
-  @include titleImageLandscape(react);
-  @include titleImageLandscape(node);
+  @include titleImageLandscape(home, 50%, -1%);
+  @include titleImageLandscape(react, 40%, 1%);
+  @include titleImageLandscape(node, 40%, 1%);
   @include titleImageLandscape(html, 55%, 5%, 5%);
   @include titleImageLandscape(cd, 55%);
+
+  @include titleImageMDLandscape(home, 50%, 3%);
+  @include titleImageMDLandscape(react, 40%, 5%);
+  @include titleImageMDLandscape(node, 40%, 5%);
+  @include titleImageMDLandscape(html, 55%, 10%, 5%);
+  @include titleImageMDLandscape(cd, 55%, 8%);
+
   @include titleImageLGLandscape(home, 42%, 1%, 13%);
   @include titleImageLGLandscape(react);
   @include titleImageLGLandscape(node);
@@ -60,6 +67,10 @@ body #react-container section {
       padding: 0 0.25em;
     }
 
+    h1 {
+      text-transform: uppercase;
+    }
+
   }
 
   @include boxPortrait(home);
@@ -67,5 +78,11 @@ body #react-container section {
   @include boxPortrait(node, $node-green, 20%);
   @include boxPortrait(html, $html-grey, 28%);
   @include boxPortrait(cd, $cd-blue, 32%);
+
+  @include boxLandscape(home);
+  @include boxLandscape(react, $react-blue, 32%);
+  @include boxLandscape(node, $node-green, 32%);
+  @include boxLandscape(html, $html-grey, 32%);
+  @include boxLandscape(cd, $cd-blue, 33%);
 
 }

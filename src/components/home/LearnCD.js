@@ -8,7 +8,7 @@ const LearnCD = ({index, screenScale, screenHeight}) =>
         <ResponsiveImg portrait="/img/titles/cd.png"
                        landscape="/img/titles/cd-long.png"
             {...screenScale(logoInOut[screenLayout()])} />
-        <div className="box" {...screenScale(expandCollapseBox)}>
+        <div className="box" {...screenScale(expandCollapseBox[screenLayout()])}>
             <h1>Automated, Certified Quality</h1>
             <ul>
                 <li>Test-driven Development</li>
