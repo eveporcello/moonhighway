@@ -128,7 +128,7 @@ $main-font: "Source Sans Pro", sans;
   }
 }
 
-@mixin titleImagePortrait($screen, $width: 75%, $top: 7%, $left: 12.5%) {
+@mixin titleImagePortrait($screen, $width: 75%, $top: 5%, $left: 12.5%) {
   @include portrait {
     &.#{$screen} img:first-of-type {
       width: $width;
@@ -234,14 +234,14 @@ $main-font: "Source Sans Pro", sans;
       }
 
       /* iphone 5 */
-      @media screen and (max-height: 570px)
+      @media screen and (max-height: 550px)
       and (min-height: 500px) {
         font-size: $size - 22%;
       }
 
       /* iphone 6 */
       @media screen and (max-height: 675px)
-      and (min-height: 570px) {
+      and (min-height: 550px) {
         font-size: $size - 30%;
         top: $top + 3%;
       }
@@ -255,7 +255,7 @@ $main-font: "Source Sans Pro", sans;
       /* iPad */
       @media screen and (max-height: 1024px)
       and (min-height: 745px) {
-        font-size: $size - 42%;
+        font-size: $size - 52%;
         width: $width - 39%;
         top: $top + 4%;
       }
