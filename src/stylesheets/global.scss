@@ -263,7 +263,7 @@ $main-font: "Source Sans Pro", sans;
       /* Laptop */
       @media screen and (min-height: 1025px)
       and (min-width: 800px) {
-        font-size: $size;
+        font-size: $size - 30%;
         width: $width - 39%;
         top: $top + 4%;
       }
@@ -271,7 +271,7 @@ $main-font: "Source Sans Pro", sans;
       /* Laptop Long */
       @media screen and (min-height: 1025px)
       and (max-width: 800px) {
-        font-size: $size + 76%;
+        width: 90%;
       }
 
     }
@@ -309,14 +309,28 @@ $main-font: "Source Sans Pro", sans;
       }
 
       /* Laptop */
-      @media screen and (max-width: 1500px)
+      @media screen and (max-width: 1300px)
       and (min-width: 1025px) {
-        background-color: blue;
+        font-size: $size + 50%;
+      }
+
+      /* HDMI Laptop */
+      @media screen and (max-width: 1500px)
+      and (min-width: 1300px) {
+        font-size: $size + 60%;
       }
 
       /* Laptop Long */
-      @media screen and (min-width: 1500px) {
-        background-color: grey;
+      @media screen and (max-width: 2200px)
+      and (min-width: 1500px) {
+        font-size: $size + 25%;
+        width: $width - 13%;
+      }
+
+      /* Laptop Long */
+      @media screen and (min-width: 2200px) {
+        font-size: $size + 85%;
+        width: $width - 13%;
       }
 
     }

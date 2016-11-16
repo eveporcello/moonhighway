@@ -41,17 +41,17 @@ body #react-container section {
   @include titleImageMDLandscape(html, 55%, 10%, 5%);
   @include titleImageMDLandscape(cd, 55%, 8%);
 
-  @include titleImageLGLandscape(home, 42%, 1%, 13%);
-  @include titleImageLGLandscape(react);
-  @include titleImageLGLandscape(node);
-  @include titleImageLGLandscape(html, 44%, 4%, 7%);
-  @include titleImageLGLandscape(cd, 44%, 4%, 7%);
+  @include titleImageLGLandscape(home, 42%, 2%, 10%);
+  @include titleImageLGLandscape(react, 30%, 6%, 10%);
+  @include titleImageLGLandscape(node, 30%, 6%, 10%);
+  @include titleImageLGLandscape(html, 44%, 9%, 7%);
+  @include titleImageLGLandscape(cd, 44%, 6%, 9%);
 
-  @include titleImageXL(home);
-  @include titleImageXL(react);
-  @include titleImageXL(node);
-  @include titleImageXL(html, 50%, 4%, 7%);
-  @include titleImageXL(cd, 50%, 4%, 7%);
+  @include titleImageXL(home, 32%, 3%, 10%);
+  @include titleImageXL(react, 32%, 3%, 10%);
+  @include titleImageXL(node, 32%, 3%, 10%);
+  @include titleImageXL(html, 35%, 9%, 6%);
+  @include titleImageXL(cd, 35%, 8%, 6%);
 
   > div.box {
     position: absolute;
