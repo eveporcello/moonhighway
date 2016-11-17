@@ -48,7 +48,7 @@ export const Whoops404 = () =>
     </div>
 
 export const SelectCheck = ({selected=false, select=f=>f, deselect=f=>f, children}) =>
-    <div className="select-check" onClick={(selected) ? deselect : select}>
+    <div className="select-check" onClick={(selected) ? e => { e.stopPropagation(); deselect() } : e => { e.stopPropagation(); select() }}>
         {(selected) ? <Check /> : <Box />}
         <span className={(selected) ? "selected" : ""}>
             {children}
@@ -68,17 +68,24 @@ export class ExpandableSelectList extends Component {
         }
     }
 
+    close() {
+        if (this.state.expanded) {
+            this.setState({ expanded: false })
+        }
+    }
+
     constructor(props) {
         super(props)
         this.state = {
-            expanded: false,
+            expanded: props.expanded,
             selectedOptions: []
         }
         this.toggle = this.toggle.bind(this)
         this.add = this.add.bind(this)
         this.remove = this.remove.bind(this)
     }
-    toggle() {
+    toggle(e) {
+        e.stopPropagation();
         const expanded = !this.state.expanded
         this.setState({expanded})
     }

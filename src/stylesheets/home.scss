@@ -78,11 +78,13 @@ body #react-container section {
   @include boxPortrait(node, $node-green, 20%);
   @include boxPortrait(html, $html-grey, 28%);
   @include boxPortrait(cd, $cd-blue, 32%);
+  @include boxContactPortrait();
 
   @include boxLandscape(home);
   @include boxLandscape(react, $react-blue, 32%);
   @include boxLandscape(node, $node-green, 32%);
   @include boxLandscape(html, $html-grey, 32%);
   @include boxLandscape(cd, $cd-blue, 33%);
+  @include boxContactLandscape();
 
 }
