@@ -35,10 +35,10 @@ export const screenSize = () =>
 export const delaySlideScreenUp = h =>
     ({
         '30%': {
-            top: '0px'
+            top: '0%'
         },
         '70%': {
-            top: -h + 'px'
+            top: '-100%'
         }
     })
 
