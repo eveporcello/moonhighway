@@ -442,26 +442,44 @@ $main-font: "Source Sans Pro", sans;
       /* Laptop */
       @media screen and (max-width: 1300px)
       and (min-width: 1025px) {
-        font-size: $size + 50%;
+        font-size: $size + 40%;
+        width: 60%;
+
+        .select-check {
+          font-size: 1.2em;
+        }
       }
 
       /* HDMI Laptop */
       @media screen and (max-width: 1500px)
       and (min-width: 1300px) {
-        font-size: $size + 60%;
+        font-size: $size + 40%;
+        width: 60%;
+
+        .select-check {
+          font-size: 1.2em;
+        }
       }
 
       /* Laptop Long */
       @media screen and (max-width: 2200px)
       and (min-width: 1500px) {
-        font-size: $size + 25%;
-        width: $width - 13%;
+        font-size: $size + 40%;
+        width: 60%;
+
+        .select-check {
+          font-size: 1.2em;
+        }
       }
 
       /* Laptop Long */
       @media screen and (min-width: 2200px) {
-        font-size: $size + 85%;
-        width: $width - 13%;
+        font-size: $size + 40%;
+        width: 60%;
+
+        .select-check {
+          font-size: 1.2em;
+        }
       }
 
     }
