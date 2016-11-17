@@ -399,16 +399,20 @@ $main-font: "Source Sans Pro", sans;
   }
 }
 
-@mixin boxContactLandscape($screen: contact, $color: white, $top: 31%, $size: 150%, $width: 39%) {
+@mixin boxContactLandscape($top: 1%, $size: 100%, $width: 90%) {
   @include landscape {
-    &.#{$screen} div.box {
+
+    &.contact div.box {
 
       /* iphone 5 & 6 */
-      border-top: .5em double $color;
-      border-bottom: .5em double $color;
+      border-top: .5em double white;
+      border-bottom: .5em double white;
       font-size: $size;
       width: $width;
       top: $top;
+      justify-content: space-around;
+
+      >p { flex-basis: 40%; }
 
       /* iphone 4 */
       @media screen and (max-width: 500px) {
@@ -420,13 +424,19 @@ $main-font: "Source Sans Pro", sans;
       /* iphone 6 plus */
       @media screen and (max-width: 745px)
       and (min-width: 675px) {
-
+        font-size: $size + 40%;
       }
 
       /* iPad */
       @media screen and (max-width: 1025px)
       and (min-width: 745px) {
-        font-size: $size + 10%;
+        font-size: $size + 40%;
+        width: 60%;
+
+        .select-check {
+          font-size: 1.2em;
+        }
+
       }
 
       /* Laptop */

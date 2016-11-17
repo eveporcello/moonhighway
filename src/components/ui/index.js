@@ -29,7 +29,8 @@ ResponsiveImg.propTypes = {
     landscape: PropTypes.string.isRequired
 }
 
-export const SocialIcons = () =>
+export const SocialIcons = ({ hide=false }) => (hide) ?
+    <div className="social-icons"></div> :
     <div className="social-icons">
         <a href="https://www.facebook.com/MoonHighway" target="_blank">
             <FacebookIcon />

@@ -28,7 +28,7 @@ export class HomePage extends Component {
                     <LearnCD route="/continuous-delivery" />
                     <Contact route="/contact" />
                 </Rellax>
-                <SocialIcons ignoreRellax={true}/>
+                <SocialIcons ignoreRellax={true} hide={location.pathname === '/contact'} />
             </div>
         )
     }

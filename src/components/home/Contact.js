@@ -29,7 +29,7 @@ export const expandBox = {
         },
         '0%': {
             left: '5%',
-            height: '75%'
+            height: '94%'
         }
     }
 }
