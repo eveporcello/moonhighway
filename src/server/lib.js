@@ -3,11 +3,11 @@ import favicon from 'serve-favicon'
 import fs from 'fs'
 import gmail from 'gmail-send'
 
-const htmlIndex = fs.readFileSync('build/client/index.html')
+const htmlIndex = fs.readFileSync('client/index.html')
 
-export const icon = favicon('build/client/favicon.ico')
+export const icon = favicon('client/favicon.ico')
 
-export const fileAssets = express.static('build/client')
+export const fileAssets = express.static('client')
 
 //
 //  TODO: Change Response Screen on Client, success / error

@@ -13,3 +13,6 @@ window.React = React
 preload([...backgrounds, ...titles]).then(() => {
     setTimeout(() => render(routes, document.getElementById('react-container')), 200)
 })
+
+
+console.log("built this city!!!")

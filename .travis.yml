@@ -3,10 +3,6 @@ node_js:
   - 4.6.1
   - 6.9.1
 
-branches:
- only:
- - staging
-
 deploy:
   provider: heroku
   email: eve@moonhighway.com, alex@moonhighway.com
@@ -15,4 +11,4 @@ deploy:
   app: staging-moonhighway
   on:
     repo: eveporcello/moonhighway
-    branch: staging
+    branch: master
