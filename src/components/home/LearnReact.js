@@ -1,17 +1,21 @@
-const LearnReact = ({screenConfig, index}) =>
-    <section className="slide"
-             style={{
-                 backgroundImage: `url(/img/bgReact.png)`,
-                 zIndex: 1000-index
-             }}
-             {...screenConfig}>
-        <img src="/img/react.png" />
-        <p>Declarative, Functional Upgrades</p>
-        <ul>
-            <li>Functional Programming</li>
-            <li>Unidirectional Dataflow</li>
-            <li>React, Redux, and more</li>
-        </ul>
+import { delaySlideScreenUp, logoInOut, expandCollapseBox, screenLayout } from '../../lib'
+
+const LearnReact = ({index, screenScale, screenHeight}) =>
+    <section className="slide react"
+             style={{ zIndex: 1000-index }}
+        {...screenScale(delaySlideScreenUp(screenHeight))}>
+        <img src="/img/titles/react.png" {...screenScale(logoInOut["portrait"])}/>
+        <div className="box" {...screenScale(expandCollapseBox[screenLayout()])}>
+            <h1>Declarative Upgrades</h1>
+            <ul>
+                <li>Functional Programming</li>
+                <li>Unidirectional Dataflow</li>
+                <li>React, Redux, and more</li>
+            </ul>
+        </div>
     </section>
 
 export default LearnReact
+
+
+

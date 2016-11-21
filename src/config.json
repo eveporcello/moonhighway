@@ -1,0 +1,34 @@
+{
+  "preload": {
+    "backgrounds": [
+      "cd.jpg",
+      "contact.jpg",
+      "home.jpg",
+      "html.jpg",
+      "node.jpg",
+      "react.jpg"
+    ],
+    "titles": [
+      "logo.png",
+      "logo-long.png",
+      "cd.png",
+      "html.png",
+      "node.png",
+      "react.png"
+    ]
+  },
+  "contact": {
+    "subjects": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Node.js",
+      "React",
+      "Flux",
+      "Redux",
+      "Continuous Delivery",
+      "TDD, BDD",
+      "Git"
+    ]
+  }
+}

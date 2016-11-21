@@ -4,7 +4,7 @@ import bodyParser from 'body-parser'
 import cookieParser from 'cookie-parser'
 
 import {
-    success, notFound, error, fileAssets, icon
+    success, notFound, error, fileAssets, icon, sendContactMail
 } from './lib'
 
 export default express()
@@ -14,6 +14,7 @@ export default express()
     .use(bodyParser.urlencoded({extended: false}))
     .use(cookieParser())
     .use(fileAssets)
+    .post('/contact/send', sendContactMail)
     .get('/', success)
     .use(notFound)
     .use(error)

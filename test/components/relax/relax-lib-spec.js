@@ -38,9 +38,9 @@ describe("skrollrAttributes", () => {
     describe("screen percentages", () => {
 
         let results,
-            sut = skrollrAttributes([0, 803, 1606, 2409, 3212, 4015])
+            sut = skrollrAttributes([0, 803, 1606, 2409, 3212, 4015], 2)
 
-        before(() => results = sut(sample, 2))
+        before(() => results = sut(sample))
 
         it("skrollr object has correct scroll values", () =>
             expect(Object.keys(results)).to.deep.equal([

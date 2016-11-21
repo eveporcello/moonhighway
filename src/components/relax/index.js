@@ -1,8 +1,9 @@
 import { Component, Children, cloneElement } from 'react'
+import { hashHistory } from 'react-router'
 import skrollr from 'skrollr'
 import Hammer from 'hammerjs'
 import { DownButton } from '../ui'
-import { StackCycle, isMobile } from '../../lib'
+import { isMobile } from '../../lib'
 import { compose } from 'redux'
 import '../../stylesheets/relax.scss'
 
@@ -10,7 +11,13 @@ import '../../stylesheets/relax.scss'
  * Durations for animations to other screens
  * @type {number}
  */
-const duration = 500
+const duration = 1000
+
+/**
+ * How many times to multiply screen height by to get scroll height
+ * @type {number}
+ */
+const scrollHeightSize = 2
 
 /**
  * Calculates the default screenheight from breakpoints
@@ -58,21 +65,20 @@ export const jsObjToCSSString = (o = {}) =>
         )
         .reduce((css, {key, value}) => `${css} ${key}: ${value}; `.trim(), '')
 
-
 /**
  * A function that converts a JavaScript animation object into
  * Skrollr properties given specific screen breakpoings
- * @param breakpoints
- * @param type
+ * @param bp
+ * @param index
  * @returns {Function}
  */
-export const skrollrAttributes = bp => {
+export const skrollrAttributes = (bp, index) => {
 
     const scale = (Array.isArray(bp)) ?
         skrollScale(bp) :
         simpleSkrollScale(bp)
 
-    return (config = {}, index = 0) =>
+    return (config = {}) =>
         Object.keys(config)
             .map(percent => ({
                 key: `data-${scale(percent, index)}`,
@@ -95,6 +101,7 @@ export class Rellax extends Component {
         this.state = {
             screen: {
                 height: window.innerHeight,
+                scrollHeight: window.innerHeight * scrollHeightSize,
                 width: window.innerWidth
             },
             current: {
@@ -107,36 +114,35 @@ export class Rellax extends Component {
         this.prevScreen = this.prevScreen.bind(this)
         this.getBreakpoints = this.getBreakpoints.bind(this)
         this.onResize = this.onResize.bind(this)
+        this.goToScreen = this.goToScreen.bind(this)
+        this.onWheel = this.onWheel.bind(this)
+        this.onArrowKeys = this.onArrowKeys.bind(this)
     }
 
     scrollScreen(el, index) {
         const { screen } = this.state
-        const { length } = this.props.children
-        const scrollRange = [screen.height * index, screen.height * (index + 1)]
+        const scrollRange = [screen.scrollHeight * index, screen.scrollHeight * (index + 1)]
+        const screenHeight = screen.height
         const breakpoints = this.getBreakpoints()
-        const maxHeight = breakpoints[breakpoints.length-1] + screen.height
-        const screenScale = skrollrAttributes(breakpoints)
+        const maxHeight = breakpoints[breakpoints.length - 1] + screen.scrollHeight
+        const screenScale = skrollrAttributes(breakpoints, index)
         const fullScale = skrollrAttributes(maxHeight)
 
-        let screenConfig = {
-            'data-0': 'top: 0px'
-        }
-
-        if (index === 0) {
-            screenConfig[`data-${screen.height}`] = `top: -${screen.height}px`
-        } else {
-            if (index !== (length - 1)) {
-                screenConfig[`data-${scrollRange[0]}`] = `top: 0px`
-                screenConfig[`data-${scrollRange[1]}`] = `top: -${screen.height}px`
+        if (el.props.route) {
+            this.routes = {
+                ...this.routes,
+                [el.props.route]: index
+            }
+            this.paths = {
+                ...this.paths,
+                [index]: el.props.route
             }
         }
 
-        // 1a - Scroll config is added to the element as properties here
-
         return cloneElement(el, {
-            screenConfig,
             index,
             scrollRange,
+            screenHeight,
             breakpoints,
             screenScale,
             fullScale
@@ -146,74 +152,101 @@ export class Rellax extends Component {
     getBreakpoints() {
         const { children } = this.props
         const { screen } = this.state
-        return Children.map(children, (child, i) => i * screen.height)
+        return Children.map(children, (child, i) => i * screen.scrollHeight)
     }
 
     nextScreen() {
-        const current = {
-            breakpoint: this.screenCycle.next(),
-            screenIndex: this.screenCycle.currentIndex(),
-            transitioning: true
+        if (!this.state.current.transitioning) {
+            const { current } = this.state
+            const { children } = this.props
+            const screenIndex = ((current.screenIndex + 1) < children.length ) ?
+            current.screenIndex + 1 :
+                current.screenIndex
+            const breakpoint = this.state.breakpoints[screenIndex]
+            if (screenIndex !== current.screenIndex) {
+                this.setState({current: {breakpoint, screenIndex, transitioning: true}})
+                hashHistory.push(this.paths[screenIndex])
+            }
         }
-        this.setState({current})
-        setTimeout(() => this.skr.animateTo(current.breakpoint, {
-            duration,
-            easing: 'swing',
-            done: () => this.setState({
-                current: {
-                    ...current,
-                    transitioning: false
-                }
-            })
-        }))
     }
 
     prevScreen() {
-        const current = {
-            breakpoint: this.screenCycle.prev(),
-            screenIndex: this.screenCycle.currentIndex()
+        if (!this.state.current.transitioning) {
+            const { current } = this.state
+            const screenIndex = (current.screenIndex) ?
+            current.screenIndex - 1 : 0
+            const breakpoint = this.state.breakpoints[screenIndex]
+            if (screenIndex !== current.screenIndex) {
+                this.setState({current: {breakpoint, screenIndex, transitioning: true}})
+                hashHistory.push(this.paths[screenIndex])
+            }
         }
-        this.setState({current})
-        setTimeout(() => this.skr.animateTo(current.breakpoint, {
+    }
+
+    goToScreen(index, duration = 1) {
+        this.skr.animateTo(this.state.breakpoints[index], {
             duration,
             easing: 'swing',
             done: () => this.setState({
                 current: {
-                    ...current,
+                    ...this.state.current,
                     transitioning: false
                 }
             })
-        }))
+        })
     }
 
     onResize() {
-        let screen = {
-                height: window.innerHeight,
-                width: window.innerWidth
-            },
-            breakpoints = this.getBreakpoints();
-        this.screenCycle = new StackCycle(breakpoints, this.state.current.screenIndex)
-        const current = {
-            ...this.state.current,
-            breakpoint: this.screenCycle.current()
-        }
-        this.setState({screen, breakpoints, current})
+        clearTimeout(this.to)
+        document.getElementById('react-container').innerHTML = '<img src="/img/titles/logo.png" />'
+        this.to = setTimeout(() => location.reload(), 500)
+    }
 
+    onWheel(e) {
+        if (this.webkitWheelTimeout) {
+            clearTimeout(this.webkitWheelTimeout)
+        }
+        this.webkitWheelTimeout = setTimeout(
+            () => (e.deltaY > 0) ?
+                this.nextScreen() :
+                this.prevScreen(),
+            50
+        )
+    }
+
+    onArrowKeys(e) {
+        switch(e.key) {
+            case " " :
+                return this.nextScreen()
+            case "ArrowDown" :
+                return this.nextScreen()
+            case "ArrowRight" :
+                return this.nextScreen()
+            case "ArrowUp" :
+                return this.prevScreen()
+            case "ArrowLeft" :
+                return this.prevScreen()
+        }
     }
 
     componentWillMount() {
         const breakpoints = this.getBreakpoints()
         this.setState({breakpoints})
-        this.screenCycle = new StackCycle(breakpoints, 0)
         window.addEventListener('resize', this.onResize)
+        if (this.props.location.pathname === '/contact') {
+            this.setState({ current: { screenIndex: 5 }})
+        }
+    }
+
+    componentWillReceiveProps(nextProps) {
+        const screenIndex = this.routes[nextProps.location.pathname]
+        this.setState({
+            current: {screenIndex}
+        })
+        this.goToScreen(screenIndex, 1000)
     }
 
     componentDidMount() {
-
-        // 2 - Hammer js and Skrollr are initialized here, after DOM is setup
-        //     a. The skrollr.init() causes the drag and scroll behave to work
-        //     a. Once released Hammer JS gets the direction and moves the screen
-
         const direction = Hammer.DIRECTION_VERTICAL
         this.skr = skrollr.init({edgeStrategy: 'set'})
         if (isMobile()) {
@@ -225,14 +258,23 @@ export class Rellax extends Component {
                     this.nextScreen()
             )
         } else {
-            //
-            //  TODO: handle laptop/desktop scroll
-            //
+            window.addEventListener("wheel", this.onWheel, false)
         }
+        window.addEventListener("keydown", this.onArrowKeys, false)
+        const screenIndex = this.routes[this.props.location.pathname] || this.state.current.screenIndex
+        this.setState({current: {screenIndex}})
+        setTimeout(() => this.goToScreen(screenIndex), 5)
+    }
+
+    shouldComponentUpdate(nextProps) {
+        const hasNewScreen = this.props.children.length !== nextProps.children.length
+        const isNewPath = this.props.location.pathname !== nextProps.location.pathname
+        return hasNewScreen || isNewPath
     }
 
     componentWillUnmount() {
-        window.removeEventListener('resize', this.onResize)
+        window.removeEventListener("wheel", this.onWheel)
+        window.removeEventListener("keydown", this.onArrowKeys)
     }
 
     componentDidUpdate() {
@@ -240,9 +282,6 @@ export class Rellax extends Component {
     }
 
     render() {
-
-        // 1 - When teh DOM is Rendered the scrollr config is added via this.scrollScreen
-
         const { children } = this.props
         const { screenIndex } = this.state.current
         return (

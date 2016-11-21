@@ -1,18 +1,20 @@
-const LearnNode = ({screenConfig, index}) =>
-    <section className="slide"
-             style={{
-                 backgroundImage: `url(/img/bgNode.png)`,
-                 zIndex: 1000-index
-             }}
-             {...screenConfig}>
-        <h1>Learn Node</h1>
-        <img src="/img/node.png" />
-        <p>Test-driven, Universal Updates</p>
-        <ul>
-            <li>Service-oriented Architecture</li>
-            <li>NoSQL Databases</li>
-            <li>Express, Socket.IO, and more</li>
-        </ul>
+import { delaySlideScreenUp, logoInOut, expandCollapseBox, screenLayout } from '../../lib'
+
+const LearnNode = ({index, screenScale, screenHeight}) =>
+    <section className="slide node"
+             style={{ zIndex: 1000-index }}
+        {...screenScale(delaySlideScreenUp(screenHeight))}>
+        <img src="/img/titles/node.png"  {...screenScale(logoInOut["portrait"])}/>
+        <div className="box" {...screenScale(expandCollapseBox[screenLayout()])}>
+            <h1>Universal, Test Driven Updates</h1>
+            <ul>
+                <li>Service-oriented Architecture</li>
+                <li>NoSQL Databases</li>
+                <li>Express, Socket.IO, and more</li>
+            </ul>
+        </div>
     </section>
 
 export default LearnNode
+
+
