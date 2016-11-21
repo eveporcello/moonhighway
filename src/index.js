@@ -15,4 +15,4 @@ preload([...backgrounds, ...titles]).then(() => {
 })
 
 
-console.log("built this city!!!")
+console.log("cd means call directory!!!")
