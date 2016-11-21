@@ -36,5 +36,3 @@ node_modules
 
 .idea/
 coverage/
-build/client/assets/
-build/server
