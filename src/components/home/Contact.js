@@ -1,6 +1,7 @@
 import C from '../../config.json'
 import { SocialIcons, ExpandableSelectList } from '../ui'
 import { screenLayout } from '../../lib'
+import fetch from 'isomorphic-fetch'
 import '../../stylesheets/contact.scss'
 
 export const expandBox = {
@@ -38,14 +39,22 @@ const Contact = ({index, screenScale}) => {
 
     let _email, _subjects, _message
 
-    const submit = () => {
-        alert(`
-TODO: Send Message
-to: ${_email.value}
-subjects: ${_subjects.value}
-message: ${_message.value}
-        `)
-    }
+    const submit = () => fetch(
+        '/contact/send',
+        {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                email: _email.value,
+                subjects: _subjects.value,
+                message: _message.value
+            })
+        })
+        .then(() => console.log('message sent success!'))
+        .catch(e => console.log('error', e))
+
 
     const clickOutside = e => {
         _subjects.close()
@@ -54,7 +63,7 @@ message: ${_message.value}
     return (
         <section className="slide contact"
                  style={{ zIndex: 1000-index }}
-                 {...screenScale({'0%': {top: '0px'}})}
+            {...screenScale({'0%': {top: '0px'}})}
                  onClick={clickOutside}>
             <div className="box" {...screenScale(expandBox[screenLayout()])}>
                 <h1>Contact Us</h1>
@@ -80,8 +89,6 @@ message: ${_message.value}
         </section>
     )
 }
-
-
 
 
 export default Contact
