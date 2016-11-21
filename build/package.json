@@ -3,7 +3,7 @@
   "version": "0.0.5",
   "description": "Moon Highway | Instructor-Led Training for Software Engineers",
   "scripts": {
-    "start": "ls; node ./server"
+    "start": "ls; echo 'is there a server?'; node ./server"
   },
   "homepage": "http://moonhighway.com"
 }
