@@ -13,4 +13,3 @@ deploy:
   app: moonhighway
   on:
     repo: eveporcello/moonhighway
-    tags: true
