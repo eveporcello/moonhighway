@@ -15,4 +15,4 @@ preload([...backgrounds, ...titles]).then(() => {
 })
 
 
-console.log("we built it!!!")
+console.log(":( can't push artifacts!")
