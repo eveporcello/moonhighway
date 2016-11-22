@@ -1,6 +1,6 @@
 {
   "name": "moonhighway",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Moon Highway | Instructor-Led Training for Software Engineers",
   "main": "./src/index.js",
   "scripts": {
