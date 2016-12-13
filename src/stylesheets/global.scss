@@ -256,7 +256,7 @@ $main-font: "Source Sans Pro", sans;
       @media screen and (max-height: 1024px)
       and (min-height: 745px) {
         font-size: $size - 52%;
-        width: $width - 39%;
+        width: 27em;
         top: $top + 4%;
       }
 
@@ -264,7 +264,7 @@ $main-font: "Source Sans Pro", sans;
       @media screen and (min-height: 1025px)
       and (min-width: 800px) {
         font-size: $size - 30%;
-        width: $width - 39%;
+        width: 25em;
         top: $top + 4%;
       }
 
@@ -278,7 +278,7 @@ $main-font: "Source Sans Pro", sans;
   }
 }
 
-@mixin boxLandscape($screen, $color: $star-blue, $top: 31%, $size: 82%, $width: 39%) {
+@mixin boxLandscape($screen, $color: $star-blue, $top: 31%, $size: 82%, $width: 25em) {
   @include landscape {
     &.#{$screen} div.box {
 
@@ -292,14 +292,13 @@ $main-font: "Source Sans Pro", sans;
       /* iphone 4 */
       @media screen and (max-width: 500px) {
         font-size: $size;
-        width: $width + 6%;
         top: $top - 5%;
       }
 
       /* iphone 6 plus */
       @media screen and (max-width: 745px)
       and (min-width: 675px) {
-
+        width: 27em;
       }
 
       /* iPad */
@@ -324,13 +323,11 @@ $main-font: "Source Sans Pro", sans;
       @media screen and (max-width: 2200px)
       and (min-width: 1500px) {
         font-size: $size + 25%;
-        width: $width - 13%;
       }
 
       /* Laptop Long */
       @media screen and (min-width: 2200px) {
         font-size: $size + 85%;
-        width: $width - 13%;
       }
 
     }
@@ -411,8 +408,6 @@ $main-font: "Source Sans Pro", sans;
       width: $width;
       top: $top;
       justify-content: space-around;
-
-      >p { flex-basis: 40%; }
 
       /* iphone 4 */
       @media screen and (max-width: 500px) {
