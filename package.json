@@ -38,7 +38,6 @@
     "gmail-send": "^1.2.6",
     "hammerjs": "^2.0.8",
     "isomorphic-fetch": "^2.2.1",
-    "lodash": "^4.17.2",
     "morgan": "^1.7.0",
     "pic-loader": "0.0.1",
     "querystring": "^0.2.0",
