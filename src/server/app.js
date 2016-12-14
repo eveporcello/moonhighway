@@ -7,6 +7,10 @@ import {
     success, notFound, error, fileAssets, icon, sendContactMail
 } from './lib'
 
+// TODO: Incorporate API
+
+// TODO: Incorporate Google Analytics for API's
+
 export default express()
     .use(icon)
     .use(logger('dev'))
@@ -15,6 +19,4 @@ export default express()
     .use(cookieParser())
     .use(fileAssets)
     .post('/contact/send', sendContactMail)
-    .get('/', success)
-    .use(notFound)
-    .use(error)
+    .get('*', success)

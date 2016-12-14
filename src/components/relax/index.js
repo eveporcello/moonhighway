@@ -1,5 +1,5 @@
 import { Component, Children, cloneElement } from 'react'
-import { hashHistory } from 'react-router'
+import { browserHistory } from 'react-router'
 import skrollr from 'skrollr'
 import Hammer from 'hammerjs'
 import { DownButton } from '../ui'
@@ -165,7 +165,7 @@ export class Rellax extends Component {
             const breakpoint = this.state.breakpoints[screenIndex]
             if (screenIndex !== current.screenIndex) {
                 this.setState({current: {breakpoint, screenIndex, transitioning: true}})
-                hashHistory.push(this.paths[screenIndex])
+                browserHistory.push(this.paths[screenIndex])
             }
         }
     }
@@ -178,7 +178,7 @@ export class Rellax extends Component {
             const breakpoint = this.state.breakpoints[screenIndex]
             if (screenIndex !== current.screenIndex) {
                 this.setState({current: {breakpoint, screenIndex, transitioning: true}})
-                hashHistory.push(this.paths[screenIndex])
+                browserHistory.push(this.paths[screenIndex])
             }
         }
     }

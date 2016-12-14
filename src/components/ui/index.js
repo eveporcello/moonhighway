@@ -43,9 +43,10 @@ export const SocialIcons = ({ hide=false }) => (hide) ?
         </a>
     </div>
 
-export const Whoops404 = () =>
+export const Whoops404 = ({ location }) =>
     <div className="whoops-404">
-        <h1>Whoops 404</h1>
+        <h1>Resource Not Found...</h1>
+        <p>Could not find Resource at '{location.pathname}'</p>
     </div>
 
 export const SelectCheck = ({selected=false, select=f=>f, deselect=f=>f, children}) =>

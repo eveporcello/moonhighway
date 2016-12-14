@@ -9,20 +9,6 @@ export const icon = favicon('build/client/favicon.ico')
 
 export const fileAssets = express.static('build/client')
 
-//
-//  TODO: Change Response Screen on Client, success / error
-//
-
-//
-//  TODO: Respond to Sender, capture sender email errors
-//
-//     Maybe Record
-//
-//        * Create Copy for Response Email
-//        * Design Response Email
-//        * Incorporate and Test Response Email
-//
-
 let sendMail = (obj, cb=f=>f) => cb(new Error('SMTP Server error'))
 
 if (process.env.emailFrom && process.env.emailTo && process.env.emailPassword ) {
@@ -53,7 +39,7 @@ export const sendContactMail = (req, res) =>
     )
 
 export const success = (req, res) =>
-    res.status(200).send(htmlIndex)
+    res.status(200).set('Content-Type', 'text/html').send(htmlIndex)
 
 export const notFound = (req, res, next) => {
     let err = new Error('Content Not Found')

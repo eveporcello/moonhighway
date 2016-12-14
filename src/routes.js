@@ -1,10 +1,10 @@
 import React from 'react'
-import { Router, Route, Redirect, hashHistory } from 'react-router'
+import { Router, Route, Redirect, browserHistory } from 'react-router'
 import { HomePage } from './components/home'
 import { Whoops404 } from './components/ui'
 
 const routes = (
-    <Router history={hashHistory}>
+    <Router history={browserHistory}>
         <Route path="/" component={HomePage}/>
         <Route path="/react" component={HomePage}/>
         <Route path="/node" component={HomePage}/>

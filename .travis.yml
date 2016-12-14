@@ -3,13 +3,20 @@ node_js:
   - 4.6.1
   - 6.9.1
 
-before_deploy:
-  - cd ./build
+branches:
+ only:
+ - master
+
+# todo: Add Production Build to MoonHighway
+
+# todo: Finalize Staging Build
 
 deploy:
   provider: heroku
+  email: eve@moonhighway.com, alex@moonhighway.com
   api_key:
-    secure: DJ6Gxm00XiSEr9x77DIP7DtMVAXjMnBZGfcPcOLSJh36mXLnD3jwpAF7icZfst+1v7sv1lNT9lh1ac1Nb/XuFZj2DkRTVeXQ4buNUFr3EUMfK0232M6rtEmDCtpoUnBR8Cnis7W6OQH8rZg/M8eI6IB0UXtYDgCzNGklzl6ie5Kaj2exqM+mYz71A+8oMqk1g+hzOtWsZW1pjDUtLun9HzlUMWHnfZcPluLzf1Eg8MtdtPjlreS1CG/O/9IqPHaBQ3nD025gkKb+jAuxxBsIwazVSSH3vabBbO7jcSBpY87+/+y3aDVBKGttwJ5SVphaJUbpd3Isk/A8B3Re5pPEWcYgncuRQ8w73FLSNBD6o73JdRfXh2s+HXLSC5SiFfuOA1ck9s6EwCFI6KxV2p/GH39yR83v3007X/E3o3HN1JLmdf0sWi7Zv+Wu1hZ++eRGH4H0REyFmyrdrEGbPra4hN/4V/aqGgtuFpaM23mwqm3D/98FJAS24mAg/hHO3/YrO1oVJ4cBM52BbwSntQ+PNWuNn+nyrlW4IwFDV6sdhXi9gtcBQ5xhXJG+H0/ZKW89zGdOtJcdd8b6flUAuWbJlUcfsGD4rwSgY+OCwR2TyPN8NEByN+wtgS3Ur93tjlSosxoqb+1NKoVDXUa9md3iKmNZDgyL1ire9k/uaIxAfd4=
-  app: moonhighway
+    secure: nA9zsR4FLatOIJSxElppfCGXga6u/ve0C5CzZMe324bU+hfKrK/wkZXezPljhHf3mVPrxbIIs0Hq0sXVBHWQKFGTu425g2hEUGOTfMZjOMPrvJMr9NrEjyRiSB6qx8dGFGGca7YAiQrH7/Jy/uE6Egl8Nwt6pAFiBk3wgVPj9umV9wCG1WTCKq8OVcCiXHcrYaYBUSCw30ujbCVRZZYlp3xsAzNL4jrNTGLccmzv9Y7u/vBRb6dbttm9p7gZzVyH8eX8QPCKBsOv2NJdLpulK+pJTzmoK62OIhrbNOAubCTDsVwDfKPQPYwEbRa2ay2Tisn5XEbZTfqvcDJkSNqlVlkPkuFUbOecFMWLdxPPzzPI1BIqgSnmCJLwKCOPyUOFEpgPrfSoc0ITrwdZc8PIhO6DpPt5v/vO3IxxXbCGLL+tH71sIEsbWw49JntOuDrrRCTMkgygBmJ98md/u7uGkJhdlV2BUaVeNbk9SkCg/IYQj2RJagzKU+/x7tRaCcoUaZCEkP8BwvHC88XbzorrSv7sHjMFL7nfpEuyPqONX/tTVfEKR1LPhxJQl+QlanuQAdtEOfU/xs+03uqqRr5+VMyHr5Oah/gqVLEDlvElUKkKgUyLXItdQblPZhMHNM38BQ422ilU9DyxdI/iSXrAB2RY46SMJuKAmvdTSEvGpkY=
+  app: staging-moonhighway
   on:
     repo: eveporcello/moonhighway
+    branch: master
