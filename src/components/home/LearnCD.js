@@ -13,11 +13,9 @@ const LearnCD = ({index, screenScale, screenHeight}) =>
             <ul>
                 <li>Test-driven Development</li>
                 <li>Behavior-driven Development</li>
-                <li>Git, Docker, Travis, and more</li>
+                <li>Git, Docker, Travis, and more ;)</li>
             </ul>
         </div>
     </section>
 
 export default LearnCD
-
-
