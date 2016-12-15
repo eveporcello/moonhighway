@@ -16,8 +16,6 @@ deploy:
   on:
     repo: eveporcello/moonhighway
     branch: master
-
-deploy:
   provider: heroku
   email: eve@moonhighway.com, alex@moonhighway.com
   api_key:
