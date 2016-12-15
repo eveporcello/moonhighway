@@ -30,7 +30,7 @@
   "bugs": {
     "url": "https://github.com/MoonTahoe/rowdy-pictures/issues"
   },
-  "homepage": "http://staging-moonhighway.herokuapp.com",
+  "homepage": "http://www.moonhighway.com",
   "dependencies": {
     "body-parser": "^1.15.2",
     "cookie-parser": "^1.4.3",
