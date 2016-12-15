@@ -2,6 +2,11 @@ language: node_js
 node_js:
   - 4.6.1
   - 6.9.1
+
+branches:
+ only:
+ - master
+
 deploy:
   email: eve@moonhighway.com, alex@moonhighway.com
   api_key:
@@ -10,10 +15,8 @@ deploy:
   app: moonhighway
   on:
     repo: eveporcello/moonhighway
-    all_branches: true
     tags: true
   provider: heroku
   app: staging-moonhighway
   on:
     repo: eveporcello/moonhighway
-    branch: master
