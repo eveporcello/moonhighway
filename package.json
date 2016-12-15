@@ -62,6 +62,7 @@
     "babel-preset-stage-0": "^6.5.0",
     "chai": "^3.5.0",
     "css-loader": "^0.23.1",
+    "cssnano": "^3.9.1",
     "deep-freeze": "0.0.1",
     "enzyme": "^2.4.1",
     "eslint": "^3.2.0",
