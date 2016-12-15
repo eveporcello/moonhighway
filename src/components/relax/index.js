@@ -243,7 +243,7 @@ export class Rellax extends Component {
         this.setState({
             current: {screenIndex}
         })
-        this.goToScreen(screenIndex, 1000)
+        setTimeout(() => this.goToScreen(screenIndex, 1000), 0)
     }
 
     componentDidMount() {
