@@ -4,7 +4,7 @@ node_js:
   - 6.9.1
 
 before_script:
-  - npm install -g css-nano
+  - npm install -g cssnano
 
 deploy:
   provider: heroku
