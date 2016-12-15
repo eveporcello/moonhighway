@@ -3,20 +3,15 @@ node_js:
   - 4.6.1
   - 6.9.1
 
-branches:
- only:
- - master
+before_script:
+  - npm install -g css-nano
 
 deploy:
+  provider: heroku
   email: eve@moonhighway.com, alex@moonhighway.com
   api_key:
     secure: NodlNWpMywb9vXjK0oBUOc/gwWDc+bx82gG+o05SbbA3A5mgoWfFUvhehaO4uQZH+68f+muLCxrjqIhpr5TtKov8f8p62OOdTOEaqG/Y4sXsWNWmKWIFy99ugNwDVijvTvQ330qpUMeCkRTVTVBDNRGxPYhctlY1C6nTw1Z3CE1Ec9K9GVfPBHEnxrQXjNtrWZrPlN2P1FKdDh3Bgfs2IS10pIP/8i3C96yRdI67taCB3CEGHhGkQ33Q3t/jlT+Rrr+7XUuHzM81OP0YpiZZN1KVR7ZXUpnOBp64SKUMjnV5FEQ20Mzz3fuXyCPWU0QlLWNfeQogU+f76haC3SWg75BmUrCiLQ5w36NJRj6IiDgW8DIpmBxD+avB8eRMGL+vXGDKUOqOjijMx2Bs4iociinmNezog74zpddbqHiIE4c2tWHxbgHcLklwobKVd06saqKm0rf+wdCAVe35UcqTQMJmF8CgX56vrVpUdDa6+u7RIWcCjdqfHSFohifhEGMuLLy+Y3daKlK+nLtFuNbA5xXhIP5Qk5Zczurk4wAO++dGxIafX3naIEbBs3tF1ChKPLKl4e1+HABlPTJOxPsZuSLM/Y2TskrOzU658Fo9BqGaXoQ1cAlBw+YxBB/TbtxQsQu7FwfBuRYarvrrZSaEuey079ufet9cIUUC+iOKAJU=
-  provider: heroku
   app: moonhighway
   on:
     repo: eveporcello/moonhighway
-    tags: true
-  provider: heroku
-  app: staging-moonhighway
-  on:
-    repo: eveporcello/moonhighway
+    branch: master
