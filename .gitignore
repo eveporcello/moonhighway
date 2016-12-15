@@ -1,6 +1,8 @@
 /build/server
 /build/client/assets
 
+.DS_Store
+
 # Logs
 logs
 *.log

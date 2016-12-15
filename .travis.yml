@@ -7,10 +7,6 @@ branches:
  only:
  - master
 
-# todo: Add Production Build to MoonHighway
-
-# todo: Finalize Staging Build
-
 deploy:
   provider: heroku
   email: eve@moonhighway.com, alex@moonhighway.com
@@ -20,3 +16,14 @@ deploy:
   on:
     repo: eveporcello/moonhighway
     branch: master
+
+deploy:
+  provider: heroku
+  email: eve@moonhighway.com, alex@moonhighway.com
+  api_key:
+    secure: P/hAvfHQGWyIf8cJCAnE1dGHSGYvBddNByhbD8RhECTiLhEVeShbG9M0Svggmp20mNJDv32uvJtYMjn3wDH0S3OvlBOjw+9zH1+FHzev7hxv1rqhrrXRCSjgfEYG49aseYf6ZOlQ1tvvRRr6E7HdUP/awkSXd1ntuDa278mcdmE=
+  app: moonhighway
+  on:
+    repo: eveporcello/moonhighway
+    branch: master
+    tags: true
