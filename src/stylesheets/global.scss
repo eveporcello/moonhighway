@@ -282,7 +282,7 @@ $main-font: "Source Sans Pro", sans;
   @include landscape {
     &.#{$screen} div.box {
 
-      /* iphone 5 & 6 */
+      /* iphone 5 */
       border-top: .5em double $color;
       border-bottom: .5em double $color;
       font-size: $size - 10%;
@@ -293,6 +293,14 @@ $main-font: "Source Sans Pro", sans;
       @media screen and (max-width: 500px) {
         font-size: $size;
         top: $top - 5%;
+      }
+
+      /* iphone 6 */
+      @media screen
+      and (min-width: 570px)
+      and (max-width: 667px) {
+        font-size: $size + 17%;
+        width: $width + 2em;
       }
 
       /* iphone 6 plus */
