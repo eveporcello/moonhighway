@@ -229,7 +229,7 @@ $main-font: "Source Sans Pro", sans;
       /* iphone 4 */
       @media screen and (max-height: 500px)
       and (min-height: 425px) {
-        font-size: $size - 23%;
+        font-size: $size - 47%;
         top: $top + 5%;
       }
 
@@ -285,7 +285,7 @@ $main-font: "Source Sans Pro", sans;
       /* iphone 5 & 6 */
       border-top: .5em double $color;
       border-bottom: .5em double $color;
-      font-size: $size;
+      font-size: $size - 10%;
       width: $width;
       top: $top;
 
