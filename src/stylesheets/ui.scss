@@ -14,6 +14,18 @@ div.home-page>div.social-icons {
       width: 50%;
   }
 
+  @include md_landscape {
+    bottom: 1.5em;
+    right: 0;
+    width: 100%;
+  }
+
+  @include lg_landscape {
+    bottom: 1.5em;
+    right: 0;
+    width: 100%;
+  }
+
   a {
     margin: 0 .1em;
     color: white;
@@ -37,6 +49,16 @@ div.down-button {
   @include landscape {
     bottom: 40%;
     left: 63%;
+  }
+
+  @include md_landscape {
+    bottom: .2em;
+    left: 50%;
+  }
+
+  @include lg_landscape {
+    bottom: .2em;
+    left: 50%;
   }
 
   >div:first-child {
