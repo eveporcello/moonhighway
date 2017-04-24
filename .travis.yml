@@ -17,3 +17,13 @@ deploy:
     repo: eveporcello/moonhighway
     branch: master
     tags: false
+
+  provider: heroku
+  email: eve@moonhighway.com, alex@moonhighway.com
+  api_key:
+    secure: P/hAvfHQGWyIf8cJCAnE1dGHSGYvBddNByhbD8RhECTiLhEVeShbG9M0Svggmp20mNJDv32uvJtYMjn3wDH0S3OvlBOjw+9zH1+FHzev7hxv1rqhrrXRCSjgfEYG49aseYf6ZOlQ1tvvRRr6E7HdUP/awkSXd1ntuDa278mcdmE=
+  app: moonhighway
+  on:
+    repo: eveporcello/moonhighway
+    tags: true
+    all_branches: true
