@@ -18,6 +18,7 @@ deploy:
     branch: master
     tags: false
 
+deploy:
   provider: heroku
   email: eve@moonhighway.com, alex@moonhighway.com
   api_key:
