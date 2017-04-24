@@ -3,11 +3,17 @@ node_js:
   - 4.6.1
   - 6.9.1
 
-branches:
- only:
- - master
-
 deploy:
+  provider: heroku
+  email: eve@moonhighway.com, alex@moonhighway.com
+  api_key:
+    secure: P/hAvfHQGWyIf8cJCAnE1dGHSGYvBddNByhbD8RhECTiLhEVeShbG9M0Svggmp20mNJDv32uvJtYMjn3wDH0S3OvlBOjw+9zH1+FHzev7hxv1rqhrrXRCSjgfEYG49aseYf6ZOlQ1tvvRRr6E7HdUP/awkSXd1ntuDa278mcdmE=
+  app: moonhighway
+  on:
+    repo: eveporcello/moonhighway
+    branch: master
+    tags: true
+
   provider: heroku
   email: eve@moonhighway.com, alex@moonhighway.com
   api_key:
@@ -17,14 +23,3 @@ deploy:
     repo: eveporcello/moonhighway
     branch: master
     tags: false
-
-deploy:
-  provider: heroku
-  email: eve@moonhighway.com, alex@moonhighway.com
-  api_key:
-    secure: P/hAvfHQGWyIf8cJCAnE1dGHSGYvBddNByhbD8RhECTiLhEVeShbG9M0Svggmp20mNJDv32uvJtYMjn3wDH0S3OvlBOjw+9zH1+FHzev7hxv1rqhrrXRCSjgfEYG49aseYf6ZOlQ1tvvRRr6E7HdUP/awkSXd1ntuDa278mcdmE=
-  app: moonhighway
-  on:
-    repo: eveporcello/moonhighway
-    tags: true
-    all_branches: true
