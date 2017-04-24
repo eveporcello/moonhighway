@@ -26,6 +26,18 @@ div.home-page>div.social-icons {
     width: 100%;
   }
 
+  @include wideScreen {
+    bottom: 1.5em;
+    right: 0;
+    width: 100%;
+  }
+
+  @include xl {
+    bottom: 1.5em;
+    right: 0;
+    width: 100%;
+  }
+
   a {
     margin: 0 .1em;
     color: white;
@@ -57,6 +69,16 @@ div.down-button {
   }
 
   @include lg_landscape {
+    bottom: .2em;
+    left: 50%;
+  }
+
+  @include wideScreen {
+    bottom: .2em;
+    left: 50%;
+  }
+
+  @include xl {
     bottom: .2em;
     left: 50%;
   }
