@@ -3,6 +3,9 @@ node_js:
   - 4.6.1
   - 6.9.1
 
+branches:
+  - master
+
 deploy:
   provider: heroku
   email: eve@moonhighway.com, alex@moonhighway.com
