@@ -8,6 +8,36 @@ div.home-page>div.social-icons {
   bottom: 1.5em;
   font-size: 2.5em;
 
+  @include landscape {
+      bottom: 53%;
+      right: 12%;
+      width: 50%;
+  }
+
+  @include md_landscape {
+    bottom: 1.5em;
+    right: 0;
+    width: 100%;
+  }
+
+  @include lg_landscape {
+    bottom: 1.5em;
+    right: 0;
+    width: 100%;
+  }
+
+  @include wideScreen {
+    bottom: 1.5em;
+    right: 0;
+    width: 100%;
+  }
+
+  @include xl {
+    bottom: 1.5em;
+    right: 0;
+    width: 100%;
+  }
+
   a {
     margin: 0 .1em;
     color: white;
@@ -27,6 +57,31 @@ div.down-button {
   cursor: pointer;
   bottom: .2em;
   font-size: 3em;
+
+  @include landscape {
+    bottom: 40%;
+    left: 63%;
+  }
+
+  @include md_landscape {
+    bottom: .2em;
+    left: 50%;
+  }
+
+  @include lg_landscape {
+    bottom: .2em;
+    left: 50%;
+  }
+
+  @include wideScreen {
+    bottom: .2em;
+    left: 50%;
+  }
+
+  @include xl {
+    bottom: .2em;
+    left: 50%;
+  }
 
   >div:first-child {
     background-color: black;
