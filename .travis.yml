@@ -11,7 +11,7 @@ deploy:
   app: staging-moonhighway
   on:
     repo: eveporcello/moonhighway
-    branch: master
+    branch: staging
 
   provider: heroku
   api_key:
