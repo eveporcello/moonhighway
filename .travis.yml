@@ -5,19 +5,9 @@ node_js:
 
 deploy:
   provider: heroku
-  email: eve@moonhighway.com, alex@moonhighway.com
   api_key:
-    secure: P/hAvfHQGWyIf8cJCAnE1dGHSGYvBddNByhbD8RhECTiLhEVeShbG9M0Svggmp20mNJDv32uvJtYMjn3wDH0S3OvlBOjw+9zH1+FHzev7hxv1rqhrrXRCSjgfEYG49aseYf6ZOlQ1tvvRRr6E7HdUP/awkSXd1ntuDa278mcdmE=
+    secure: ih+fNbeyvOML/pA5hpiA4VVMw6PoEIqRU0N9MoZxeKYeIqLp2PzzzO/QcJi90BksS9tJTWwe2M8fiCDJsgDjJ7mzMMLo0aGR7vf/xBqOBjIvSkAQJi+0NAy4alXQP2Bg6xp65RP6vOaJZ/NuZ0QeP1MdRB9wWsUY2wQd6puZHvoF3rEAYIvi2GTm1qoc0ozGmxofcNuXey2v/cFSikhRLiZizxiS1pkbfLtMFn40dvtSP93enBWH6vdr6zmJLaDHDffKd06xqrPM37cA/hbHWXBEJEj2TMApMuz+YvV1ZZBPLsmrWqFOV8nwRyF5lYt6nrPm0CcbSFIrAHIOOv1Q6EE4m/F3UDFEoXta3Ejdz3ijSkqDMk5bHZsRcpKuXkiaJHzyaDC0DWk5ZrhxYGRzoOcxG+2qvflKCUQnp/CxExNZAwlr/bWn/YsmuECZf2ZC+bpUpD9xiC8JQnd1YJZ1H/m2adWVkaIFA7kcuUv4ZQ/2y6dBXquEscjQohepQDRsjeA4xF53O91qOJK/Qi1OAZFGkurQvlafWeiywq3BMyuuJT6Jrv/peCYnBdgkZ9QluDGprgMk5zS/ySW2JFWuukuBl8tVVCMUyu/Ltv2xLW6b6gUg+RAwj7ZZzFZKq482F7LuNwSAnhDxwLFepiTMqyPRC5OAI47fjIfs1BWQGto=
   app: moonhighway
   on:
     repo: eveporcello/moonhighway
-    branch: master
-
-  provider: heroku
-  email: eve@moonhighway.com, alex@moonhighway.com
-  api_key:
-    secure: nA9zsR4FLatOIJSxElppfCGXga6u/ve0C5CzZMe324bU+hfKrK/wkZXezPljhHf3mVPrxbIIs0Hq0sXVBHWQKFGTu425g2hEUGOTfMZjOMPrvJMr9NrEjyRiSB6qx8dGFGGca7YAiQrH7/Jy/uE6Egl8Nwt6pAFiBk3wgVPj9umV9wCG1WTCKq8OVcCiXHcrYaYBUSCw30ujbCVRZZYlp3xsAzNL4jrNTGLccmzv9Y7u/vBRb6dbttm9p7gZzVyH8eX8QPCKBsOv2NJdLpulK+pJTzmoK62OIhrbNOAubCTDsVwDfKPQPYwEbRa2ay2Tisn5XEbZTfqvcDJkSNqlVlkPkuFUbOecFMWLdxPPzzPI1BIqgSnmCJLwKCOPyUOFEpgPrfSoc0ITrwdZc8PIhO6DpPt5v/vO3IxxXbCGLL+tH71sIEsbWw49JntOuDrrRCTMkgygBmJ98md/u7uGkJhdlV2BUaVeNbk9SkCg/IYQj2RJagzKU+/x7tRaCcoUaZCEkP8BwvHC88XbzorrSv7sHjMFL7nfpEuyPqONX/tTVfEKR1LPhxJQl+QlanuQAdtEOfU/xs+03uqqRr5+VMyHr5Oah/gqVLEDlvElUKkKgUyLXItdQblPZhMHNM38BQ422ilU9DyxdI/iSXrAB2RY46SMJuKAmvdTSEvGpkY=
-  app: staging-moonhighway
-  on:
-    repo: eveporcello/moonhighway
-    branch: staging
+    branch: master    
