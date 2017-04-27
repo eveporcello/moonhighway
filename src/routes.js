@@ -2,9 +2,15 @@ import React from 'react'
 import { Router, Route, Redirect, browserHistory } from 'react-router'
 import { HomePage } from './components/home'
 import { Whoops404 } from './components/ui'
+import ReactGA from 'react-ga'
+
+ReactGA.initialize('UA-40790507-1')
 
 const routes = (
-    <Router history={browserHistory}>
+    <Router history={browserHistory} onUpdate={() => {
+        ReactGA.set({ page: window.location.pathname })
+        ReactGA.pageview(window.location.pathname)
+    }}>
         <Route path="/" component={HomePage}/>
         <Route path="/react" component={HomePage}/>
         <Route path="/node" component={HomePage}/>
