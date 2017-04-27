@@ -2,6 +2,7 @@ import React from 'react'
 import { Router, Route, Redirect, browserHistory } from 'react-router'
 import { HomePage } from './components/home'
 import { Whoops404 } from './components/ui'
+import InternalPage from './components/page/InternalPage'
 import ReactGA from 'react-ga'
 
 ReactGA.initialize('UA-40790507-1')
@@ -17,6 +18,7 @@ const routes = (
         <Route path="/html-css" component={HomePage}/>
         <Route path="/continuous-delivery" component={HomePage}/>
         <Route path="/contact" component={HomePage}/>
+        <Route path="/info/:article" component={InternalPage} />
         <Redirect from="/h5o-1" to="/"/>
         <Redirect from="/h5o-2" to="/"/>
         <Redirect from="/h5o-3" to="/react"/>
