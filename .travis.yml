@@ -3,11 +3,6 @@ node_js:
 - 4.6.1
 - 6.9.1
 
-branches:
-  only:
-  - staging
-  - master
-
 deploy:
 
   provider: heroku
