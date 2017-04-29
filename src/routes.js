@@ -6,14 +6,14 @@ import InternalPage from './components/page/InternalPage'
 import ReactGA from 'react-ga'
 
 if (window.location.origin.match(/moonhighway.com/)) {
-  ReactGA.initialize('UA-40790507-1')
+    ReactGA.initialize('UA-40790507-1')
 }
 
 const routes = (
     <Router history={browserHistory} onUpdate={() => {
         if (window.location.origin.match(/moonhighway.com/)) {
-          ReactGA.set({ page: window.location.pathname })
-          ReactGA.pageview(window.location.pathname)
+            ReactGA.set({ page: window.location.pathname })
+            ReactGA.pageview(window.location.pathname)
         }
     }}>
         <Route path="/" component={HomePage}/>
