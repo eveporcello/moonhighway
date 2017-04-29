@@ -19,13 +19,6 @@ const routes = (
         <Route path="/continuous-delivery" component={HomePage}/>
         <Route path="/contact" component={HomePage}/>
         <Route path="/info/:article" component={InternalPage} />
-        <Redirect from="/h5o-1" to="/"/>
-        <Redirect from="/h5o-2" to="/"/>
-        <Redirect from="/h5o-3" to="/react"/>
-        <Redirect from="/h5o-4" to="/node"/>
-        <Redirect from="/h5o-5" to="/html-css"/>
-        <Redirect from="/h5o-6" to="/continuous-delivery"/>
-        <Redirect from="/h5o-7" to="/contact"/>
         <Route path="*" component={Whoops404}/>
     </Router>
 )

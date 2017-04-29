@@ -1,5 +1,6 @@
 import { delaySlideScreenUp, logoInOut, expandCollapseBox, screenLayout } from '../../lib'
 import { ResponsiveImg } from '../ui'
+import { Link } from 'react-router'
 
 const LearnHTML = ({index, screenScale, screenHeight}) =>
     <section className="slide html"
@@ -13,11 +14,9 @@ const LearnHTML = ({index, screenScale, screenHeight}) =>
             <ul>
                 <li>Flexbox and Animations</li>
                 <li>Data Visualizations</li>
-                <li>HTML6, CSS4, SVG, and more</li>
+                <li>HTML6, CSS4, SVG, and <Link to="/info/html-css-training">more &gt;</Link></li>
             </ul>
         </div>
     </section>
 
 export default LearnHTML
-
-

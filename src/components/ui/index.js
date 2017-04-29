@@ -6,9 +6,28 @@ import FacebookIcon from 'react-icons/lib/fa/facebook'
 import DownTriangle from 'react-icons/lib/go/triangle-down'
 import Box from 'react-icons/lib/md/check-box-outline-blank'
 import Check from 'react-icons/lib/md/check-box'
+import { Link } from 'react-router'
 import { screenLayout } from '../../lib'
 
 import '../../stylesheets/ui.scss'
+
+export const Header = ({title}) =>
+  <header>
+    <p><Link to="/">[logo]</Link></p>
+    <h1>{title}</h1>
+    <p>[Social]</p>
+  </header>
+
+export const Menu = () =>
+  <nav className="main-menu">
+    <h2>Main Menu</h2>
+    <Link to="/info/about">About Moon Highway</Link>
+    <Link to="/info/react-training">React Training</Link>
+    <Link to="/info/node-training">Node Training</Link>
+    <Link to="/info/html-css-training">HTML &amp; CSS Training</Link>
+    <Link to="/info/continuous-delivery-training">Continuous Delivery Training</Link>
+    <Link to="/contact">Contact Us</Link>
+  </nav>
 
 export const DownButton = ({onClick=f=>f}) =>
     <div className="down-button" onClick={onClick}>
