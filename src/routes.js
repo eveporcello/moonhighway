@@ -5,12 +5,16 @@ import { Whoops404 } from './components/ui'
 import InternalPage from './components/page/InternalPage'
 import ReactGA from 'react-ga'
 
-ReactGA.initialize('UA-40790507-1')
+if (window.location.origin.match(/moonhighway.com/)) {
+  ReactGA.initialize('UA-40790507-1')
+}
 
 const routes = (
     <Router history={browserHistory} onUpdate={() => {
-        ReactGA.set({ page: window.location.pathname })
-        ReactGA.pageview(window.location.pathname)
+        if (window.location.origin.match(/moonhighway.com/)) {
+          ReactGA.set({ page: window.location.pathname })
+          ReactGA.pageview(window.location.pathname)
+        }
     }}>
         <Route path="/" component={HomePage}/>
         <Route path="/react" component={HomePage}/>
