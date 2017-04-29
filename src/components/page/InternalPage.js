@@ -18,8 +18,8 @@ export default class InternalPage extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-      const { article } = nextProps.params
-      this.fetchContent(article)
+        const { article } = nextProps.params
+        this.fetchContent(article)
     }
 
     componentWillMount() {
@@ -33,19 +33,19 @@ export default class InternalPage extends Component {
     }
 
     fetchContent(article) {
-      fetch(`/content/${article}.md`)
-        .then(resp => resp.text())
-        .then(resp => resp.match(/<!DOCTYPE html>/) ?
-            `Whoops...\n==========\n\nWe are sorry, we cannot find content for __${article}__` :
-            resp
-        )
-        .then(markdown => marked(markdown))
-        .then(html => this.setState({
-            loaded: true,
-            content: {__html: html},
-            title: capitalize.words(article.replace(/-/g, " ").replace('html css', 'HTML & CSS'))
-        }))
-        .catch(error => this.setState({error}))
+        fetch(`/content/${article}.md`)
+          .then(resp => resp.text())
+          .then(resp => resp.match(/<!DOCTYPE html>/) ?
+              `Whoops...\n==========\n\nWe are sorry, we cannot find content for __${article}__` :
+              resp
+          )
+          .then(markdown => marked(markdown))
+          .then(html => this.setState({
+              loaded: true,
+              content: {__html: html},
+              title: capitalize.words(article.replace(/-/g, " ").replace('html css', 'HTML & CSS'))
+          }))
+          .catch(error => this.setState({error}))
     }
 
     render() {

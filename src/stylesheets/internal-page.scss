@@ -47,6 +47,13 @@ article.internal-page {
 
   div.contents {
     padding: 1em;
+    position: relative;
+    width: 65%;
+
+    img {
+      width: auto;
+      max-width: 100%;
+    }
   }
 
 }
