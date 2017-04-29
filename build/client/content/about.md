@@ -31,9 +31,6 @@ Our trainers are our curriculum developers, so they have first-hand knowledge of
 ### Empathy
 We care a lot about helping our students succeed. An instructor is not just a technology expert who covers the bullet points and hopes people can keep up. An instructor should facilitate a collaborative effort. We listen to the needs of the students in real-time to make students feel engaged and supported when learning something new.
 
-### Not Just White Dudes
-Unlike most training companies, we don’t just pull young white dudes off of Craigslist, put them in a button down shirt, and send them to your office. We are a diverse team, and we think that’s good.
-
 ## Course Content
 Moon Highway courses are designed to be engaging and hands-on. We might use a few slides here and there, but we aim to get students typing code, rather than listening to lecture.
 
