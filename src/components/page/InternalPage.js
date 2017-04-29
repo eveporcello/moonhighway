@@ -3,6 +3,7 @@ import marked from 'marked'
 import { Header, Menu } from '../ui'
 import '../../stylesheets/internal-page.scss'
 import Loading from 'react-loading-animation'
+import capitalize from 'capitalize'
 
 export default class InternalPage extends Component {
 
@@ -41,7 +42,8 @@ export default class InternalPage extends Component {
         .then(markdown => marked(markdown))
         .then(html => this.setState({
             loaded: true,
-            content: {__html: html}
+            content: {__html: html},
+            title: capitalize.words(article.replace(/-/g, " ").replace('html css', 'HTML & CSS'))
         }))
         .catch(error => this.setState({error}))
     }
@@ -50,7 +52,7 @@ export default class InternalPage extends Component {
         const { params } = this.props
         return (this.state.loaded) ?
               <article className="internal-page">
-                <Header />
+                <Header title={this.state.title} />
                 <Menu />
                 <div className="contents" dangerouslySetInnerHTML={this.state.content} />
               </article> : (this.state.error) ?
@@ -58,8 +60,8 @@ export default class InternalPage extends Component {
                     <h1>Error loading content</h1>
                     <p>We've experienced an error trying to load: {params.article}</p>
                   </article> :
-                  <article className="internal-page error">
-                    <Header />
+                  <article className="internal-page">
+                    <Header title="Loading" />
                     <Menu />
                     <Loading />
                   </article>

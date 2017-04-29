@@ -13,7 +13,9 @@ import '../../stylesheets/ui.scss'
 
 export const Header = ({title}) =>
   <header>
-    <p><Link to="/">[logo]</Link></p>
+    <Link to="/">
+      <img src="/img/titles/logo-long.png" alt="back to Moon Highway home" />
+    </Link>
     <h1>{title}</h1>
     <p>[Social]</p>
   </header>

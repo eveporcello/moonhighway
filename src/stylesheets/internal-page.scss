@@ -2,11 +2,51 @@
 
 article.internal-page {
 
+  display: flex;
+  flex-wrap: wrap;
   background-color: white;
   min-height: 100%;
 
   h1 {
     margin: 0;
+  }
+
+  header {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+
+    h1 {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    a {
+      color: white;
+    }
+
+    img {
+      width: 300px;
+      margin: 12px;
+    }
+
+    p {
+      width: 272px;
+    }
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 5em;
+  }
+
+  div.contents {
+    padding: 1em;
   }
 
 }
