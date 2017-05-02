@@ -1,6 +1,7 @@
 import { Component } from 'react'
 import marked from 'marked'
-import { Header, Menu } from '../ui'
+import Menu from './Menu'
+import { Header } from '../ui'
 import '../../stylesheets/internal-page.scss'
 import Loading from 'react-loading-animation'
 import capitalize from 'capitalize'
@@ -53,8 +54,14 @@ export default class InternalPage extends Component {
         return (this.state.loaded) ?
               <article className="internal-page">
                 <Header title={this.state.title} />
-                <Menu />
-                <div className="contents" dangerouslySetInnerHTML={this.state.content} />
+                <div className="main-row">
+                  <div className="right">
+                    <Menu />
+                  </div>
+                  <div className="left">
+                    <div className="contents" dangerouslySetInnerHTML={this.state.content} />
+                  </div>
+                </div>
               </article> : (this.state.error) ?
                   <article className="internal-page error">
                     <h1>Error loading content</h1>
@@ -62,8 +69,14 @@ export default class InternalPage extends Component {
                   </article> :
                   <article className="internal-page">
                     <Header title="Loading" />
-                    <Menu />
-                    <Loading />
+                    <div className="main-row">
+                      <div className="right">
+                        <Menu />
+                      </div>
+                      <div className="left">
+                        <Loading />
+                      </div>
+                    </div>
                   </article>
     }
 }

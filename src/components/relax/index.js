@@ -249,7 +249,6 @@ export class Rellax extends Component {
     componentDidMount() {
         const direction = Hammer.DIRECTION_VERTICAL
         this.skr = skrollr.init({edgeStrategy: 'set'})
-        this.skr.refresh()
         if (isMobile()) {
             this.mc = new Hammer(this.refs.root)
             this.mc.get('pan').set({direction});
@@ -274,9 +273,12 @@ export class Rellax extends Component {
     }
 
     componentWillUnmount() {
+        clearTimeout(this.to)
         window.removeEventListener("wheel", this.onWheel)
         window.removeEventListener("keydown", this.onArrowKeys)
+        window.removeEventListener("resize", this.onResize)
         document.body.style.height = ''
+        this.skr.destroy()
     }
 
     componentDidUpdate() {

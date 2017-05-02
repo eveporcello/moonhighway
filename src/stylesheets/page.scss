@@ -12,6 +12,8 @@ body {
   font-family: $main-font;
   font-size: 70%;
 
+  display: flex;
+
   @media screen and (min-width: 750px) {
     font-size: 100%;
   }
@@ -20,6 +22,7 @@ body {
 
 #react-container {
   display: block;
+  flex-basis: 100%;
 }
 
 /* Hiding the scrollbar */

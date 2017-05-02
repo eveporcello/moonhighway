@@ -14,22 +14,11 @@ import '../../stylesheets/ui.scss'
 export const Header = ({title}) =>
   <header>
     <Link to="/">
-      <img src="/img/titles/logo-long.png" alt="back to Moon Highway home" />
+      <img src="/img/titles/logo-sm-long.png" alt="back to Moon Highway home" />
     </Link>
     <h1>{title}</h1>
-    <p>[Social]</p>
+    <SocialIcons />
   </header>
-
-export const Menu = () =>
-  <nav className="main-menu">
-    <h2>Main Menu</h2>
-    <Link to="/info/about">About Moon Highway</Link>
-    <Link to="/info/react-training">React Training</Link>
-    <Link to="/info/node-training">Node Training</Link>
-    <Link to="/info/html-css-training">HTML &amp; CSS Training</Link>
-    <Link to="/info/continuous-delivery-training">Continuous Delivery Training</Link>
-    <Link to="/contact">Contact Us</Link>
-  </nav>
 
 export const DownButton = ({onClick=f=>f}) =>
     <div className="down-button" onClick={onClick}>

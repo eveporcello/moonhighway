@@ -3,7 +3,7 @@
 article.internal-page {
 
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   background-color: white;
   min-height: 100%;
 
@@ -12,16 +12,32 @@ article.internal-page {
   }
 
   header {
-    flex-basis: 100%;
+    height: 70px;
     display: flex;
+    @media screen and (max-width: 500px) {
+      flex-direction: column;
+      height: 145px;
+      justify-content: center;
+
+      div.social-icons {
+        font-size: 3em !important;
+        position: relative;
+        top: -33px;
+      }
+    }
     justify-content: space-between;
     align-items: center;
-    background-color: black;
+    background-color: #003;
+    border-bottom: solid 2px #7ABCFF;
     color: white;
+    font-family: 'Montserrat', Arial;
 
     h1 {
       flex-grow: 1;
       text-align: center;
+      @media screen and (max-width: 750px) {
+        display: none;
+      }
     }
 
     a {
@@ -33,26 +49,68 @@ article.internal-page {
       margin: 12px;
     }
 
-    p {
-      width: 272px;
+    div.social-icons {
+      font-size: 2em;
+      margin-right: .5em;
+
+      a {
+        margin: 0 .5em;
+      }
     }
   }
 
-  nav {
+  div.main-row {
+    flex-grow: 1;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    padding: 5em;
-  }
 
-  div.contents {
-    padding: 1em;
-    position: relative;
-    width: 65%;
+    div.right {
+      flex-grow: 1;
+    }
 
-    img {
-      width: auto;
-      max-width: 100%;
+    div.left {
+      flex-grow: 3;
+    }
+
+    nav {
+      h2 {
+        display: none;
+      }
+      width: 260px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      padding: 5em;
+      @media screen and (max-width: 1200px) {
+        padding: 5em 2em;
+      }
+      font-size: 1em;
+      font-family: 'Montserrat';
+
+      a {
+
+        color: #7ABCFF;
+        text-decoration: none;
+        text-align: right;
+        border-right: solid 2px lightgrey;
+        padding: .7em;
+        margin: 4px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+    }
+
+    div.contents {
+      padding: 1em;
+      position: relative;
+      flex-grow: 20;
+
+      img {
+        width: auto;
+        max-width: 100%;
+      }
     }
   }
 
