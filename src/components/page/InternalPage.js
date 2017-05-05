@@ -25,13 +25,9 @@ export default class InternalPage extends Component {
         this.onResize = this.onResize.bind(this)
     }
 
-    static defaultProps = {
-      breakpoint: 769
-    }
-
     toggleMenu() {
-      const menuOpen = !this.state.menuOpen
-      this.setState({ menuOpen })
+        const menuOpen = !this.state.menuOpen
+        this.setState({ menuOpen })
     }
 
     onResize() {
@@ -73,7 +69,7 @@ export default class InternalPage extends Component {
     }
 
     componentDidUpdate() {
-      scroll(0,0)
+        scroll(0,0)
     }
 
     fetchContent(article) {
@@ -127,4 +123,8 @@ export default class InternalPage extends Component {
                     <Footer />
                   </article>
     }
+}
+
+InternalPage.defaultProps = {
+    breakpoint: 769
 }
