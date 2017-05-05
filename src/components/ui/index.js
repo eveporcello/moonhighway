@@ -8,17 +8,7 @@ import Box from 'react-icons/lib/md/check-box-outline-blank'
 import Check from 'react-icons/lib/md/check-box'
 import { Link } from 'react-router'
 import { screenLayout } from '../../lib'
-
 import '../../stylesheets/ui.scss'
-
-export const Header = ({title}) =>
-  <header>
-    <Link to="/">
-      <img src="/img/titles/logo-sm-long.png" alt="back to Moon Highway home" />
-    </Link>
-    <h1>{title}</h1>
-    <SocialIcons />
-  </header>
 
 export const DownButton = ({onClick=f=>f}) =>
     <div className="down-button" onClick={onClick}>

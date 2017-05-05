@@ -1,51 +1,57 @@
-import { Component } from 'react'
+import React, { Component, Children } from 'react'
 import { Link } from 'react-router'
 import { SocialIcons } from '../ui'
+import CheeseburgerMenu from 'cheeseburger-menu'
 
-export default class Menu extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            collapsed: window.innerWidth < 750
-        }
-        this.onResize = this.onResize.bind(this)
-    }
+const links = [
+  <Link activeClassName="selected"
+        to="/info/about">About Moon Highway</Link>,
+  <Link activeClassName="selected"
+        to="/info/react-training">React Training</Link>,
+  <Link activeClassName="selected"
+        to="/info/node-training">Node Training</Link>,
+  <Link activeClassName="selected"
+        to="/info/html-css-training">HTML &amp; CSS Training</Link>,
+  <Link activeClassName="selected"
+        to="/info/continuous-delivery-training">Continuous Delivery Training</Link>,
+  <Link activeClassName="selected"
+        to="/contact">Contact Us</Link>
+]
 
-    onResize() {
-        if (this.state.collapsed && window.innerWidth > this.props.breakpoint) {
-            this.setState({ collapsed: false })
-        } else if (!this.state.collapsed && window.innerWidth < this.props.breakpoint) {
-            this.setState({ collapsed: true })
-        }
-    }
-
-    componentWillMount() {
-        window.addEventListener('resize', this.onResize)
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('resize', this.onResize)
-    }
-
-    render() {
-        const activeStyle = {
-            borderRightColor: '#b3b6b8',
-            color: '#b3b6b8'
-        }
-        return (this.state.collapsed) ?
-            <h1>Collapsed Menu</h1> :
-            <nav className="main-menu">
+export const Menu = ({collapsed=false, isOpen=false, toggleMenu=f=>f }) =>
+    (collapsed) ? (
+        <CheeseburgerMenu isOpen={isOpen} closeCallback={toggleMenu}>
+            <nav className="mobile-menu">
                 <h2>Main Menu</h2>
-                <Link activeStyle={activeStyle} to="/info/about">About Moon Highway</Link>
-                <Link activeStyle={activeStyle} to="/info/react-training">React Training</Link>
-                <Link activeStyle={activeStyle} to="/info/node-training">Node Training</Link>
-                <Link activeStyle={activeStyle} to="/info/html-css-training">HTML &amp; CSS Training</Link>
-                <Link activeStyle={activeStyle} to="/info/continuous-delivery-training">Continuous Delivery Training</Link>
-                <Link activeStyle={activeStyle} to="/contact">Contact Us</Link>
+                <Link to="/">
+                    <img src="/img/titles/logo-dark.png" alt="Moon Highway" />
+                </Link>
+                {Children.map(links, link => {
+                  link.props.onClick = toggleMenu
+                  return link
+                })}
             </nav>
-    }
-}
+        </CheeseburgerMenu>
+    ) : (
+        <nav className="main-menu">
+            <h2>Main Menu</h2>
+            {links}
+        </nav>
+    )
 
-Menu.defaultProps = {
-    breakpoint: 933
-}
+export const Header = ({title}) =>
+  <header>
+    <Link to="/">
+      <img src="/img/titles/logo-sm-long.png" alt="back to Moon Highway home" />
+    </Link>
+    <h1>{title}</h1>
+    <SocialIcons />
+  </header>
+
+export const Footer = () =>
+    <footer>
+      <div>
+        {links}
+      </div>
+      <div>&copy; copywrite 2017 Moon Highway LLC</div>
+    </footer>
