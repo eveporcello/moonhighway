@@ -10,15 +10,15 @@ Whether it’s a project manager who needs to know more about HTML, a front-end 
 
 ## Bios
 
-### Alex Banks ![Twitter](#) ![Github](#)
+### Alex Banks [Twitter](https://twitter.com/moontahoe) [Github](https://github.com/moontahoe)
 Alex Banks is a software engineer, instructor, and co-founder of Moon Highway, a curriculum development company in Northern California. As a software consultant, he has developed applications for the Chicago Marathon, MSN, and the Department of Energy. In addition, he's authored several classes for Lynda.com.
 
-* [Alex's Classes on LinkedIn Learning](#)
+* [Alex's Classes on LinkedIn Learning](https://www.linkedin.com/learning/instructors/alex-banks?u=2125562)
 
-### Eve Porcello ![Twitter](#) ![Github](#)
+### Eve Porcello [Twitter](https://twitter.com/eveporcello) [Github](https://github.com/eveporcello)
 Eve Porcello is a software architect and co-founder of Moon Highway, a curriculum development company in Northern California. Prior to Moon Highway, Eve worked on software projects for 1-800-Dentist and Microsoft. She is an active corporate trainer, speaker, and author on Lynda.com.
 
-* [Eve's Classes on LinkedIn Learning](#)
+* [Eve's Classes on LinkedIn Learning](https://www.linkedin.com/learning/instructors/eve-porcello?u=2125562)
 
 ## Why Our Classes are Different
 
@@ -50,21 +50,21 @@ Our course materials are comprised of three different components: samples, exerc
 
 ## Student Testimonials
 
-"I like that this was hands-on and less lecture/presentation based" - Node.js Kickoff student
-"No student left behind - very cool." - JavaScript Pro student
-"Great job of both answering questions & keeping the pace moving in class!" - JavaScript Kickoff student
-"Instructor is very good. Knowledgeable and a good communicator. Pace of class was great as well as the materials. Fast enough to challenge but not to frustrate." - CSS Pro student
-"Very knowledgeable, able to discuss any side topic or deeper concept, engaging, built excellent connection to class. Good pacing." - HTML Foundation student
-"Instructor is good about redirecting lessons on the fly based on questions and input." - JavaScript Kickoff student
+* "I like that this was hands-on and less lecture/presentation based" - Node.js Kickoff student
+* "No student left behind - very cool." - JavaScript Pro student
+* "Great job of both answering questions & keeping the pace moving in class!" - JavaScript Kickoff student
+* "Instructor is very good. Knowledgeable and a good communicator. Pace of class was great as well as the materials. Fast enough to challenge but not to frustrate." - CSS Pro student
+* "Very knowledgeable, able to discuss any side topic or deeper concept, engaging, built excellent connection to class. Good pacing." - HTML Foundation student
+* "Instructor is good about redirecting lessons on the fly based on questions and input." - JavaScript Kickoff student
 
 ## LinkedIn Learning Classes
 Since 2015, we’ve created several classes as LinkedIn Learning authors. Our courses can be used as prerequisites or supplemental materials to our course offerings.
 
 ### Courses We’ve Recorded
-* [Node.js Essential Training]()
-* [Learning React]()
-* [React.js Essential Training]()
-* [Learning ECMAScript 6]()
-* [Learning GraphQL]()
-* [Learning React Native]()
-* [Learning Redux]()
+* [Node.js Essential Training](https://www.linkedin.com/learning/node-js-essential-training?u=2125562)
+* [Learning React](https://www.linkedin.com/learning/learning-react-js-2?u=2125562)
+* [React.js Essential Training](https://www.linkedin.com/learning/react-js-essential-training?u=2125562)
+* [Learning React Native](https://www.linkedin.com/learning/learning-react-native-2?u=2125562)
+* [Learning Redux](https://www.linkedin.com/learning/learning-redux?u=2125562)
+* [Learning ECMAScript 6](https://www.linkedin.com/learning/learning-ecmascript-6?u=2125562)
+* [Learning GraphQL](https://www.linkedin.com/learning/learning-graphql?u=2125562)

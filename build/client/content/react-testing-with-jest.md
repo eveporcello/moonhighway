@@ -19,9 +19,9 @@ Students will be most successful in this class if they are comfortable with Java
 
 Need to brush up on any of these skills? Check out these courses:
 
-* [JavaScript Pro]()
-* [Node.js Kickoff]()
-* [Node.js Full Stack]()
-* [React Kickoff]()
-* [Advanced React with Redux]()
-* [ESNext and Functional JavaScript]()
+* [JavaScript Pro](https://www.moonhighway.com/info/javascript-pro)
+* [Node.js Kickoff](https://www.moonhighway.com/info/node-kickoff)
+* [Node.js Full Stack](https://www.moonhighway.com/info/node-full-stack)
+* [React Kickoff](https://www.moonhighway.com/info/react-kickoff)
+* [Advanced React with Redux](https://www.moonhighway.com/info/advanced-react-with-redux)
+* [ESNext and Functional JavaScript](https://www.moonhighway.com/info/esnext-functional-javascript)

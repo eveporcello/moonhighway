@@ -22,5 +22,5 @@ Students will be most successful in this class if they are comfortable with HTML
 
 Need to brush up on any of these skills? Check out these courses:
 
-* [HTML Foundation]()
-* [JavaScript Kickoff]()
+* [HTML Foundation](https://www.moonhighway.com/info/html5-foundation)
+* [JavaScript Kickoff](https://www.moonhighway.com/info/javascript-kickoff)

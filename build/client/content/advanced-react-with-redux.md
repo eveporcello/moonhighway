@@ -43,7 +43,7 @@ Students will be most successful in this class if they have solid JavaScript ski
 
 Need to brush up on any of these skills? Check out these courses:
 
-* [JavaScript Pro]()
-* [Node.js Intro]()
-* [ESNext and Functional JavaScript]()
-* [React Kickoff]()
+* [JavaScript Pro](https://www.moonhighway.com/info/javascript-pro)
+* [Node.js Kickoff](https://www.moonhighway.com/info/node-kickoff)
+* [ESNext and Functional JavaScript](https://www.moonhighway.com/info/esnext-functional-javascript)
+* [React Kickoff](https://www.moonhighway.com/info/react-kickoff)

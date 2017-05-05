@@ -1,9 +1,9 @@
 Node.js Full Stack
 =======
 
-## Length: 1 Day
+## Length: 2 Day
 
-Node.js is JavaScript without the browser. This course covers how Node works, when to use it, and how to use it. In this introduction, we'll look at the core components of Node.js and covers how to incorporate 3rd party modules from the npm registry.
+In this course, we'll focus on building full-stack apps with Node.js. With a variety of node packages, we'll get comfortable managing dependencies. Then we'll learn testing techniques for code reliability. Finally, we will explore Express routing and middleware features.
 
 ### What You'll Learn
 
@@ -16,11 +16,10 @@ Node.js is JavaScript without the browser. This course covers how Node works, wh
 * Testing HTTP Endpoints
 
 ## Prerequisites
-Students should have a solid understanding of JavaScript and an intro
+Students should have a solid understanding of JavaScript and an intro-level understanding of Node.js.
 
 Need to brush up on any of these skills? Check out these courses:
 
-* [HTML Foundation]()
-* [CSS Kickoff]()
-* [CSS Pro]()
-* [JavaScript Kickoff]()
+* [JavaScript Kickoff](https://www.moonhighway.com/info/javascript-kickoff)
+* [JavaScript Pro](https://www.moonhighway.com/info/javascript-pro)
+* [Node.js Kickoff](https://www.moonhighway.com/info/node-kickoff)

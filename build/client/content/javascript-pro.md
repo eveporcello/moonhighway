@@ -19,7 +19,7 @@ Students will be most successful in this class if they have solid HTML and CSS s
 
 Need to brush up on any of these skills? Check out these courses:
 
-* [HTML Foundation]()
-* [CSS Kickoff]()
-* [CSS Pro]()
-* [JavaScript Kickoff]()
+* [HTML Foundation](https://www.moonhighway.com/info/html5-foundation)
+* [CSS Kickoff](https://www.moonhighway.com/info/css-kickoff)
+* [CSS Boss](https://www.moonhighway.com/info/css-boss)
+* [JavaScript Kickoff](https://www.moonhighway.com/info/javascript-kickoff)
