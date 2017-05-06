@@ -20,4 +20,4 @@ Students should be comfortable creating pages using HTML tags.
 
 Need to brush up on these skills? Check out:
 
-* [HTML5 Foundation](https://www.moonhighway.com/info/html5-foundation)
+* [HTML5 Foundation](#/info/html5-foundation)

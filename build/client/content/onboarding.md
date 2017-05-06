@@ -7,4 +7,4 @@ Moon Highway offers engineering onboarding courses for companies of all sizes. W
 
 With a custom onboarding program, you will help cultivate and solidify your engineering culture.
 
-[Contact us](https://moonhighway.com/contact) for more information.
+[Contact us](#/contact) for more information.

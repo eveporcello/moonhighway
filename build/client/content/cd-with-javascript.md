@@ -18,6 +18,6 @@ Students will be most successful in this class if they know HTML and basic JavaS
 
 Need to brush up on any of these skills? Check out these courses:
 
-* [HTML Foundation](https://www.moonhighway.com/info/html5-foundation)
-* [JavaScript Kickoff](https://www.moonhighway.com/info/css-kickoff)
-* [Node.js Kickoff](https://www.moonhighway.com/info/node-kickoff)
+* [HTML Foundation](#/info/html5-foundation)
+* [JavaScript Kickoff](#/info/css-kickoff)
+* [Node.js Kickoff](#/info/node-kickoff)

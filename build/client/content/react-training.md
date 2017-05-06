@@ -7,22 +7,22 @@ Since its open-source release by Facebook in 2013, the React library has explode
 
 ## Moon Highway's React Courses
 
-### [React Bootcamp - 5 Days](https://www.moonhighway.com/info/react-bootcamp)
+### [React Bootcamp - 5 Days](#/info/react-bootcamp)
 Based on our Learning React book, we’ll give a team everything needed to build modern, React applications.
 
-### [React Kickoff - 2 Days](https://www.moonhighway.com/info/react-kickoff)
+### [React Kickoff - 2 Days](#/info/react-kickoff)
 Get started with React the right way.
 
-### [Advanced React with Redux - 3 Days](https://www.moonhighway.com/info/advanced-react-with-redux)
+### [Advanced React with Redux - 3 Days](#/info/advanced-react-with-redux)
 Go beyond the basics with topics like Redux, React Router, Jest testing, and universal React apps.
 
-### [ESNext and Functional JavaScript - 1 Day](https://www.moonhighway.com/info/esnext-functional-javascript)
+### [ESNext and Functional JavaScript - 1 Day](#/info/esnext-functional-javascript)
 Learn the latest syntax and functional techniques to get ready for modern JavaScript.
 
-### [GraphQL Kickoff - 1 Day](https://www.moonhighway.com/info/graphql-kickoff)
+### [GraphQL Kickoff - 1 Day](#/info/graphql-kickoff)
 Write queries and mutations for your APIs with GraphQL.
 
-### [React Native Kickoff - 1 Day](https://www.moonhighway.com/info/react-native-kickoff)
+### [React Native Kickoff - 1 Day](#/info/react-native-kickoff)
 Think outside the browser with React Native training for iOS and Android devices.
 
 ## Related Courses on LinkedIn Learning / Lynda.com

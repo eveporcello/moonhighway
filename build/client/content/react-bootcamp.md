@@ -65,8 +65,8 @@ Students will be most successful in this class if they have HTML, CSS, and JavaS
 
 Need to brush up on any of these skills? Check out these courses:
 
-* [HTML Foundation](https://www.moonhighway.com/info/html5-foundation)
-* [CSS Kickoff](https://www.moonhighway.com/info/css-kickoff)
-* [JavaScript Kickoff](https://www.moonhighway.com/info/javascript-kickoff)
-* [Node.js Kickoff](https://www.moonhighway.com/info/node-kickoff)
-* [ESNext and Functional JavaScript](https://www.moonhighway.com/info/esnext-functional-javascript)
+* [HTML Foundation](#/info/html5-foundation)
+* [CSS Kickoff](#/info/css-kickoff)
+* [JavaScript Kickoff](#/info/javascript-kickoff)
+* [Node.js Kickoff](#/info/node-kickoff)
+* [ESNext and Functional JavaScript](#/info/esnext-functional-javascript)

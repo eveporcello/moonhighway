@@ -7,19 +7,19 @@ Our beginner JavaScript courses emphasize the fundamentals of JavaScript for eng
 
 ## Moon Highway's JavaScript and Node.js Courses
 
-### [JavaScript Kickoff - 1 Day](https://www.moonhighway.com/info/javascript-kickoff)
+### [JavaScript Kickoff - 1 Day](#/info/javascript-kickoff)
 Learn all of the basics in this one day introduction to JavaScript.
 
-### [JavaScript Pro - 1 Day](https://www.moonhighway.com/info/javascript-pro)
+### [JavaScript Pro - 1 Day](#/info/javascript-pro)
 Build on the basics with JavaScript libraries, frameworks, and language features.
 
-### [JavaScript Hip - 1 Day](https://www.moonhighway.com/info/javascript-hip)
+### [JavaScript Hip - 1 Day](#/info/javascript-hip)
 Get fancy with functional JavaScript and the latest ECMAScript syntax.
 
-### [Node.js Kickoff - 1 Day](https://www.moonhighway.com/info/node-kickoff)
+### [Node.js Kickoff - 1 Day](#/info/node-kickoff)
 Kickstart your full-stack career with server-side JavaScript in Node.js.
 
-### [Node.js Full Stack - 2 Days](https://www.moonhighway.com/info/node-full-stack)
+### [Node.js Full Stack - 2 Days](#/info/node-full-stack)
 Build full-stack apps with Node.js and learn testing techniques for code reliability.
 
 ## Related Courses on LinkedIn Learning / Lynda.com

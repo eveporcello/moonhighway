@@ -5,7 +5,7 @@ React Kickoff
 
 This course is designed to introduce JavaScript developers to the React library. Starting from scratch, we'll give students a solid foundation with the core concepts of React. We will create components and get familiar with important features like props and state.
 
-This course is also part of our [5 Day React Bootcamp]().
+This course is also part of our [5 Day React Bootcamp](/info/react-bootcamp).
 
 ## Day 1: Intro to React
 Dive into React by creating components and getting familiar with props and state.
@@ -35,8 +35,8 @@ Students will be most successful in this class if they have at least basic HTML,
 
 Need to brush up on any of these skills? Check out these courses:
 
-* [HTML Foundation](https://www.moonhighway.com/info/html5-foundation)
-* [CSS Kickoff](https://www.moonhighway.com/info/css-kickoff)
-* [JavaScript Kickoff](https://www.moonhighway.com/info/javascript-kickoff)
-* [Node.js Kickoff](https://www.moonhighway.com/info/node-kickoff)
-* [ESNext and Functional JavaScript](https://www.moonhighway.com/info/esnext-functional-javascript)
+* [HTML Foundation](#/info/html5-foundation)
+* [CSS Kickoff](#/info/css-kickoff)
+* [JavaScript Kickoff](#/info/javascript-kickoff)
+* [Node.js Kickoff](#/info/node-kickoff)
+* [ESNext and Functional JavaScript](#/info/esnext-functional-javascript)

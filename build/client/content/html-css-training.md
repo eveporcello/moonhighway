@@ -5,14 +5,14 @@ Make your pages semantic, responsive, and accessible with the latest HTML and CS
 
 ## Moon Highway's HTML and CSS Courses
 
-### [HTML Foundation - 1 Day](https://www.moonhighway.com/info/html5-foundation)
+### [HTML Foundation - 1 Day](#/info/html5-foundation)
 Craft logical hierarchies learning the basics of HTML.
 
-### [CSS Kickoff - 1 Day](https://www.moonhighway.com/info/css-kickoff)
+### [CSS Kickoff - 1 Day](#/info/css-kickoff)
 Style and arrange your content with an intro to CSS.
 
-### [CSS Boss - 1 Day](https://www.moonhighway.com/info/css-boss)
+### [CSS Boss - 1 Day](#/info/css-boss)
 Animate and automate with the newest syntax and CSS tools.
 
-### [CSS Flex - 1 Day](https://www.moonhighway.com/info/css-flex)
+### [CSS Flex - 1 Day](#/info/css-flex)
 Design beautiful responsive pages with Flexbox and CSS Grid.

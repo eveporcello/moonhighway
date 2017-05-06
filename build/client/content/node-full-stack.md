@@ -20,6 +20,6 @@ Students should have a solid understanding of JavaScript and an intro-level unde
 
 Need to brush up on any of these skills? Check out these courses:
 
-* [JavaScript Kickoff](https://www.moonhighway.com/info/javascript-kickoff)
-* [JavaScript Pro](https://www.moonhighway.com/info/javascript-pro)
-* [Node.js Kickoff](https://www.moonhighway.com/info/node-kickoff)
+* [JavaScript Kickoff](#/info/javascript-kickoff)
+* [JavaScript Pro](#/info/javascript-pro)
+* [Node.js Kickoff](#/info/node-kickoff)

@@ -7,20 +7,20 @@ Whether you're onboarding new staff or you're rolling out new processes that eve
 
 ## Moon Highway's Continuous Delivery Courses
 
-### [Git Kickoff - 1 Day](https://www.moonhighway.com/info/git-kickoff)
+### [Git Kickoff - 1 Day](#/info/git-kickoff)
 Organize and manage the versions of your code with a solid understanding of Git and GitHub.
 
-### [Test Driven Development with JavaScript - 1 Day](https://www.moonhighway.com/info/tdd-with-javascript)
+### [Test Driven Development with JavaScript - 1 Day](#/info/tdd-with-javascript)
 Understand how to write solid, testable applications with JavaScript and test libraries.
 
-### [Behavior-Driven Development with JavaScript - 1 Day](https://www.moonhighway.com/info/bdd-with-javascript)
+### [Behavior-Driven Development with JavaScript - 1 Day](#/info/bdd-with-javascript)
 Design great user experiences by implementing behavior-driven development.
 
-### [Continuous Delivery with JavaScript - 1 Day](https://www.moonhighway.com/info/cd-with-javascript)
+### [Continuous Delivery with JavaScript - 1 Day](#/info/cd-with-javascript)
 Integrate your code into the project with continuous delivery techniques.
 
-### [UX Design and Accessibility - 2 Days](https://www.moonhighway.com/info/ux-design)
+### [UX Design and Accessibility - 2 Days](#/info/ux-design)
 Build sites that are beautiful, useful, and accessible by learning the UX design process.
 
-### [Onboarding](https://www.moonhighway.com/info/onboarding)
+### [Onboarding](#/info/onboarding)
 Solidify your engineering culture by starting everyone on the same page.

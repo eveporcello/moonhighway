@@ -18,5 +18,5 @@ Students should be comfortable with HTML and CSS basics before taking this cours
 
 Need to brush up on any of these skills? Check out these courses:
 
-* [HTML Foundation](https://www.moonhighway.com/info/html5-foundation)
-* [CSS Kickoff](https://www.moonhighway.com/info/css-kickoff)
+* [HTML Foundation](#/info/html5-foundation)
+* [CSS Kickoff](#/info/css-kickoff)
