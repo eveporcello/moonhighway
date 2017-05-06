@@ -40,30 +40,30 @@ Bio Templates
 ======================
 
 @bio@
-![Pic](../img/titles/logo-dark.png)
 ### Alex Banks
+Alex Banks is a software engineer, instructor, and co-founder of Moon Highway, a curriculum development company in Northern California. As a software consultant, he has developed applications for the Chicago Marathon, MSN, and the Department of Energy. In addition, he's authored several classes for Lynda.com.
+![Pic](../img/titles/logo-dark.png)
 [Twitter](https://twitter.com/moontahoe)
 [Github](https://github.com/moontahoe)
 [LinkedIn](https://www.linkedin.com/in/alexbanks/)
-Alex Banks is a software engineer, instructor, and co-founder of Moon Highway, a curriculum development company in Northern California. As a software consultant, he has developed applications for the Chicago Marathon, MSN, and the Department of Energy. In addition, he's authored several classes for Lynda.com.
-* [Alex's Classes on LinkedIn Learning](https://www.linkedin.com/learning/instructors/alex-banks?u=2125562)
+[Alex's Classes on LinkedIn Learning](https://www.linkedin.com/learning/instructors/alex-banks?u=2125562)
 @endbio@
 
 @bio@
-![Pic](../img/titles/logo-dark.png)
 ### Eve Porcello
+Eve Porcello is a software architect and co-founder of Moon Highway, a curriculum development company in Northern California. Prior to Moon Highway, Eve worked on software projects for 1-800-Dentist and Microsoft. She is an active corporate trainer, speaker, and author on Lynda.com.
+![Pic](../img/titles/logo-dark.png)
 [Twitter](https://twitter.com/eveporcello)
 [Github](https://github.com/eveporcello)
 [LinkedIn](https://www.linkedin.com/in/eveporcello/)
-Eve Porcello is a software architect and co-founder of Moon Highway, a curriculum development company in Northern California. Prior to Moon Highway, Eve worked on software projects for 1-800-Dentist and Microsoft. She is an active corporate trainer, speaker, and author on Lynda.com.
-* [Eve's Classes on LinkedIn Learning](https://www.linkedin.com/learning/instructors/eve-porcello?u=2125562)
+[Eve's Classes on LinkedIn Learning](https://www.linkedin.com/learning/instructors/eve-porcello?u=2125562)
 @endbio@
 
 Content Templates
 =====================
 
 @left@
-### Left Title
+### Left in Markdown
 Andouille doner bacon turkey drumstick short loin. Tri-tip kevin ball tip tongue, shoulder picanha t-bone corned beef landjaeger bresaola.
 ![IMG](../img/titles/logo-dark.png)
 @endleft@
@@ -74,23 +74,26 @@ Andouille doner bacon turkey drumstick short loin. Tri-tip kevin ball tip tongue
 ![IMG](../img/titles/logo-dark.png)
 @endright@
 
-@video-https://www.linkedin.com/learning/node-js-essential-training?u=2125562@
-![Video](../img/titles/logo-dark.png)
+@video@
 ### Node js Essential training
+[Link](https://www.linkedin.com/learning/node-js-essential-training?u=2125562)
+![Video](../img/titles/logo-dark.png)
 By: Alex Banks
 24 mins
 @endvideo@
 
-@video-https://www.linkedin.com/learning/learning-react-js-2?u=2125562@
-![Video](../img/titles/logo-dark.png)
+@video@
 ### Learning React
+[Link](https://www.linkedin.com/learning/learning-react-js-2?u=2125562)
+![Video](../img/titles/logo-dark.png)
 By: Eve Porcello
 1 hr 5 mins
 @endvideo@
 
-@video-https://www.linkedin.com/learning/react-js-essential-training?u=2125562@
-![Video](../img/titles/logo-dark.png)
+@video@
 ### React Essential training
+[Link](https://www.linkedin.com/learning/react-js-essential-training?u=2125562)
+![Video](../img/titles/logo-dark.png)
 By: Alex Banks
 12 hr 5 mins
 @endvideo@

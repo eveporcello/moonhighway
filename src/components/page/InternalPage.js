@@ -7,6 +7,7 @@ import { Link } from 'react-router'
 import { Header, Footer, Menu } from './Menu'
 import LeftArrow from 'react-icons/lib/fa/angle-left'
 import '../../stylesheets/internal-page.scss'
+import '../../stylesheets/contents.scss'
 
 export default class InternalPage extends Component {
 
@@ -81,6 +82,17 @@ export default class InternalPage extends Component {
               resp
           )
           .then(markdown => marked(markdown))
+          .then(html => html.replace(/@left@/g, '<div class="template-left">'))
+          .then(html => html.replace(/@right@/g, '<div class="template-right">'))
+          .then(html => html.replace(/@bio@/g, '<div class="template-bio">'))
+          .then(html => html.replace(/@video@/g, '<div class="template-video">'))
+          .then(html => html.replace(/@endleft@|@endright@|@endbio@|@endvideo@/g, '</div>'))
+          .then(html => html.replace(/<p><div/g, '<div'))
+          .then(html => html.replace(/div><\/p>/g,'div>'))
+          .then(html => html.replace(/-left"><\/p>/g, '-left">'))
+          .then(html => html.replace(/-right"><\/p>/g, '-right">'))
+          .then(html => html.replace(/-bio"><\/p>/g, '-bio">'))
+          .then(html => html.replace(/-video"><\/p>/g, '-video">'))
           .then(html => this.setState({
               loaded: true,
               content: {__html: html},
