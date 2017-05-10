@@ -25,7 +25,7 @@ curriculum designers, authors, and partners both in business and in life.
 while attending DePaul University. Eve designed software specifications and worked on software projects for 1-800-Dentist and Microsoft while she learned how to code. Eve began teaching UML, usability, and tools for drafting software specifications in 2010. By 2012 Eve was teaching
 Node js, Test Driven Development, and functional JavaScript techniques to engineers at Yahoo and PayPal. She is an active corporate trainer, speaker, and author for O'Reilly media and LinkedIn Learning.</p>
 <a href="https://www.linkedin.com/learning/instructors/eve-porcello?u=2125562" target="_blank">
-  <img src="http://localhost:3333/img/linkedin-learning/learning-insider-program.png" alt="LinkedIn learning insider Alex Banks" />
+  <img src="/img/linkedin-learning/learning-insider-program.png" alt="LinkedIn learning insider Alex Banks" />
 </a>
 </div>
 </div>
@@ -39,7 +39,7 @@ to JavaScript in 1997 as a Computer Science student at Georgetown University. As
 developed curriculum and delivered classroom based training to hundreds of engineers at companies across the country from AOL in Dulles Virginia to Yahoo
 in Sunnyvale California. He is an active corporate training, speaker, and author for O'Reilly media and LinkedIn learning.</p>
 <a href="https://www.linkedin.com/learning/instructors/alex-banks?u=2125562" target="_blank">
-  <img src="http://localhost:3333/img/linkedin-learning/learning-insider-program.png" alt="LinkedIn learning insider Alex Banks" />
+  <img src="/img/linkedin-learning/learning-insider-program.png" alt="LinkedIn learning insider Alex Banks" />
 </a>
 </div>
 </div>

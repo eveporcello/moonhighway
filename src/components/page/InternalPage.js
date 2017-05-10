@@ -73,7 +73,9 @@ export default class InternalPage extends Component {
     }
 
     fetchContent(article) {
+        console.warn('fetching from http://localhost:3000 for development!')
         fetch(`/content/${article}.md`)
+        //fetch(`http://localhost:3000/content/${article}.md`)
           .then(resp => resp.text())
           .then(resp => resp.match(/<!DOCTYPE html>/) ?
               `Whoops...\n==========\n\nWe are sorry, we cannot find content for __${article}__` :
