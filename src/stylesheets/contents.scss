@@ -1,10 +1,19 @@
 div.contents {
+  display: flex;
+  flex-wrap: wrap;
   padding: 1em;
   position: relative;
   flex-grow: 20;
+  font-size: 125%;
 
   @media screen and (max-width: 769px) {
     font-size: 150%;
+  }
+
+  strong {
+    font-family: verdana, sans-serif;
+    font-size: .9em;
+    color: #003;
   }
 
   h1 {
@@ -12,6 +21,12 @@ div.contents {
     font-size: 1.4em;
     padding: .2em 0;
     border-bottom: solid 1px #7ABCFF;
+    flex-basis: 100%;
+    margin-bottom: .75em;
+  }
+
+  >p {
+    margin-top: 0;
   }
 
   h2 {
@@ -20,6 +35,7 @@ div.contents {
     padding: 0;
     margin: 0;
     color: #979797;
+    margin-bottom: .75em;
   }
 
   h3 {
@@ -49,7 +65,7 @@ div.contents {
     margin-left: 10%;
     padding: .2em;
     border: solid 1px grey;
-    box-shadow: 3px 3px 10px #725e7d;
+    box-shadow: 3px 3px 10px #a5acb3;
   }
 
   blockquote {
@@ -57,6 +73,11 @@ div.contents {
       font-family: "Source Sans Pro", Arial;
       display: flex;
       flex-wrap: wrap;
+
+      @media screen and (max-width: 770px) {
+        font-size: 1.2em;
+        margin: 1em 0;
+      }
 
       &:before {
           content: "\"";
@@ -87,4 +108,195 @@ div.contents {
       }
   }
 
+  div.bio {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 2em 0;
+    @media screen and (max-width: 770px) {
+      flex-direction: column;
+      align-items: center;
+      img {
+        order: 2
+      }
+
+      >div {
+        order: 1;
+      }
+    }
+
+    img {
+        margin: 0;
+    }
+
+    >div {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin: 0 2em;
+      border-left: solid 1px #a5acb3;
+      padding: 0 2em;
+
+      @media screen and (max-width: 770px) {
+        border: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      div.social-icons {
+        font-size: 1.5em;
+        svg {
+          margin: 0 .25em;
+        }
+      }
+
+      p {
+        font-size: .9em;
+      }
+
+      h3 {
+        font-size: 2em;
+        margin: 0;
+      }
+
+      img {
+        width: 300px;
+        padding: 0;
+        border: none;
+        margin: 0;
+        box-shadow: none;
+        cursor: pointer;
+      }
+    }
+  }
+
+  div.template {
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em 2em;
+
+    @media screen and (max-width: 770px) {
+      display: block;
+    }
+
+    figcaption {
+      position: relative;
+      top: 10px;
+    }
+
+    &#template-1 {
+      figcaption {
+        position: relative;
+        top: -20px
+      }
+    }
+
+    &#template-2 {
+      figure {
+        flex-basis: 300%;
+      }
+    }
+
+    &#template-4 {
+      figure {
+        flex-basis: 300%;
+      }
+
+      img {
+        border: none;
+        box-shadow: none;
+      }
+    }
+
+    figure {
+      flex-basis: 400%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        text-align: center;
+      }
+
+      figcaption {
+        font-family: Times;
+        color: #b6b2b2;
+        font-size: .8em;
+        font-style: italic;
+      }
+    }
+
+    img {
+      margin: 0;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    >div {
+      display: flex;
+      flex-direction: column;
+
+      h3 {
+        margin: 0;
+        font-size: 1.2em;
+      }
+
+      p {
+        margin: 0;
+        font-size: .8em;
+      }
+
+    }
+  }
+
+  div.video-links {
+      display: flex;
+      flex-wrap: wrap;
+      a {
+          position: relative;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-direction: column;
+          border: solid 1px grey;
+          flex-basis: calc(calc(25% - 2px) - 2em);
+          @media screen and (max-width: 1200px) {
+            flex-basis: calc(calc(33.33% - 2px) - 2em);
+          }
+          @media screen and (max-width: 1024px) {
+            flex-basis: calc(calc(50% - 2px) - 2em);
+          }
+          @media screen and (max-width: 770px) {
+            flex-basis: calc(calc(100% - 2px) - 2em);
+          }
+          margin: 1em;
+          &:hover {
+            text-decoration: none;
+          }
+          img {
+              margin: 0;
+              width: 100%;
+              max-width: 100%;
+              padding: 0;
+              border: 0;
+              box-shadow: none;
+          }
+          h2 {
+              font-size: .9em;
+              text-align: center;
+              padding: .5em 0;
+          }
+          p {
+            font-size: .8em;
+          }
+      }
+  }
 }

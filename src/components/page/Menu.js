@@ -33,10 +33,12 @@ export const Menu = ({collapsed=false, isOpen=false, toggleMenu=f=>f }) =>
             </nav>
         </CheeseburgerMenu>
     ) : (
-        <nav className="main-menu">
-            <h2>Main Menu</h2>
-            {links}
-        </nav>
+        <div className="menu-container">
+          <nav className="main-menu">
+              <h2>Main Menu</h2>
+              {links}
+          </nav>
+        </div>
     )
 
 export const Header = ({title}) =>

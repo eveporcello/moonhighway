@@ -63,7 +63,6 @@ export default class InternalPage extends Component {
     componentWillUnmount() {
         window.removeEventListener('resize', this.onResize)
         document.body.style.backgroundColor = this.previousBackgroundColor
-
         this.mc.off()
         this.mc.destroy()
         this.mc = null
@@ -74,8 +73,7 @@ export default class InternalPage extends Component {
     }
 
     fetchContent(article) {
-        console.warn('fetching from localhost:3000 only!')
-        fetch(`http://localhost:3000/content/${article}.md`)
+        fetch(`/content/${article}.md`)
           .then(resp => resp.text())
           .then(resp => resp.match(/<!DOCTYPE html>/) ?
               `Whoops...\n==========\n\nWe are sorry, we cannot find content for __${article}__` :
