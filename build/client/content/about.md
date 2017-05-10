@@ -1,17 +1,19 @@
 About Moon Highway
 ======
-Moon Highway is a training and curriculum development company based Northern California. Our goal in every course is build confidence by
-challenging students to succeed. We create an environment that nurtures success in every classroom for students at every skill level. We believe that
-success is contagious. The excitement that we build with one small group of engineers will permeate your entire organization.
+Moon Highway is a training and curriculum development company based in Northern
+California. Our goal in every course is to build confidence by challenging students
+to succeed. We create an environment that nurtures success in every classroom for
+students at every skill level. We believe that success is contagious. The excitement
+that we build with one small group of engineers will permeate your entire organization.
 
 ## Who We Train
 We teach JavaScript to __technical professionals__. We migrate __engineers__ from traditional
 object oriented languages to JavaScript. We upgrade current JavaScript __developers__ to
 the latest techniques and practices. We teach __creatives__ how to be more effective with
 JavaScript and CSS. We even provide classes for __managers__ and __non-technical stakeholders__,
-so they can understand how everything fits together. We can teach you __entire team__ how
+so they can understand how everything fits together. We can teach your __entire team__ how
 to build JavaScript applications that run on a server, in a browser, on a phone, on a robot,
-or in a virtual reality headset.
+or in virtual reality.
 
 ## Who we are
 Moon Highway is a family business. Alex Banks and Eve Porcello are instructors,
@@ -64,7 +66,7 @@ all day lectures. They are all day hack-a-thons. We train engineers as if they a
 ## Materials
 We think a lot about training and training materials. We've come up with a modular approach to course content that allows us to customize each class to the needs of a specific team. We treat our content like software. All of our course files are hosted in GitHub and we update them continuously.
 
-We've even standardized an approach to content development. All of our course content falls under one of the following categories:
+We've even standardized how we approach to content development. All of our course content falls under one of the following categories:
 
 <div id="template-1" class="template">
   <div>
@@ -120,9 +122,10 @@ We've even standardized an approach to content development. All of our course co
   </figure>
 </div>
 
-Our courses are structured using a combination of these techniques. Samples introduce a technique, labs challenge the student to implement that technique,
-and exercises give us a feel for how to implement that technique in the real world. This process leverages the power of reinforcement and is designed
-to build student confidence.
+Our courses are structured using a combination of these techniques. Samples introduce
+a technique, labs challenge the student to implement that technique on their own,
+and exercises give us a feel for how to implement that technique in the real world.
+This process leverages the power of reinforcement and is designed to build student confidence.
 
 ## Student Testimonials
 
