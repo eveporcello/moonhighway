@@ -5,7 +5,8 @@ div.contents {
   position: relative;
   flex-grow: 20;
   font-size: 125%;
-
+  max-width: 1024px;
+  
   @media screen and (max-width: 769px) {
     font-size: 150%;
   }
@@ -144,6 +145,11 @@ div.contents {
         border: none;
         margin: 0;
         padding: 0;
+
+        a {
+          align-self: center;
+          text-align: center;
+        }
       }
 
       div.social-icons {
@@ -260,7 +266,9 @@ div.contents {
   div.video-links {
       display: flex;
       flex-wrap: wrap;
+
       a {
+          background-color: white;
           position: relative;
           display: flex;
           justify-content: space-between;
