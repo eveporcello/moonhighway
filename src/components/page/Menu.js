@@ -56,12 +56,12 @@ export const Footer = () =>
         <div className="contact">
             <span>Moon Highway, LLC</span>
             <span>PO BOX 1578</span>
-            <span>Tahoe City, CA, 96145</span>
+            <span>Tahoe City, CA 96145</span>
             <span><a href="mailto:info@moonhighway.com">info@moonhighway.com</a></span>
             <span>(530) 523 - 3084</span>
         </div>
         <div className="links">
           {links}
         </div>
-        <div>&copy; copywrite 2017 Moon Highway LLC</div>
+        <div>&copy; copyright 2017 Moon Highway LLC</div>
     </footer>
