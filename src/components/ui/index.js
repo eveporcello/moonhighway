@@ -20,9 +20,9 @@ DownButton.propTypes = {
     onClick: PropTypes.func
 }
 
-export const ResponsiveImg = (props) =>
-    <img src={(screenLayout() === "portrait") ? props.portrait : props.landscape}
-        {...props} />
+export const ResponsiveImg = ({landscape, portrait, ...skrollValues}) =>
+    <img src={(screenLayout() === "portrait") ? portrait : landscape}
+        {...skrollValues} />
 
 ResponsiveImg.propTypes = {
     portrait: PropTypes.string.isRequired,

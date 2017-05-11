@@ -73,7 +73,14 @@ export default class InternalPage extends Component {
     }
 
     fetchContent(article) {
-        fetch(`/content/${article}.md`)
+        const url = (process.env.NODE_ENV === 'development' && window.location.origin.match(/http:\/\/localhost:3333/)) ?
+            `http://localhost:3000/content/${article}.md` : `/content/${article}.md`
+
+        if (process.env.NODE_ENV === 'development' && window.location.origin.match(/http:\/\/localhost:3333/)) {
+            console.warn('fetching from localhost:3000 only!')
+        }
+
+        fetch(url)
           .then(resp => resp.text())
           .then(resp => resp.match(/<!DOCTYPE html>/) ?
               `Whoops...\n==========\n\nWe are sorry, we cannot find content for __${article}__` :

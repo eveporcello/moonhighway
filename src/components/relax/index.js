@@ -1,5 +1,5 @@
 import { Component, Children, cloneElement } from 'react'
-import { browserHistory } from 'react-router'
+import { hashHistory, browserHistory } from 'react-router'
 import skrollr from 'skrollr'
 import Hammer from 'hammerjs'
 import { DownButton } from '../ui'
@@ -165,7 +165,13 @@ export class Rellax extends Component {
             const breakpoint = this.state.breakpoints[screenIndex]
             if (screenIndex !== current.screenIndex) {
                 this.setState({current: {breakpoint, screenIndex, transitioning: true}})
-                browserHistory.push(this.paths[screenIndex])
+                if (process.env.NODE_ENV === 'development' && window.location.origin.match(/http:\/\/localhost:3333/)) {
+                    console.warn('navigating with hashHistory')
+                    hashHistory.push(this.paths[screenIndex])
+                } else {
+                    browserHistory.push(this.paths[screenIndex])
+                }
+
             }
         }
     }
@@ -178,7 +184,13 @@ export class Rellax extends Component {
             const breakpoint = this.state.breakpoints[screenIndex]
             if (screenIndex !== current.screenIndex) {
                 this.setState({current: {breakpoint, screenIndex, transitioning: true}})
-                browserHistory.push(this.paths[screenIndex])
+                if (process.env.NODE_ENV === 'development' && window.location.origin.match(/http:\/\/localhost:3333/)) {
+                    console.warn('navigating with hashHistory')
+                    hashHistory.push(this.paths[screenIndex])
+                } else {
+                    browserHistory.push(this.paths[screenIndex])
+                }
+
             }
         }
     }

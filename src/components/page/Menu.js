@@ -4,17 +4,23 @@ import { SocialIcons } from '../ui'
 import CheeseburgerMenu from 'cheeseburger-menu'
 
 const links = [
-    <Link activeClassName="selected"
+    <Link key={0}
+          activeClassName="selected"
           to="/info/about">About Moon Highway</Link>,
-    <Link activeClassName="selected"
+    <Link key={1}
+          activeClassName="selected"
           to="/info/react-training">React Training</Link>,
-    <Link activeClassName="selected"
+    <Link key={2}
+          activeClassName="selected"
           to="/info/node-training">Node Training</Link>,
-    <Link activeClassName="selected"
+    <Link key={3}
+          activeClassName="selected"
           to="/info/html-css-training">HTML &amp; CSS Training</Link>,
-    <Link activeClassName="selected"
+    <Link key={4}
+          activeClassName="selected"
           to="/info/continuous-delivery-training">Continuous Delivery Training</Link>,
-    <Link activeClassName="selected"
+    <Link key={5}
+          activeClassName="selected"
           to="/contact">Contact Us</Link>
 ]
 
