@@ -35,8 +35,8 @@ export const Menu = ({collapsed=false, isOpen=false, toggleMenu=f=>f }) =>
                 {Children.map(links, link => ({
                     ...link,
                     props: {
-                      ...link.props,
-                      onClick: toggleMenu
+                        ...link.props,
+                        onClick: toggleMenu
                     }
                 }))}
             </nav>

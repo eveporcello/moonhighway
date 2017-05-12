@@ -105,7 +105,6 @@ div.whoops-404 {
   color: white;
 }
 
-
 a.more-link {
   color: orange;
   text-decoration: none;
@@ -118,6 +117,17 @@ a.more-link {
     font-size: 1.7em;
     position: relative;
     top: -2px;
-    left: -8px;
+  }
+}
+
+p a.more-link {
+  svg {
+    left: -5px;
+  }
+}
+
+li a.more-link {
+  svg {
+    left: -10px;
   }
 }

@@ -190,7 +190,6 @@ export class Rellax extends Component {
                 } else {
                     browserHistory.push(this.paths[screenIndex])
                 }
-
             }
         }
     }
@@ -259,6 +258,28 @@ export class Rellax extends Component {
     }
 
     componentDidMount() {
+
+        window.autoplay = (t=10000) => {
+            if (window.autoplaying) {
+                clearInterval(window.autoplaying)
+                return 'autoscroll function turned off'
+            } else {
+                window.autoplaying = setInterval(() => {
+                    if (this.props.location.pathname === '/continuous-delivery') {
+                        if (process.env.NODE_ENV === 'development' && window.location.origin.match(/http:\/\/localhost:3333/)) {
+                            console.warn('navigating with hashHistory')
+                            hashHistory.push('/')
+                        } else {
+                            browserHistory.push('/')
+                        }
+                    } else {
+                        this.nextScreen()
+                    }
+                },t)
+                return `window will autoscroll every ${t/1000} seconds - invoke autoplay() again to stop`
+            }
+        }
+
         const direction = Hammer.DIRECTION_VERTICAL
         this.skr = skrollr.init({edgeStrategy: 'set'})
         if (isMobile()) {

@@ -14,7 +14,7 @@ const routes = (
         if (process.env.NODE_ENV === 'development' && window.location.origin.match(/http:\/\/localhost:3333/)) {
             console.warn('using hashHistory for development')
         }
-        if (window.location.origin.match(/moonhighway.com/)) {
+        if (window.location.origin.match(/moonhighway.com/) && !window.autoplaying) {
             ReactGA.set({ page: window.location.pathname })
             ReactGA.pageview(window.location.pathname)
         }
