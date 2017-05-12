@@ -2,7 +2,8 @@ import { PropTypes, Component } from 'react'
 import MdEject from 'react-icons/lib/md/eject'
 import GithubIcon from 'react-icons/lib/go/mark-github'
 import TwitterIcon from 'react-icons/lib/fa/twitter'
-import FacebookIcon from 'react-icons/lib/fa/linkedin-square'
+import FacebookIcon from 'react-icons/lib/fa/facebook'
+import LinkedInIcon from 'react-icons/lib/fa/linkedin-square'
 import DownTriangle from 'react-icons/lib/go/triangle-down'
 import Box from 'react-icons/lib/md/check-box-outline-blank'
 import Check from 'react-icons/lib/md/check-box'
@@ -34,6 +35,9 @@ export const SocialIcons = ({ hide=false }) => (hide) ?
     <div className="social-icons">
         <a href="https://www.facebook.com/MoonHighway" target="_blank">
             <FacebookIcon />
+        </a>
+        <a href="https://www.linkedin.com/company-beta/2521788/" target="_blank">
+            <LinkedInIcon />
         </a>
         <a href="https://twitter.com/MoonHighway" target="_blank">
             <TwitterIcon />
