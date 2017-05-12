@@ -48,6 +48,7 @@ export default class InternalPage extends Component {
     componentWillMount() {
         window.addEventListener('resize', this.onResize)
         document.body.style.backgroundColor = "white"
+        document.body.style.overflow = "scroll"
     }
 
     componentDidMount() {
@@ -63,6 +64,7 @@ export default class InternalPage extends Component {
     componentWillUnmount() {
         window.removeEventListener('resize', this.onResize)
         document.body.style.backgroundColor = this.previousBackgroundColor
+        document.body.style.overflow = ""
         this.mc.off()
         this.mc.destroy()
         this.mc = null
