@@ -1,6 +1,7 @@
 import { delaySlideScreenUp, logoInOut, expandCollapseBox, screenLayout } from '../../lib'
 import { ResponsiveImg } from '../ui'
 import { Link } from 'react-router'
+import { MoreLink } from '../ui'
 
 const LearnCD = ({index, screenScale, screenHeight}) =>
     <section className="slide cd"
@@ -14,7 +15,7 @@ const LearnCD = ({index, screenScale, screenHeight}) =>
             <ul>
                 <li>Test-driven Development</li>
                 <li>Behavior-driven Development</li>
-                <li>Git, Docker, Travis, and <Link to="/info/continuous-delivery-training">more &gt;</Link></li>
+                <li>Git, Docker, Travis, and <MoreLink to="/info/continuous-delivery-training" /></li>
             </ul>
         </div>
     </section>

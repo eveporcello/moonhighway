@@ -5,6 +5,7 @@ import TwitterIcon from 'react-icons/lib/fa/twitter'
 import FacebookIcon from 'react-icons/lib/fa/facebook'
 import LinkedInIcon from 'react-icons/lib/fa/linkedin-square'
 import DownTriangle from 'react-icons/lib/go/triangle-down'
+import RightArrow from 'react-icons/lib/fa/angle-right'
 import Box from 'react-icons/lib/md/check-box-outline-blank'
 import Check from 'react-icons/lib/md/check-box'
 import { Link } from 'react-router'
@@ -20,6 +21,12 @@ export const DownButton = ({onClick=f=>f}) =>
 DownButton.propTypes = {
     onClick: PropTypes.func
 }
+
+export const MoreLink = ({ to, children }) =>
+  <Link className="more-link" to={to} alt="">
+    {(children) ? ` ${children}` : ' more'}
+    <RightArrow />
+  </Link>
 
 export const ResponsiveImg = ({landscape, portrait, ...skrollValues}) =>
     <img src={(screenLayout() === "portrait") ? portrait : landscape}

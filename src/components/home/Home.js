@@ -1,6 +1,7 @@
 import { delaySlideScreenUp, logoOut, collapseBox, screenLayout } from '../../lib'
 import { ResponsiveImg } from '../ui'
 import { Link } from 'react-router'
+import { MoreLink } from '../ui'
 
 const Home = ({index, screenScale, screenHeight}) =>
     <section className="slide home"
@@ -11,8 +12,8 @@ const Home = ({index, screenScale, screenHeight}) =>
             {...screenScale(logoOut[screenLayout()])} />
         <div className="box" {...screenScale(collapseBox[screenLayout()])}>
             <h1>Updates, Upgrades, and Patches for Your Engineers</h1>
-            <p>Customized software development training for engineers of all skill levels. 
-                <Link to="/info/about">More about Moon Highway &gt;</Link>
+            <p>Customized software development training for engineers of all skill levels.
+                <MoreLink to="/info/about">About Moon Highway</MoreLink>
             </p>
         </div>
     </section>

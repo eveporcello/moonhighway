@@ -104,3 +104,20 @@ div.whoops-404 {
   padding: 1em;
   color: white;
 }
+
+
+a.more-link {
+  color: orange;
+  text-decoration: none;
+
+  &:hover {
+    color: yellow;
+  }
+
+  svg {
+    font-size: 1.7em;
+    position: relative;
+    top: -2px;
+    left: -8px;
+  }
+}

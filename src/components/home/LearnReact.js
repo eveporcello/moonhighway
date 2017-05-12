@@ -1,5 +1,6 @@
 import { delaySlideScreenUp, logoInOut, expandCollapseBox, screenLayout } from '../../lib'
 import { Link } from 'react-router'
+import { MoreLink } from '../ui'
 
 const LearnReact = ({index, screenScale, screenHeight}) =>
     <section className="slide react"
@@ -11,7 +12,7 @@ const LearnReact = ({index, screenScale, screenHeight}) =>
             <ul>
                 <li>Functional Programming</li>
                 <li>Unidirectional Dataflow</li>
-                <li>React, Redux, and <Link to="/info/react-training">more &gt;</Link></li>
+                <li>React, Redux, and <MoreLink to="/info/react-training" /></li>
             </ul>
         </div>
     </section>
