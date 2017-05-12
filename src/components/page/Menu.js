@@ -32,10 +32,13 @@ export const Menu = ({collapsed=false, isOpen=false, toggleMenu=f=>f }) =>
                 <Link to="/">
                     <img src="/img/titles/logo-dark.png" alt="Moon Highway" />
                 </Link>
-                {Children.map(links, link => {
-                    link.props.onClick = toggleMenu
-                    return link
-                })}
+                {Children.map(links, link => ({
+                    ...link,
+                    props: {
+                      ...link.props,
+                      onClick: toggleMenu
+                    }
+                }))}
             </nav>
         </CheeseburgerMenu>
     ) : (

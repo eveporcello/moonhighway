@@ -129,6 +129,11 @@ div.contents {
 
     img {
         margin: 0;
+
+        @media screen and (max-width: 1025px)
+        and (min-width: 771px) {
+          width: 150px;
+        }
     }
 
     >div {
@@ -140,6 +145,11 @@ div.contents {
       margin: 0 2em;
       border-left: solid 1px #a5acb3;
       padding: 0 2em;
+
+      @media screen and (max-width: 1025px)
+      and (min-width: 771px) {
+        font-size: 75%;
+      }
 
       @media screen and (max-width: 770px) {
         border: none;
