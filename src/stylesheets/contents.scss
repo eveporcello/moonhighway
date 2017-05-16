@@ -47,7 +47,7 @@ div.contents {
 
   ul {
     list-style-type: square;
-    color: #b27a7a;
+    color: #ac77ba;
   }
 
   a {
@@ -317,4 +317,57 @@ div.contents {
           }
       }
   }
+
+  section.mh-course {
+    position: relative;
+    flex-basis: 100%;
+    margin: 1em 0;
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 1px #e5e5e5;
+    padding-bottom: 1.5em;
+    header {
+        background: none;
+        border: none;
+        h2 {
+          font-family: Verdana;
+          font-weight: 100;
+          font-size: 2em;
+          text-shadow: 1px 1px 7px #7ABCFF;
+          color: black;
+        }
+    }
+    >div {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        img {
+            margin-left: 0;
+            margin: 0 1em 0 0;
+            width: 153px;
+            &.free {
+              border: none;
+              box-shadow: none;
+            }
+        }
+        div:nth-child(2) {
+            flex-shrink: 5;
+            h3 {
+              margin: 0 1em;
+            }
+            p {
+                margin: 0 1em;
+            }
+        }
+        div:last-child {
+            flex-basis: 350px;
+            margin: 0 1em;
+            h3 {
+              margin-top: 0;
+            }
+        }
+    }
+  }
+
+
 }

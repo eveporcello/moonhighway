@@ -30,7 +30,7 @@ export const Menu = ({collapsed=false, isOpen=false, toggleMenu=f=>f }) =>
             <nav className="mobile-menu">
                 <h2>Main Menu</h2>
                 <Link to="/">
-                    <img src="/img/titles/logo-dark.png" alt="Moon Highway" />
+                    <img src="/img/logo/logo-dark.png" alt="Moon Highway" />
                 </Link>
                 {Children.map(links, link => ({
                     ...link,
@@ -53,7 +53,7 @@ export const Menu = ({collapsed=false, isOpen=false, toggleMenu=f=>f }) =>
 export const Header = ({title}) =>
     <header>
         <Link to="/">
-          <img src="/img/titles/logo-sm-long.png" alt="back to Moon Highway home" />
+          <img src="/img/logo/logo-sm-long.png" alt="back to Moon Highway home" />
         </Link>
         <h1>{title}</h1>
         <SocialIcons />

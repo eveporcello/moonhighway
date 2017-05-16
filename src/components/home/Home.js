@@ -8,7 +8,7 @@ const Home = ({index, screenScale, screenHeight}) =>
              style={{ zIndex: 1000-index }}
         {...screenScale(delaySlideScreenUp(screenHeight))}>
         <ResponsiveImg portrait="/img/titles/logo.png"
-                       landscape="/img/titles/logo-long.png"
+                       landscape="/img/logo/logo-long.png"
             {...screenScale(logoOut[screenLayout()])} />
         <div className="box" {...screenScale(collapseBox[screenLayout()])}>
             <h1>Updates, Upgrades, and Patches for Your Engineers</h1>
