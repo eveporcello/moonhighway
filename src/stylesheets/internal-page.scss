@@ -11,7 +11,7 @@ article.internal-page {
     margin: 0;
   }
 
-  header {
+  >header {
     height: 70px;
     display: flex;
     @media screen and (max-width: 500px) {
