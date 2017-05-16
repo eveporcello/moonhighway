@@ -5,7 +5,7 @@ Continuous Delivery is the practice of deploying your code to production without
 any human intervention. It allows your business products to rapidly incorporate
 feedback and instantly push new features to production without compromising quality.
 The JavaScript community has plenty of tools that we can use to build continuous delivery
-pipelines. Our courses are geared towards students who want to master the patterns
+systems. Our courses are geared towards students who want to master the patterns
 and tools associated with JavaScript build pipelines.
 
 <section class="mh-course">
@@ -13,14 +13,12 @@ and tools associated with JavaScript build pipelines.
     <h2>Git and GitHub</h2>
   </header>
   <div>
-    <img src="/img/logo/github.png" class="free" alt="" />
+    <img src="/img/logo/github.png" class="free" alt="GitHub logo icon" />
     <div>
       <h3>Length: 1 day</h3>
       <p>
-      Git is a revision control system that helps you manage your code base. GitHub is
-      the worlds leading software development platform. Our course teaches you how to
-      manage your code base with Git and GitHub, which is the foundation for Continuous Delivery.
-      This class is designed for __developers__, __engineers__, __creatives__, and __managers__.
+      Git is a version control system that helps you manage your codebase. GitHub is
+      the world's leading software development platform. This class is designed for __developers__, __engineers__, __creatives__, and __managers__.
       We teach your entire __team__ how to work efficiently with Git and GitHub.
       </p>
     </div>
@@ -45,13 +43,13 @@ and tools associated with JavaScript build pipelines.
     <h2>NPM Publisher</h2>
   </header>
   <div>
-    <img src="/img/logo/npm.png" class="free" alt="" />
+    <img src="/img/logo/npm.png" class="free" alt="npm logo" />
     <div>
       <h3>Length: 1 day</h3>
       <p>
-      This course is designed for __developers__, and __engineers__ who plan on
-      publishing their JavaScript repos's to NPM. Students learn to build and
-      publish CLI's and libraries to NPM. We cover the best practices and techniques
+      This course is designed for __developers__ and __engineers__ who plan to
+      publish their JavaScript repositories to NPM. Students will learn to build and
+      publish CLIs and libraries. We cover the best practices and techniques
       for documenting, versioning, and setting up automated continuous delivery pipelines
       that deploy your code to NPM.
       </p>
@@ -59,10 +57,10 @@ and tools associated with JavaScript build pipelines.
     <div>
       <h3>Topics</h3>
       <ul>
-        <li>publishing NPMs</li>
-        <li>building CLIs</li>
-        <li>linking CLIs</li>
-        <li>building libraries</li>
+        <li>Publishing NPMs</li>
+        <li>Building CLIs</li>
+        <li>Linking CLIs</li>
+        <li>Building Libraries</li>
         <li>Travis CI</li>
         <li>Testing</li>
         <li>Deployment</li>
@@ -77,12 +75,12 @@ and tools associated with JavaScript build pipelines.
     <h2>Heroku Publisher</h2>
   </header>
   <div>
-    <img src="/img/logo/heroku.png" class="free" alt="" />
+    <img src="/img/logo/heroku.png" class="free" alt="heroku logo icon" />
     <div>
       <h3>Length: 1 day</h3>
       <p>
-      This course is designed for __developers__ and __engineers__ who which to
-      deploy JavaScript applications on Heroku, the SalesForce cloud platform. Students
+      This course is designed for __developers__ and __engineers__ who wish to
+      deploy JavaScript applications using Heroku, the Salesforce cloud platform. Students will
       learn how to create and mange Heroku with both the Heroku CLI and the Heroku dashboard.
       Students will build continuous delivery pipelines that test and certify applications before
       deploying to Heroku.
@@ -94,7 +92,7 @@ and tools associated with JavaScript build pipelines.
         <li>Heroku Apps</li>
         <li>Heroku CLI</li>
         <li>Adding Config Vars</li>
-        <li>Heroku AddOns</li>
+        <li>Heroku Add-ons</li>
         <li>Setting up HTTPS</li>
         <li>Heroku CI</li>
         <li>Travis CI</li>
@@ -110,20 +108,21 @@ and tools associated with JavaScript build pipelines.
     <h2>Accessibility and UX Design</h2>
   </header>
   <div>
-    <img src="/img/logo/accessibility.png" class="free" alt="" />
+    <img src="/img/logo/a11y.png" class="free" alt="accessibility icon" />
     <div>
       <h3>Length: 2 days</h3>
-      <p>description
+      <p>In this course, we focus on the best techniques for creating accessible and enjoyable user experiences. Designed for __developers__, __engineers__, __creatives__, __managers__, and anyone else involved in working on web projects. We'll go over the legal and ethical guidelines to consider when creating websites. Then we'll discuss how accessibility fits in with the UX design process and can enhance experiences for every user.
       </p>
     </div>
     <div>
       <h3>Topics</h3>
       <ul>
-        <li>topic</li>
-        <li>topic</li>
-        <li>topic</li>
-        <li>topic</li>
-        <li>topic</li>
+        <li>Designing Accessible Experiences</li>
+        <li>Semantic HTML</li>
+        <li>Accessible Forms</li>
+        <li>Video and Audio</li>
+        <li>The UX Design Process</li>
+        <li>User Testing</li>
       </ul>
     </div>
   </div>
@@ -131,5 +130,5 @@ and tools associated with JavaScript build pipelines.
 
 ## Custom Curriculums
 Any of our classes can be customized to fit your specific needs. <a href="/contact">Ask us</a> about how to
-build the perfect JavaScript course that includes any of the Continuous Delivery Topics
+build the perfect JavaScript course that includes any of the Continuous Delivery topics
 listed on this page.
