@@ -401,3 +401,13 @@ div.contents {
 
 
 }
+
+.spin-pop {
+  animation: 1s linear 0s infinite alternate spinPop;
+
+}
+
+@keyframes spinPop {
+  0% { transform: rotate(-20deg) }
+  100% { transform: rotate(20deg) }
+}
