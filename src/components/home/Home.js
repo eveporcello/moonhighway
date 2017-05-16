@@ -7,7 +7,7 @@ const Home = ({index, screenScale, screenHeight}) =>
     <section className="slide home"
              style={{ zIndex: 1000-index }}
         {...screenScale(delaySlideScreenUp(screenHeight))}>
-        <ResponsiveImg portrait="/img/titles/logo.png"
+        <ResponsiveImg portrait="/img/logo/logo.png"
                        landscape="/img/logo/logo-long.png"
             {...screenScale(logoOut[screenLayout()])} />
         <div className="box" {...screenScale(collapseBox[screenLayout()])}>

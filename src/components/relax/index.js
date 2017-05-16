@@ -209,7 +209,7 @@ export class Rellax extends Component {
 
     onResize() {
         clearTimeout(this.to)
-        document.getElementById('react-container').innerHTML = '<img src="/img/titles/logo.png" />'
+        document.getElementById('react-container').innerHTML = '<img src="/img/logo/logo.png" />'
         this.to = setTimeout(() => location.reload(), 500)
     }
 
