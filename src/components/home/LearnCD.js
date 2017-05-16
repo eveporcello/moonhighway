@@ -15,7 +15,7 @@ const LearnCD = ({index, screenScale, screenHeight}) =>
             <ul>
                 <li>Test-driven Development</li>
                 <li>Behavior-driven Development</li>
-                <li>Git, Docker, Travis, and <MoreLink to="/info/continuous-delivery-training" /></li>
+                <li>Git, Travis, Heroku and <MoreLink to="/info/continuous-delivery-training" /></li>
             </ul>
         </div>
     </section>

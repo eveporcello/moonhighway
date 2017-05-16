@@ -15,7 +15,7 @@ const LearnHTML = ({index, screenScale, screenHeight}) =>
             <ul>
                 <li>Flexbox and Animations</li>
                 <li>Data Visualizations</li>
-                <li>HTML6, CSS4, SVG, and <MoreLink to="/info/html-css-training" /></li>
+                <li>HTML, CSS, SVG, and <MoreLink to="/info/html-css-training" /></li>
             </ul>
         </div>
     </section>
