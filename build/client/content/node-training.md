@@ -1,28 +1,248 @@
 Node.js Training
 =========
 
-With JavaScript and Node.js training from Moon Highway, you'll learn the skills necessary to be a successful full-stack JavaScript developer.
+With JavaScript and Node.js training from Moon Highway, your __team__ will learn the skills necessary to be successful at
+building full stack JavaScript applications. Our beginner JavaScript courses emphasize the fundamentals of JavaScript.
+They are designed for __developers__, __engineers__, __creatives__, and __managers__ who have very little JavaScript
+experience. Our Node js materials are designed to train you for the job. We focus heavily unit testing, best
+practices and real world scenarios.
 
-Our beginner JavaScript courses emphasize the fundamentals of JavaScript for engineers that are new to front end development. Since JavaScript seems to be involved in every level of the stack, we'll make sure that everyone is up to speed on the latest techniques. Or, if the basics are already in place for your developers, we'll cover Node.js and the ecosystem of tools. From the file system to npm to testing, developers will be able to hit the ground running with Node projects.
+<section class="mh-course">
+  <header>
+    <h2>JavaScript Kickoff</h2>
+  </header>
+  <div>
+    <img src="/img/logo/js.png" alt="" />
+    <div>
+      <h3>Length: 1 day</h3>
+      <p>
+      This course is designed for __developers__, __engineers__, __creatives__, and __managers__
+      who have never had the chance to learn the core fundamentals of vanilla JavaScript.
+      This course examines the core types available in JavaScript and how these types are used
+      to create every library, framework, or application that uses the language. We examine
+      JavaScripts quarks and discuss how they differ from other programming languages. Students
+      leave this course with a solid understanding of the basics of vanilla JavaScript and
+      become more confident at their jobs.
+      </p>
+    </div>
+    <div>
+      <h3>Topics</h3>
+      <ul>
+        <li>primitives</li>
+        <li>flow control</li>
+        <li>truthy/falsy</li>
+        <li>arrays</li>
+        <li>objects</li>
+        <li>functions</li>
+        <li>DOM API</li>
+        <li>debugging</li>
+        <li>jQuery</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-## Moon Highway's JavaScript and Node.js Courses
+<section class="mh-course">
+  <header>
+    <h2>Node js Kickoff</h2>
+  </header>
+  <div>
+    <img src="/img/logo/node.svg" class="free" alt="" />
+    <div>
+      <h3>Length: 1 day</h3>
+      <p>This course introduces Node js to __developers__, __engineers__, __creatives__,
+      and __managers__ who have a foundational understanding of the JavaScript language.
+      In this course we cover the core modules that ship with node js. We wrap this course
+      up by introducing npm and using JavaScript modules that are developed by the community.
+      Students leave this course with their environments setup for rapid development
+      ready to build awesome apps.
+      </p>
+    </div>
+    <div>
+      <h3>Topics</h3>
+      <ul>
+        <li>Environment Setup</li>
+        <li>NVM</li>
+        <li>Node Core</li>
+        <li>Building CLI's</li>
+        <li>EventEmitter</li>
+        <li>Using Node Modules</li>
+        <li>NPM</li>
+        <li>Unit Testing</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-### [JavaScript Kickoff - 1 Day](#/info/javascript-kickoff)
-Learn all of the basics in this one day introduction to JavaScript.
+<!--
+<section class="mh-course">
+  <header>
+    <h2>Node js Pro</h2>
+  </header>
+  <div>
+    <img src="/img/logo/node.svg" class="free" alt="" />
+    <div>
+      <h3>Length: 1 day</h3>
+      <p>description
+      </p>
+    </div>
+    <div>
+      <h3>Topics</h3>
+      <ul>
+        <li>Stream Interface</li>
+        <li>spawning processes</li>
+        <li>stdin, stdout</li>
+        <li>NPM</li>
+        <li>fs module</li>
+        <li>http requests</li>
+        <li>http servers</li>
+        <li>Async Unit Testing</li>
+      </ul>
+    </div>
+  </div>
+</section>
+-->
+<section class="mh-course">
+  <header>
+    <h2>Emerging JavaScript</h2>
+  </header>
+  <div>
+    <img src="/img/logo/es.png" alt="ECMAScript Logo" />
+    <div>
+      <h3>Length: 1 day</h3>
+      <p>
+      This JavaScript course is designed for __developers__, and __engineers__ who
+      have some JavaScript experience. It covers the latest syntax that
+      is being used to make JavaScript code more beautiful and friendly across the web.
+      Understanding ES2015, ES2016, and ES2017 will make your __team__ much more proficient with React.
+      <p>
+    </div>
+    <div>
+      <h3>Topics</h3>
+      <ul>
+        <li>Declarations</li>
+        <li>Arrow Functions</li>
+        <li>Destructuring</li>
+        <li>import, export</li>
+        <li>Promises</li>
+        <li>Class Declarations</li>
+        <li>Generators</li>
+        <li>Spread Operator</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-### [JavaScript Pro - 1 Day](#/info/javascript-pro)
-Build on the basics with JavaScript libraries, frameworks, and language features.
+<section class="mh-course">
+  <header>
+    <h2>Functional JavaScript</h2>
+  </header>
+  <div>
+    <img src="/img/logo/functional-js.png" alt="Functional JavaScript Logo" />
+    <div>
+      <h3>Length: 1 day</h3>
+      <p>This course introduces the functional programming paradigm and shows
+      JavaScript __developers__ and __engineers__ how to use functional design patterns
+      to produce more efficient and beautiful code. An understanding of functional programming
+      techniques is vital to being highly proficient with React. This course serves as
+      an excellent prerequisite for our React courses.</p>
+    </div>
+    <div>
+      <h3>Topics</h3>
+      <ul>
+        <li>Immutability</li>
+        <li>Pure Functions</li>
+        <li>Transforming Data</li>
+        <li>Higher Order Functions</li>
+        <li>Recursion</li>
+        <li>Composition</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-### [JavaScript Hip - 1 Day](#/info/javascript-hip)
-Get fancy with functional JavaScript and the latest ECMAScript syntax.
+<section class="mh-course">
+  <header>
+    <h2>Using Graph QL</h2>
+  </header>
+  <div>
+    <img src="/img/logo/graphql.png" class="free" alt="" />
+    <div>
+      <h3>Length: 1 day</h3>
+      <p>This course introduces the efficient data fetching query language, Graph QL.
+      This course is designed for __developers__, __engineers__, __creatives__, and __managers__,
+      or anyone who wants to learn how to query a Graph QL service. This course
+      covers how to build graph ql queries and interact with already existing Graph
+      ql services.
+      </p>
+    </div>
+    <div>
+      <h3>Topics</h3>
+      <ul>
+        <li>What is Graph QL</li>
+        <li>Why use Graph QL</li>
+        <li>Making Basic Queries</li>
+        <li>Filtering Data</li>
+        <li>Query Connections</li>
+        <li>Using Mutations</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-### [Node.js Kickoff - 1 Day](#/info/node-kickoff)
-Kickstart your full-stack career with server-side JavaScript in Node.js.
+<!--
+<section class="mh-course">
+  <header>
+    <h2>Graph QL with Node js</h2>
+  </header>
+  <div>
+    <img src="/img/logo/graphql.png" class="free" alt="" />
+    <div>
+      <h3>Length: 1 </h3>
+      <p>description
+      </p>
+    </div>
+    <div>
+      <h3>Topics</h3>
+      <ul>
+        <li>Building Schemas</li>
+        <li>Connecting Schemas</li>
+        <li>topic</li>
+        <li>topic</li>
+        <li>topic</li>
+        <li>topic</li>
+      </ul>
+    </div>
+  </div>
+</section>
+-->
 
-### [Node.js Full Stack - 2 Days](#/info/node-full-stack)
-Build full-stack apps with Node.js and learn testing techniques for code reliability.
 
-## Related Courses on LinkedIn Learning / Lynda.com
+## Custom Curriculums
+Any of our classes can be customized to fit your specific needs. We can create
+the perfect Node js training course for your team. Our materials are designed to
+be isolated, combined, and rearranged to create the perfect class.
 
-* [Node.js Essential Training](https://www.linkedin.com/learning/node-js-essential-training?u=2125562)
-* [Learning ECMAScript 6](https://www.linkedin.com/learning/learning-ecmascript-6?u=2125562)
+# Related Courses on LinkedIn Learning / Lynda.com
+
+We have a couple of courses relating to Node js on LinkedIn Learning. Although our live courses
+go into greater detail, you can get a feel for our teaching style by taking one
+or more of the following classes:
+
+<div class="video-links">
+<a class="video" href="https://www.linkedin.com/learning/node-js-essential-training" target="_blank">
+  <img src="/img/linkedin-learning/node.png" alt="Node.js Essential Training" />
+  <h2>Node.js Essential Training</h2>
+  <p>6hr 16min</p>
+</a>
+<a class="video" href="https://www.linkedin.com/learning/learning-graphql" target="_blank">
+  <img src="/img/linkedin-learning/graphql.png" alt="learning graphql" />
+  <h2>Learning GraphQL</h2>
+  <p>0hr 53min</p>
+</a>
+<a class="video" href="https://www.linkedin.com/learning/learning-ecmascript-6" target="_blank">
+  <img src="/img/linkedin-learning/es6.png" alt="learning ecmascript 6" />
+  <h2>Learning ECMAScript 6</h2>
+  <p>1hr 18min</p>
+</a>
+</div>
