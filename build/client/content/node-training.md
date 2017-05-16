@@ -2,17 +2,17 @@ Node.js Training
 =========
 
 With JavaScript and Node.js training from Moon Highway, your __team__ will learn the skills necessary to be successful at
-building full stack JavaScript applications. Our beginner JavaScript courses emphasize the fundamentals of JavaScript.
+building full-stack JavaScript applications. Our beginner JavaScript courses emphasize the fundamentals of JavaScript.
 They are designed for __developers__, __engineers__, __creatives__, and __managers__ who have very little JavaScript
-experience. Our Node js materials are designed to train you for the job. We focus heavily unit testing, best
-practices and real world scenarios.
+experience. Our Node.js materials are designed to train you for the job. We focus heavily on unit testing, best
+practices, and real world scenarios.
 
 <section class="mh-course">
   <header>
     <h2>JavaScript Kickoff</h2>
   </header>
   <div>
-    <img src="/img/logo/js.png" alt="" />
+    <img src="/img/logo/js.png" alt="Intro to JavaScript icon" />
     <div>
       <h3>Length: 1 day</h3>
       <p>
@@ -20,7 +20,7 @@ practices and real world scenarios.
       who have never had the chance to learn the core fundamentals of vanilla JavaScript.
       This course examines the core types available in JavaScript and how these types are used
       to create every library, framework, or application that uses the language. We examine
-      JavaScripts quarks and discuss how they differ from other programming languages. Students
+      JavaScript's quirks and discuss how JavaScript differs from other programming languages. Students
       leave this course with a solid understanding of the basics of vanilla JavaScript and
       become more confident at their jobs.
       </p>
@@ -28,14 +28,14 @@ practices and real world scenarios.
     <div>
       <h3>Topics</h3>
       <ul>
-        <li>primitives</li>
-        <li>flow control</li>
-        <li>truthy/falsy</li>
-        <li>arrays</li>
-        <li>objects</li>
-        <li>functions</li>
-        <li>DOM API</li>
-        <li>debugging</li>
+        <li>Primitives</li>
+        <li>Flow Control</li>
+        <li>Truthy/Falsy</li>
+        <li>Arrays</li>
+        <li>Objects</li>
+        <li>Functions</li>
+        <li>DOM Manipulation</li>
+        <li>Debugging</li>
         <li>jQuery</li>
       </ul>
     </div>
@@ -44,15 +44,14 @@ practices and real world scenarios.
 
 <section class="mh-course">
   <header>
-    <h2>Node js Kickoff</h2>
+    <h2>Node.js Kickoff</h2>
   </header>
   <div>
-    <img src="/img/logo/node.svg" class="free" alt="" />
+    <img src="/img/logo/node.svg" class="free" alt="Node.js icon" />
     <div>
       <h3>Length: 1 day</h3>
-      <p>This course introduces Node js to __developers__, __engineers__, __creatives__,
-      and __managers__ who have a foundational understanding of the JavaScript language.
-      In this course we cover the core modules that ship with node js. We wrap this course
+      <p>This course introduces the concepts of Node.js and is aimed at __developers__, __engineers__, __creatives__, and __managers__ who have a basic understanding of the JavaScript language.
+      In this course, we cover the core modules that ship with Node.js. We wrap this course
       up by introducing npm and using JavaScript modules that are developed by the community.
       Students leave this course with their environments setup for rapid development
       ready to build awesome apps.
@@ -64,7 +63,7 @@ practices and real world scenarios.
         <li>Environment Setup</li>
         <li>NVM</li>
         <li>Node Core</li>
-        <li>Building CLI's</li>
+        <li>Building CLIs</li>
         <li>EventEmitter</li>
         <li>Using Node Modules</li>
         <li>NPM</li>
@@ -77,10 +76,10 @@ practices and real world scenarios.
 <!--
 <section class="mh-course">
   <header>
-    <h2>Node js Pro</h2>
+    <h2>Node.js Pro</h2>
   </header>
   <div>
-    <img src="/img/logo/node.svg" class="free" alt="" />
+    <img src="/img/logo/node.svg" class="free" alt="Node.js Pro Icon" />
     <div>
       <h3>Length: 1 day</h3>
       <p>description
@@ -90,7 +89,7 @@ practices and real world scenarios.
       <h3>Topics</h3>
       <ul>
         <li>Stream Interface</li>
-        <li>spawning processes</li>
+        <li>Spawning Processes</li>
         <li>stdin, stdout</li>
         <li>NPM</li>
         <li>fs module</li>
@@ -107,11 +106,11 @@ practices and real world scenarios.
     <h2>Emerging JavaScript</h2>
   </header>
   <div>
-    <img src="/img/logo/es.png" alt="ECMAScript Logo" />
+    <img src="/img/logo/es.png" alt="ECMAScript icon" />
     <div>
       <h3>Length: 1 day</h3>
       <p>
-      This JavaScript course is designed for __developers__, and __engineers__ who
+      This JavaScript course is designed for __developers__ and __engineers__ who
       have some JavaScript experience. It covers the latest syntax that
       is being used to make JavaScript code more beautiful and friendly across the web.
       Understanding ES2015, ES2016, and ES2017 will make your __team__ much more proficient with React.
@@ -163,28 +162,27 @@ practices and real world scenarios.
 
 <section class="mh-course">
   <header>
-    <h2>Using Graph QL</h2>
+    <h2>Using GraphQL</h2>
   </header>
   <div>
-    <img src="/img/logo/graphql.png" class="free" alt="" />
+    <img src="/img/logo/graphql.png" class="free" alt="GraphQL icon" />
     <div>
       <h3>Length: 1 day</h3>
-      <p>This course introduces the efficient data fetching query language, Graph QL.
-      This course is designed for __developers__, __engineers__, __creatives__, and __managers__,
-      or anyone who wants to learn how to query a Graph QL service. This course
-      covers how to build graph ql queries and interact with already existing Graph
-      ql services.
+      <p>This course introduces the efficient data fetching and querying language, Graph QL.
+      This course is designed for __developers__, __engineers__, __creatives__, __managers__,
+      and anyone who wants to learn how to query a GraphQL service. This course
+      covers how to build GraphQL queries and interact with existing GraphQL services.
       </p>
     </div>
     <div>
       <h3>Topics</h3>
       <ul>
-        <li>What is Graph QL</li>
-        <li>Why use Graph QL</li>
-        <li>Making Basic Queries</li>
-        <li>Filtering Data</li>
-        <li>Query Connections</li>
-        <li>Using Mutations</li>
+        <li>What is GraphQL</li>
+        <li>Why use GraphQL</li>
+        <li>Basic Queries</li>
+        <li>Schemas</li>
+        <li>Connections</li>
+        <li>Mutations</li>
       </ul>
     </div>
   </div>
@@ -220,12 +218,12 @@ practices and real world scenarios.
 
 ## Custom Curriculums
 Any of our classes can be customized to fit your specific needs. We can create
-the perfect Node js training course for your team. Our materials are designed to
+the perfect Node.js training course for your team. Our materials are designed to
 be isolated, combined, and rearranged to create the perfect class.
 
 # Related Courses on LinkedIn Learning / Lynda.com
 
-We have a couple of courses relating to Node js on LinkedIn Learning. Although our live courses
+We have few courses relating to Node.js on LinkedIn Learning. Although our live courses
 go into greater detail, you can get a feel for our teaching style by taking one
 or more of the following classes:
 
