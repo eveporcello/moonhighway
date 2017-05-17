@@ -3,11 +3,13 @@ import MdEject from 'react-icons/lib/md/eject'
 import GithubIcon from 'react-icons/lib/go/mark-github'
 import TwitterIcon from 'react-icons/lib/fa/twitter'
 import FacebookIcon from 'react-icons/lib/fa/facebook'
+import LinkedInIcon from 'react-icons/lib/fa/linkedin-square'
 import DownTriangle from 'react-icons/lib/go/triangle-down'
+import RightArrow from 'react-icons/lib/fa/angle-right'
 import Box from 'react-icons/lib/md/check-box-outline-blank'
 import Check from 'react-icons/lib/md/check-box'
+import { Link } from 'react-router'
 import { screenLayout } from '../../lib'
-
 import '../../stylesheets/ui.scss'
 
 export const DownButton = ({onClick=f=>f}) =>
@@ -20,9 +22,15 @@ DownButton.propTypes = {
     onClick: PropTypes.func
 }
 
-export const ResponsiveImg = (props) =>
-    <img src={(screenLayout() === "portrait") ? props.portrait : props.landscape}
-        {...props} />
+export const MoreLink = ({ to, children }) =>
+  <Link className="more-link" to={to} alt="">
+    {(children) ? ` ${children}` : ' more'}
+    <RightArrow />
+  </Link>
+
+export const ResponsiveImg = ({landscape, portrait, ...skrollValues}) =>
+    <img src={(screenLayout() === "portrait") ? portrait : landscape}
+        {...skrollValues} />
 
 ResponsiveImg.propTypes = {
     portrait: PropTypes.string.isRequired,
@@ -34,6 +42,9 @@ export const SocialIcons = ({ hide=false }) => (hide) ?
     <div className="social-icons">
         <a href="https://www.facebook.com/MoonHighway" target="_blank">
             <FacebookIcon />
+        </a>
+        <a href="https://www.linkedin.com/company-beta/2521788/" target="_blank">
+            <LinkedInIcon />
         </a>
         <a href="https://twitter.com/MoonHighway" target="_blank">
             <TwitterIcon />

@@ -1,5 +1,5 @@
 import { Component, Children, cloneElement } from 'react'
-import { browserHistory } from 'react-router'
+import { hashHistory, browserHistory } from 'react-router'
 import skrollr from 'skrollr'
 import Hammer from 'hammerjs'
 import { DownButton } from '../ui'
@@ -165,7 +165,13 @@ export class Rellax extends Component {
             const breakpoint = this.state.breakpoints[screenIndex]
             if (screenIndex !== current.screenIndex) {
                 this.setState({current: {breakpoint, screenIndex, transitioning: true}})
-                browserHistory.push(this.paths[screenIndex])
+                if (process.env.NODE_ENV === 'development' && window.location.origin.match(/http:\/\/localhost:3333/)) {
+                    console.warn('navigating with hashHistory')
+                    hashHistory.push(this.paths[screenIndex])
+                } else {
+                    browserHistory.push(this.paths[screenIndex])
+                }
+
             }
         }
     }
@@ -178,7 +184,12 @@ export class Rellax extends Component {
             const breakpoint = this.state.breakpoints[screenIndex]
             if (screenIndex !== current.screenIndex) {
                 this.setState({current: {breakpoint, screenIndex, transitioning: true}})
-                browserHistory.push(this.paths[screenIndex])
+                if (process.env.NODE_ENV === 'development' && window.location.origin.match(/http:\/\/localhost:3333/)) {
+                    console.warn('navigating with hashHistory')
+                    hashHistory.push(this.paths[screenIndex])
+                } else {
+                    browserHistory.push(this.paths[screenIndex])
+                }
             }
         }
     }
@@ -198,7 +209,7 @@ export class Rellax extends Component {
 
     onResize() {
         clearTimeout(this.to)
-        document.getElementById('react-container').innerHTML = '<img src="/img/titles/logo.png" />'
+        document.getElementById('react-container').innerHTML = '<img src="/img/logo/logo.png" />'
         this.to = setTimeout(() => location.reload(), 500)
     }
 
@@ -247,6 +258,28 @@ export class Rellax extends Component {
     }
 
     componentDidMount() {
+
+        window.autoplay = (t=10000) => {
+            if (window.autoplaying) {
+                clearInterval(window.autoplaying)
+                return 'autoscroll function turned off'
+            } else {
+                window.autoplaying = setInterval(() => {
+                    if (this.props.location.pathname === '/continuous-delivery') {
+                        if (process.env.NODE_ENV === 'development' && window.location.origin.match(/http:\/\/localhost:3333/)) {
+                            console.warn('navigating with hashHistory')
+                            hashHistory.push('/')
+                        } else {
+                            browserHistory.push('/')
+                        }
+                    } else {
+                        this.nextScreen()
+                    }
+                },t)
+                return `window will autoscroll every ${t/1000} seconds - invoke autoplay() again to stop`
+            }
+        }
+
         const direction = Hammer.DIRECTION_VERTICAL
         this.skr = skrollr.init({edgeStrategy: 'set'})
         if (isMobile()) {
@@ -273,8 +306,12 @@ export class Rellax extends Component {
     }
 
     componentWillUnmount() {
+        clearTimeout(this.to)
         window.removeEventListener("wheel", this.onWheel)
         window.removeEventListener("keydown", this.onArrowKeys)
+        window.removeEventListener("resize", this.onResize)
+        document.body.style.height = ''
+        this.skr.destroy()
     }
 
     componentDidUpdate() {

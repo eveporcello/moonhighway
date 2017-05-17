@@ -240,15 +240,17 @@ $main-font: "Source Sans Pro", sans;
       }
 
       /* iphone 6 */
-      @media screen and (max-height: 560px)
-      and (min-height: 550px) {
+      @media screen and (max-height: 595px)
+      and (min-height: 550px)
+      and (max-width: 400px) {
         font-size: $size - 30%;
         top: $top + 3%;
       }
 
       /* iphone 6 plus */
       @media screen and (max-height: 745px)
-      and (min-height: 561px) {
+      and (min-height: 561px)
+      and (min-width: 400px){
         font-size: $size - 18%;
         top: $top + 4%;
       }
