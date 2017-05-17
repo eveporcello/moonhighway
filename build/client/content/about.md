@@ -129,27 +129,27 @@ This process leverages the power of reinforcement and is designed to build stude
 
 ## Student Testimonials
 
-> "I like that this was hands-on and less lecture/presentation based"
+> I like that this was hands-on and less lecture/presentation based."
 * Node.js Kickoff student
 
 <!-- -->
-> "No student left behind - very cool."
+> No student left behind - very cool."
 * JavaScript Pro student
 
 <!-- -->
-> "Great job of both answering questions & keeping the pace moving in class!"
+> Great job of both answering questions & keeping the pace moving in class!"
 * JavaScript Kickoff student
 
 <!-- -->
->"Instructor is very good. Knowledgeable and a good communicator. Pace of class was great as well as the materials. Fast enough to challenge but not to frustrate."
+> Instructor is very good. Knowledgeable and a good communicator. Pace of class was great as well as the materials. Fast enough to challenge but not to frustrate."
 * CSS Pro student
 
 <!-- -->
-> "Very knowledgeable, able to discuss any side topic or deeper concept, engaging, built excellent connection to class. Good pacing."
+> Very knowledgeable, able to discuss any side topic or deeper concept, engaging, built excellent connection to class. Good pacing."
 * HTML Foundation student
 
 <!-- -->
-> "Instructor is good about redirecting lessons on the fly based on questions and input."
+>   Instructor is good about redirecting lessons on the fly based on questions and input."
 * JavaScript Kickoff student
 
 Online Content
