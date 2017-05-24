@@ -81,7 +81,7 @@ efficient HTML and CSS will help showcase your content in the best way possible.
       <h3>Length: 1 day</h3>
       <p>
       This course is designed for __creatives__, __developers__, and __engineers__
-      who are familiar with the basics of HTML and have dabbled in JavaScript. This course
+      who are familiar with the basics of HTML and have dabbled with JavaScript. This course
       introduces features and tags from the fifth version of the HTML specification. These
       features allow developers to add interactivity to their browser applications. Students will
       improve their ability to work with the browser by implementing these features and
@@ -161,7 +161,7 @@ efficient HTML and CSS will help showcase your content in the best way possible.
         <li>Relative Elements</li>
         <li>Fixed Elements</li>
         <li>Floating Content</li>
-        <li>Building layouts</li>
+        <li>Building Layouts</li>
         <li>Flexbox</li>
         <li>JavaScript Interactivity</li>
         <li>Building Menus</li>
