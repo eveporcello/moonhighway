@@ -48,7 +48,9 @@ export default class InternalPage extends Component {
     componentWillMount() {
         window.addEventListener('resize', this.onResize)
         document.body.style.backgroundColor = "white"
-        document.body.style.overflow = "scroll"
+        if (window.navigator.userAgent.match(/Firefox/)) {
+            document.body.style.overflow = "scroll"
+        }
     }
 
     componentDidMount() {
