@@ -44,7 +44,7 @@ practices, and real world scenarios.
 
 <section class="mh-course">
   <header>
-    <h2>Node.js Kickoff</h2>
+    <h2>Node Kickoff</h2>
   </header>
   <div>
     <img src="/img/logo/node.svg" class="free" alt="Node.js icon" />
@@ -73,16 +73,48 @@ practices, and real world scenarios.
   </div>
 </section>
 
-<!--
 <section class="mh-course">
   <header>
-    <h2>Node.js Pro</h2>
+    <h2>JavaScript Pro</h2>
   </header>
   <div>
-    <img src="/img/logo/node.svg" class="free" alt="Node.js Pro Icon" />
+    <img src="/img/logo/mh-tree.png" alt="" />
     <div>
       <h3>Length: 1 day</h3>
-      <p>description
+      <p>
+      This course is designed for __developers__ and __engineers__ who have the basics of JavaScript
+      under their belt and are ready to improve their code by implementing object-oriented design patterns in JavaScript. This course examines how JavaScript objects and functions work together with prototypal inheritance to allow you to develop applications with the same design patterns that you are currently familiar with like singletons, composites, MV*, and more.
+      </p>
+    </div>
+    <div>
+      <h3>Topics</h3>
+      <ul>
+        <li>Advanced Objects</li>
+        <li>Prototype</li>
+        <li>ES5 Enhancements</li>
+        <li>ES6 Class Syntax</li>
+        <li>Templates</li>
+        <li>Design Patterns</li>
+        <li>TDD with Jasmine</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="mh-course">
+  <header>
+    <h2>Node Pro</h2>
+  </header>
+  <div>
+    <img src="/img/logo/node-tree.png" alt="" />
+    <div>
+      <h3>Length: 1 day</h3>
+      <p>
+      This course is designed for __developers__ and __engineers__ who already have Node.js
+      installed and are ready to dive deeper into its core modules and patterns. In this class,
+      we examine the stream interface and how to work with synchronicity and asynchronicity in
+      Node.js applications. Students implement the stream interface several times by working
+      with the core modules that incorporate streams.
       </p>
     </div>
     <div>
@@ -100,7 +132,7 @@ practices, and real world scenarios.
     </div>
   </div>
 </section>
--->
+
 <section class="mh-course">
   <header>
     <h2>Emerging JavaScript</h2>

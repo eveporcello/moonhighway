@@ -40,7 +40,7 @@ and tools associated with JavaScript build pipelines.
 
 <section class="mh-course">
   <header>
-    <h2>NPM Publisher</h2>
+    <h2>npm Publisher</h2>
   </header>
   <div>
     <img src="/img/logo/npm.png" class="free" alt="npm logo" />
@@ -48,16 +48,16 @@ and tools associated with JavaScript build pipelines.
       <h3>Length: 1 day</h3>
       <p>
       This course is designed for __developers__ and __engineers__ who plan to
-      publish their JavaScript repositories to NPM. Students will learn to build and
+      publish their JavaScript repositories to npm. Students will learn to build and
       publish CLIs and libraries. We cover the best practices and techniques
       for documenting, versioning, and setting up automated continuous delivery pipelines
-      that deploy your code to NPM.
+      that deploy your code to npm.
       </p>
     </div>
     <div>
       <h3>Topics</h3>
       <ul>
-        <li>Publishing NPMs</li>
+        <li>Publishing npms</li>
         <li>Building CLIs</li>
         <li>Linking CLIs</li>
         <li>Building Libraries</li>

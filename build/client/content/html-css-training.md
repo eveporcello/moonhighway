@@ -7,6 +7,43 @@ efficient HTML and CSS will help showcase your content in the best way possible.
 
 <section class="mh-course">
   <header>
+    <h2>HTML &amp; HTTP Foundation</h2>
+  </header>
+  <div>
+    <img src="/img/logo/chrome.png" class="free" alt="Google Chrome Logo" />
+    <div>
+      <h3>Length: 1 day</h3>
+      <p>
+      This course is designed for __anyone__ who is new to the web or Google Chrome.
+      This includes __managers__ who are new to web projects, __engineers__ new to JavaScript
+      and the browser, and __creatives__ new to digital design. In this course,
+      students learn how the browser works with HTTP, HTML, CSS, and JavaScript by learning
+      how to review and debug websites with Google Chrome. We discuss techniques that are used
+      to optimize website performance.
+      </p>
+    </div>
+    <div>
+      <h3>Topics</h3>
+      <ul>
+        <li>Google Chrome</li>
+        <li>The HTTP Protocol</li>
+        <li>Client vs. Server</li>
+        <li>Static Websites</li>
+        <li>Dynamic Websites</li>
+        <li>Single Page Application</li>
+        <li>Debugging Tools</li>
+        <li>Website Optimization</li>
+        <li>SEO Optimization</li>
+        <li>Mobile Web Development</li>
+        <li>REST</li>
+        <li>Web Sockets</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="mh-course">
+  <header>
     <h2>HTML5 Kickoff</h2>
   </header>
   <div>
@@ -33,17 +70,22 @@ efficient HTML and CSS will help showcase your content in the best way possible.
   </div>
 </section>
 
-<!--
+
 <section class="mh-course">
   <header>
     <h2>HTML5 Pro</h2>
   </header>
   <div>
-    <img src="/img/logo/html5-pro.png" class="free" alt="" />
+    <img src="/img/logo/html-tree.png" alt="" />
     <div>
       <h3>Length: 1 day</h3>
       <p>
-
+      This course is designed for __creatives__, __developers__, and __engineers__
+      who are familiar with the basics of HTML and have dabbled with JavaScript. This course
+      introduces features and tags from the fifth version of the HTML specification. These
+      features allow developers to add interactivity to their browser applications. Students will
+      improve their ability to work with the browser by implementing these features and
+      testing them in browsers on devices.
       </p>
     </div>
     <div>
@@ -56,11 +98,11 @@ efficient HTML and CSS will help showcase your content in the best way possible.
         <li>Canvas</li>
         <li>Geolocation</li>
         <li>Media Capture</li>
+        <li>Device Debugging</li>
       </ul>
     </div>
   </div>
 </section>
--->
 
 <section class="mh-course">
   <header>
@@ -98,6 +140,39 @@ efficient HTML and CSS will help showcase your content in the best way possible.
 
 <section class="mh-course">
   <header>
+    <h2>CSS Pro</h2>
+  </header>
+  <div>
+    <img src="/img/logo/crazy-tree.png" alt="" />
+    <div>
+      <h3>Length: 1 day</h3>
+      <p>
+      This course is designed to teach __creatives__, __developers__, and __engineers__
+      who have a solid foundation in CSS how to construct complex full-page layouts.
+      This course analyzes how to construct layouts using percentages, the box models, and
+      floats. In addition to covering legacy layout techniques, students will gain an understanding
+      of how to use the latest layout techniques including flexbox and the grid.
+      </p>
+    </div>
+    <div>
+      <h3>Topics</h3>
+      <ul>
+        <li>Positioning</li>
+        <li>Relative Elements</li>
+        <li>Fixed Elements</li>
+        <li>Floating Content</li>
+        <li>Building Layouts</li>
+        <li>Flexbox</li>
+        <li>JavaScript Interactivity</li>
+        <li>Building Menus</li>
+        <li>CSS Grid</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="mh-course">
+  <header>
     <h2>CSS Animations</h2>
   </header>
   <div>
@@ -122,43 +197,6 @@ efficient HTML and CSS will help showcase your content in the best way possible.
         <li>3D Animations</li>
         <li>Managing Animations</li>
         <li>SVG Animations</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="mh-course">
-  <header>
-    <h2>HTML &amp; HTTP Foundation</h2>
-  </header>
-  <div>
-    <img src="/img/logo/chrome.png" class="free" alt="Google Chrome Logo" />
-    <div>
-      <h3>Length: 1 day</h3>
-      <p>
-      This course is designed for __anyone__ who is new to the web or Google Chrome.
-      This includes __managers__ who are new to web projects, __engineers__ new to JavaScript
-      and the browser, and __creatives__ new to digital design. In this course,
-      students learn how the browser works with HTTP, HTML, CSS, and JavaScript by learning
-      how to review and debug websites with Google Chrome. We discuss techniques that are used
-      to optimize website performance.
-      </p>
-    </div>
-    <div>
-      <h3>Topics</h3>
-      <ul>
-        <li>Google Chrome</li>
-        <li>The HTTP Protocol</li>
-        <li>Client vs. Server</li>
-        <li>Static Websites</li>
-        <li>Dynamic Websites</li>
-        <li>Single Page Application</li>
-        <li>Debugging Tools</li>
-        <li>Website Optimization</li>
-        <li>SEO Optimization</li>
-        <li>Mobile Web Development</li>
-        <li>REST</li>
-        <li>Web Sockets</li>
       </ul>
     </div>
   </div>
