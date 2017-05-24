@@ -82,11 +82,8 @@ practices, and real world scenarios.
     <div>
       <h3>Length: 1 day</h3>
       <p>
-      This course is designed for __developers__, and __engineers__, who have the JavaScript
-      basics under their belt and are ready to improve their code by implementing Objects
-      Oriented design patterns in JavaScript. This course examines how JavaScript Objects
-      and functions work together with prototypical inheritance to allow you to develop applications
-      with the same design patterns that you are currently familiar with: Singletons, Composites, MV*, etc;
+      This course is designed for __developers__ and __engineers__ who have the basics of JavaScript
+      under their belt and are ready to improve their code by implementing object-oriented design patterns in JavaScript. This course examines how JavaScript objects and functions work together with prototypal inheritance to allow you to develop applications with the same design patterns that you are currently familiar with like singletons, composites, MV*, and more.
       </p>
     </div>
     <div>
@@ -113,10 +110,10 @@ practices, and real world scenarios.
     <div>
       <h3>Length: 1 day</h3>
       <p>
-      This course is designed for __developers__, and __engineers__ who already have node js
+      This course is designed for __developers__ and __engineers__ who already have Node.js
       installed and are ready to dive deeper into its core modules and patterns. In this class,
-      we examine how the stream interface and how to work with synchronicity and asynchronicity in
-      node js applications. Students implement the stream interface several times over by working
+      we examine the stream interface and how to work with synchronicity and asynchronicity in
+      Node.js applications. Students implement the stream interface several times by working
       with the core modules that incorporate streams.
       </p>
     </div>

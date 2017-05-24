@@ -82,8 +82,8 @@ efficient HTML and CSS will help showcase your content in the best way possible.
       <p>
       This course is designed for __creatives__, __developers__, and __engineers__
       who are familiar with the basics of HTML and have dabbled in JavaScript. This course
-      introduces features and tags from the fifth version of the html specification. These
-      features allow developers to add interactivity to their browser applications. Students
+      introduces features and tags from the fifth version of the HTML specification. These
+      features allow developers to add interactivity to their browser applications. Students will
       improve their ability to work with the browser by implementing these features and
       testing them in browsers on devices.
       </p>
@@ -148,9 +148,9 @@ efficient HTML and CSS will help showcase your content in the best way possible.
       <h3>Length: 1 day</h3>
       <p>
       This course is designed to teach __creatives__, __developers__, and __engineers__
-      who have a solid foundation in CSS how to construct complex full page layouts.
+      who have a solid foundation in CSS how to construct complex full-page layouts.
       This course analyzes how to construct layouts using percentages, the box models, and
-      floats. In addition to covering legacy layout techniques, Students gain an understanding
+      floats. In addition to covering legacy layout techniques, students will gain an understanding
       of how to use the latest layout techniques including flexbox and the grid.
       </p>
     </div>
