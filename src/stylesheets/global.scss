@@ -368,8 +368,8 @@ $main-font: "Source Sans Pro", sans;
       and (max-width: 1200px)
       and (min-height: 600px)
       and (max-height: 700px) {
-        font-size: $size + 40%;
-        width: $width - 1em;
+        font-size: $size + 20%;
+        width: $width + 1em;
         top: $top - 2%;
       }
 

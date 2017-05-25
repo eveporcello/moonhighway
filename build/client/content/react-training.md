@@ -101,7 +101,7 @@ Since its open-source release by Facebook in 2013, the React library has explode
     <h2>Zero to React</h2>
   </header>
   <div>
-    <img src="/img/logo/zero-to-react.png" alt="" />
+    <img src="/img/logo/zero-to-react.png" alt="zero to react course icon" />
     <div>
       <h3>Length: 2 days</h3>
       <p>This course is designed for __project managers__, __designers__, or __engineers__
