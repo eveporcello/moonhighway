@@ -78,7 +78,7 @@ practices, and real world scenarios.
     <h2>JavaScript Pro</h2>
   </header>
   <div>
-    <img src="/img/logo/mh-tree.png" alt="" />
+    <img src="/img/logo/mh-tree.png" alt="JavaScript tree icon" />
     <div>
       <h3>Length: 1 day</h3>
       <p>
@@ -106,7 +106,7 @@ practices, and real world scenarios.
     <h2>Node Pro</h2>
   </header>
   <div>
-    <img src="/img/logo/node-tree.png" alt="" />
+    <img src="/img/logo/node-tree.png" alt="Node.js tree icon" />
     <div>
       <h3>Length: 1 day</h3>
       <p>
@@ -194,19 +194,19 @@ practices, and real world scenarios.
 
 <section class="mh-course">
   <header>
-    <h2>Websocket Pro</h2>
+    <h2>WebSockets Pro</h2>
   </header>
   <div>
-    <img src="/img/logo/websockets.png" class="free" alt="" />
+    <img src="/img/logo/websockets.png" class="free" alt="WebSockets logo" />
     <div>
       <h3>Length: 2 days</h3>
       <p>
       This course is designed for __developers__ and __engineers__ who are proficient
-      with JavaScript and Node and are ready to build real time interactive browser applications
+      with JavaScript and Node and are ready to build real-time interactive browser applications
       using WebSockets. WebSockets allow for real time two way data communications between clients and
-      servers. In this course, we dive deep into TCP sockets and the WebSocket spec.
+      servers. In this course, we dive deep into TCP sockets and the WebSockets spec.
       Students gain an understanding of how WebSockets work before moving on to using libraries
-      and frameworks like Socket IO or Firebase.
+      and frameworks like SocketIO and Firebase.
       </p>
     </div>
     <div>

@@ -143,7 +143,7 @@ efficient HTML and CSS will help showcase your content in the best way possible.
     <h2>CSS Pro</h2>
   </header>
   <div>
-    <img src="/img/logo/crazy-tree.png" alt="" />
+    <img src="/img/logo/crazy-tree.png" alt="CSS Pro tree icon" />
     <div>
       <h3>Length: 1 day</h3>
       <p>
@@ -204,30 +204,30 @@ efficient HTML and CSS will help showcase your content in the best way possible.
 
 <section class="mh-course">
   <header>
-    <h2>SaSS &amp; ScSS kickoff</h2>
+    <h2>Sass &amp; SCSS kickoff</h2>
   </header>
   <div>
-    <img src="/img/logo/sass-logo.png" class="free" alt="" />
+    <img src="/img/logo/sass-logo.png" class="free" alt="SASS logo icon" />
     <div>
       <h3>Length: 1 day</h3>
       <p>
       This course is designed to teach __creatives__, __developers__, and __engineers__
-      who have a solid foundation is CSS how to improve their stylesheet code with SaSS and ScSS.
-      SaSS is a scripting language that generates CSS files. In this class, Students learn how to
-      enhance the way they write CSS as well as statically pre-process stylesheets with SaSS.
+      who have a solid foundation is CSS how to improve their stylesheet code with Sass and SCSS.
+      Sass is a scripting language that generates CSS files. In this class, students learn how to
+      enhance the way they write CSS as well as statically pre-process stylesheets with Sass.
       </p>
     </div>
     <div>
       <h3>Topics</h3>
       <ul>
-        <li>preprocessing</li>
-        <li>imports</li>
-        <li>variables</li>
-        <li>operators</li>
+        <li>Preprocessing</li>
+        <li>Imports</li>
+        <li>Variables</li>
+        <li>Operators</li>
         <li>Nesting</li>
         <li>Looping</li>
         <li>Mixins</li>
-        <li>functions</li>
+        <li>Functions</li>
       </ul>
     </div>
   </div>
@@ -235,7 +235,7 @@ efficient HTML and CSS will help showcase your content in the best way possible.
 
 <section class="mh-course">
   <header>
-    <h2>LESS kickoff</h2>
+    <h2>LESS Kickoff</h2>
   </header>
   <div>
     <img src="/img/logo/less-logo.png" class="free" alt="" />
@@ -245,21 +245,21 @@ efficient HTML and CSS will help showcase your content in the best way possible.
       This course is designed to teach __creatives__, __developers__, and __engineers__
       who have a solid foundation is CSS how to improve their stylesheet code with LESS.
       LESS is a scripting language that statically generates CSS files. Students learn how to
-      enhance the way they write CSS as well as statically pre-process stylesheets with LESS.
+      enhance the way they write CSS as well as statically preprocess stylesheets with LESS.
       </p>
     </div>
     <div>
       <h3>Topics</h3>
       <ul>
-        <li>preprocessing</li>
-        <li>imports</li>
-        <li>variables</li>
+        <li>Preprocessing</li>
+        <li>Imports</li>
+        <li>Variables</li>
         <li>Namespaces</li>
         <li>Nesting</li>
         <li>Mixins</li>
-        <li>looping</li>
-        <li>merging</li>
-        <li>functions</li>
+        <li>Looping</li>
+        <li>Merging</li>
+        <li>Functions</li>
       </ul>
     </div>
   </div>
