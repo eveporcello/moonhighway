@@ -194,6 +194,39 @@ practices, and real world scenarios.
 
 <section class="mh-course">
   <header>
+    <h2>Websocket Pro</h2>
+  </header>
+  <div>
+    <img src="/img/logo/websockets.png" class="free" alt="" />
+    <div>
+      <h3>Length: 2 days</h3>
+      <p>
+      This course is designed for __developers__ and __engineers__ who are proficient
+      with JavaScript and Node and are ready to build real time interactive browser applications
+      using WebSockets. WebSockets allow for real time two way data communications between clients and
+      servers. In this course, we dive deep into TCP sockets and the WebSocket spec.
+      Students gain an understanding of how WebSockets work before moving on to using libraries
+      and frameworks like Socket IO or Firebase.
+      </p>
+    </div>
+    <div>
+      <h3>Topics</h3>
+      <ul>
+        <li>TCP Sockets</li>
+        <li>Building WebSockets</li>
+        <li>Connecting to WebSockets</li>
+        <li>Using Socket IO</li>
+        <li>Express</li>
+        <li>Securing Sockets</li>
+        <li>Streaming Media with WebSockets</li>
+        <li>Working with Firebase</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="mh-course">
+  <header>
     <h2>Using GraphQL</h2>
   </header>
   <div>
