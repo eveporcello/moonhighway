@@ -43,14 +43,14 @@ and tools associated with JavaScript build pipelines.
     <h2>Webpack Pro</h2>
   </header>
   <div>
-    <img src="/img/logo/webpack.svg" class="free" alt="" />
+    <img src="/img/logo/webpack.svg" class="free" alt="webpack logo" />
     <div>
       <h3>Length: 1 day</h3>
       <p>
       This course is designed for __developers__ and __engineers__ who want a deeper understanding
-      of how webpack works. In this class, we build custom loaders and plugins and various
-      webpack configurations. Students gain an understanding of how to pre-process and package
-      code with webpack through hands on challenges and examples.
+      of how webpack works. In this class, we build custom loaders and plugins and create various
+      webpack configurations. Students gain an understanding of how to preprocess and package
+      code with webpack through hands-on challenges and examples.
       </p>
     </div>
     <div>
@@ -63,8 +63,8 @@ and tools associated with JavaScript build pipelines.
         <li>Building Loaders</li>
         <li>Building Plugins</li>
         <li>Environments</li>
-        <li>Multiple configurations</li>
-        <li>Hot Swapping</li>
+        <li>Multiple Configurations</li>
+        <li>Hot Module Replacement</li>
       </ul>
     </div>
   </div>
