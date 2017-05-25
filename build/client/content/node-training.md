@@ -135,6 +135,71 @@ practices, and real world scenarios.
 
 <section class="mh-course">
   <header>
+    <h2>Node Stacked</h2>
+  </header>
+  <div>
+    <img src="/img/logo/node-stacked.png" class="free" alt="node.js stacked icon" />
+    <div>
+      <h3>Length: 2 days</h3>
+      <p>
+      This course is designed for __developers__ and __engineers__ who have the basics
+      of Node and JavaScript under their belt. In this course, we example techniques for
+      developing full-stack JavaScript applications. Students build and modify an Express
+      application that that serves data to a single-page browser application.
+      </p>
+    </div>
+    <div>
+      <h3>Topics</h3>
+      <ul>
+        <li>Express Generator</li>
+        <li>Express Middleware</li>
+        <li>Express Routes</li>
+        <li>Mocha</li>
+        <li>REST APIs</li>
+        <li>Polling</li>
+        <li>Long Polling</li>
+        <li>SocketIO</li>
+        <li>Single Page Applications</li>
+        <li>Handlebars</li>
+        <li>React</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="mh-course">
+  <header>
+    <h2>Node Data Pro</h2>
+  </header>
+  <div>
+    <img src="/img/logo/node-data.png" class="free"  alt="" />
+    <div>
+      <h3>Length: 1 day</h3>
+      <p>
+      This course is designed for __developers__ and __engineers__ who have the basics
+      of Node and JavaScript under their belt. This class examines how Node.js applications
+      interact with data layers. In this class, students setup Mongo databases and learn
+      to work with Mongo. This course also introduces and compares mLab and Firebase, two popular database services.
+      </p>
+    </div>
+    <div>
+      <h3>Topics</h3>
+      <ul>
+        <li>Installing Mongo</li>
+        <li>Using Mongo Shell</li>
+        <li>Importing Data</li>
+        <li>CRUD Operations</li>
+        <li>Using mLab</li>
+        <li>Setting Up Firebase</li>
+        <li>Firebase Auth</li>
+        <li>Using Firebase</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="mh-course">
+  <header>
     <h2>Emerging JavaScript</h2>
   </header>
   <div>
@@ -253,33 +318,36 @@ practices, and real world scenarios.
   </div>
 </section>
 
-<!--
+
 <section class="mh-course">
   <header>
-    <h2>Graph QL with Node js</h2>
+    <h2>GraphQL with Node</h2>
   </header>
   <div>
-    <img src="/img/logo/graphql.png" class="free" alt="" />
+    <img src="/img/logo/node-graphql.png" class="free" alt="" />
     <div>
-      <h3>Length: 1 </h3>
-      <p>description
+      <h3>Length: 1 day</h3>
+      <p>
+      This course is designed for __developers__ and __engineers__ who are proficient
+      with JavaScript, comfortable with Node and JavaScript, and are familiar with using
+      GraphQL. In this course, students learn how to build GraphQL endpoints with Node,
+      Express, and GraphQL. Students learn to build and connect schemas and practice hands-on techniques for retrieving data from multiple sources.
       </p>
     </div>
     <div>
       <h3>Topics</h3>
       <ul>
+        <li>GraphQL and Express</li>
+        <li>Setting Up GraphQL</li>
         <li>Building Schemas</li>
-        <li>Connecting Schemas</li>
-        <li>topic</li>
-        <li>topic</li>
-        <li>topic</li>
-        <li>topic</li>
+        <li>Multiple Sources</li>
+        <li>Filtering Queries</li>
+        <li>Connecting Data</li>
+        <li>Building Mutations</li>
       </ul>
     </div>
   </div>
 </section>
--->
-
 
 ## Custom Curriculums
 Any of our classes can be customized to fit your specific needs. We can create

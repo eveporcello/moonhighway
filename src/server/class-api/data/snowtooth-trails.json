@@ -1,224 +1,884 @@
 [
   {
     "name": "Blue Bird",
-    "lift": "Astra Express",
+    "lift": [
+      "/class/api/snowtooth/lifts/Astra-Express"
+    ],
     "difficulty": "intermediate",
-    "status": "open"
+    "status": "open",
+    "groomed": true,
+    "snowmaking": false,
+    "trees": false,
+    "night": false
   },
   {
     "name": "Blackhawk",
-    "lift": "Astra Express",
+    "lift": [
+      "/class/api/snowtooth/lifts/Astra-Express",
+      "/class/api/snowtooth/lifts/Panorama"
+    ],
     "difficulty": "intermediate",
-    "status": "open"
+    "status": "open",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": false,
+    "night": false
   },
   {
     "name": "Duck's Revenge",
-    "lift": "Astra Express",
+    "lift": [
+      "/class/api/snowtooth/lifts/Astra-Express"
+    ],
     "difficulty": "intermediate",
-    "status": "open"
+    "status": "open",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": true,
+    "night": false
   },
   {
     "name": "Ice Streak",
-    "lift": "Astra Express",
+    "lift": [
+      "/class/api/snowtooth/lifts/Astra-Express"
+    ],
     "difficulty": "intermediate",
-    "status": "open"
+    "status": "open",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": false,
+    "night": false
   },
   {
     "name": "Piggly Wiggly Bowl",
-    "lift": "Astra Express",
+    "lift": [
+      "/class/api/snowtooth/lifts/Astra-Express"
+    ],
     "difficulty": "intermediate",
-    "status": "open"
+    "status": "open",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": true,
+    "night": false
   },
   {
     "name": "Parachute",
-    "lift": "Astra Express",
+    "lift": [
+      "/class/api/snowtooth/lifts/Astra-Express"
+    ],
     "difficulty": "intermediate",
-    "status": "open"
+    "status": "open",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": false,
+    "night": false
   },
   {
     "name": "Goosebumps",
-    "lift": "Jazz Cat",
+    "lift": [
+      "/class/api/snowtooth/lifts/Astra-Express",
+      "/class/api/snowtooth/lifts/Jazz-Cat"
+    ],
     "difficulty": "advanced",
-    "status": "open"
+    "status": "open",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": true,
+    "night": false
   },
   {
     "name": "River Run",
-    "lift": "Jazz Cat",
+    "lift": [
+      "/class/api/snowtooth/lifts/Jazz-Cat"
+    ],
     "difficulty": "intermediate",
-    "status": "open"
+    "status": "open",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": true,
+    "night": false
+  },
+  {
+    "name": "Cape Cod",
+    "lift": [
+      "/class/api/snowtooth/lifts/Jazz-Cat"
+    ],
+    "difficulty": "intermediate",
+    "status": "closed",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": true,
+    "night": false
+  },
+  {
+    "name": "Grandma",
+    "lift": [
+      "/class/api/snowtooth/lifts/Jazz-Cat"
+    ],
+    "difficulty": "expert",
+    "status": "open",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": true,
+    "night": false
+  },
+  {
+    "name": "Wild Child",
+    "lift": [
+      "/class/api/snowtooth/lifts/Jazz-Cat"
+    ],
+    "difficulty": "advanced",
+    "status": "closed",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": false,
+    "night": false
+  },
+  {
+    "name": "Old Witch",
+    "lift": [
+      "/class/api/snowtooth/lifts/Jazz-Cat"
+    ],
+    "difficulty": "expert",
+    "status": "open",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": true,
+    "night": false
   },
   {
     "name": "Dance Fight",
-    "lift": "Jolly Roger",
+    "lift": [
+      "/class/api/snowtooth/lifts/Jolly-Roger"
+    ],
     "difficulty": "beginner",
-    "status": "open"
+    "status": "open",
+    "groomed": true,
+    "snowmaking": true,
+    "trees": false,
+    "night": true
   },
   {
     "name": "Sneaky Pete",
-    "lift": "Jolly Roger",
+    "lift": [
+      "/class/api/snowtooth/lifts/Jolly-Roger"
+    ],
     "difficulty": "beginner",
-    "status": "open"
+    "status": "open",
+    "groomed": true,
+    "snowmaking": true,
+    "trees": false,
+    "night": true
   },
   {
     "name": "Bear Cave",
-    "lift": "Jolly Roger",
+    "lift": [
+      "/class/api/snowtooth/lifts/Jolly-Roger"
+    ],
     "difficulty": "intermediate",
-    "status": "open"
+    "status": "open",
+    "groomed": true,
+    "snowmaking": true,
+    "trees": false,
+    "night": true
   },
   {
     "name": "Humpty Dumpty",
-    "lift": "Jolly Roger",
+    "lift": [
+      "/class/api/snowtooth/lifts/Jolly-Roger"
+    ],
     "difficulty": "intermediate",
-    "status": "open"
+    "status": "closed",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": false,
+    "night": false
   },
   {
     "name": "Meatball",
-    "lift": "Jolly Roger",
+    "lift": [
+      "/class/api/snowtooth/lifts/Jolly-Roger"
+    ],
     "difficulty": "beginner",
-    "status": "open"
+    "status": "open",
+    "groomed": true,
+    "snowmaking": true,
+    "trees": false,
+    "night": true
+  },
+  {
+    "name": "Early Riser",
+    "lift": [
+      "/class/api/snowtooth/lifts/Jolly-Roger"
+    ],
+    "difficulty": "intermediate",
+    "status": "open",
+    "groomed": true,
+    "snowmaking": true,
+    "trees": false,
+    "night": true
+  },
+  {
+    "name": "Sunset",
+    "lift": [
+      "/class/api/snowtooth/lifts/Jolly-Roger",
+      "/class/api/snowtooth/lifts/Sunset"
+    ],
+    "difficulty": "intermediate",
+    "status": "open",
+    "groomed": true,
+    "snowmaking": true,
+    "trees": false,
+    "night": true
+  },
+  {
+    "name": "Home Run",
+    "lift": [
+      "/class/api/snowtooth/lifts/Neptune-Rope"
+    ],
+    "difficulty": "beginner",
+    "status": "open",
+    "groomed": true,
+    "snowmaking": false,
+    "trees": false,
+    "night": false
+  },
+  {
+    "name": "Crosscut",
+    "lift": [
+      "/class/api/snowtooth/lifts/Neptune-Rope"
+    ],
+    "difficulty": "beginner",
+    "status": "open",
+    "groomed": true,
+    "snowmaking": false,
+    "trees": false,
+    "night": false
+  },
+  {
+    "name": "Ocean Breeze",
+    "lift": [
+      "/class/api/snowtooth/lifts/Panorama"
+    ],
+    "difficulty": "intermediate",
+    "status": "open",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": true,
+    "night": true
+  },
+  {
+    "name": "Songstress",
+    "lift": [
+      "/class/api/snowtooth/lifts/Panorama"
+    ],
+    "difficulty": "expert",
+    "status": "closed",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": true,
+    "night": false
+  },
+  {
+    "name": "Mountain Run",
+    "lift": [
+      "/class/api/snowtooth/lifts/Panorama"
+    ],
+    "difficulty": "intermediate",
+    "status": "open",
+    "groomed": true,
+    "snowmaking": false,
+    "trees": false,
+    "night": true
+  },
+  {
+    "name": "Summit Saunter",
+    "lift": [
+      "/class/api/snowtooth/lifts/Panorama"
+    ],
+    "difficulty": "intermediate",
+    "status": "open",
+    "groomed": true,
+    "snowmaking": false,
+    "trees": false,
+    "night": true
+  },
+  {
+    "name": "Hemmed Slacks",
+    "lift": [
+      "/class/api/snowtooth/lifts/Panorama"
+    ],
+    "difficulty": "intermediate",
+    "status": "open",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": true,
+    "night": false
+  },
+  {
+    "name": "David's Dive",
+    "lift": [
+      "/class/api/snowtooth/lifts/Panorama"
+    ],
+    "difficulty": "advanced",
+    "status": "closed",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": true,
+    "night": false
+  },
+  {
+    "name": "Quarry Chute",
+    "lift": [
+      "/class/api/snowtooth/lifts/Panorama"
+    ],
+    "difficulty": "expert",
+    "status": "closed",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": true,
+    "night": false
   },
   {
     "name": "Crooked Chute",
-    "lift": "Prickly Peak",
+    "lift": [
+      "/class/api/snowtooth/lifts/Prickly-Peak"
+    ],
     "difficulty": "expert",
-    "status": "closed"
+    "status": "open",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": true,
+    "night": false
   },
   {
     "name": "Mark's Chute",
-    "lift": "Prickly Peak",
+    "lift": [
+      "/class/api/snowtooth/lifts/Prickly-Peak"
+    ],
     "difficulty": "expert",
-    "status": "open"
+    "status": "open",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": true,
+    "night": false
   },
   {
     "name": "The Terrible Chute",
-    "lift": "Prickly Peak",
+    "lift": [
+      "/class/api/snowtooth/lifts/Prickly-Peak"
+    ],
     "difficulty": "expert",
-    "status": "closed"
+    "status": "open",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": true,
+    "night": false
+  },
+  {
+    "name": "Magma Chute",
+    "lift": [
+      "/class/api/snowtooth/lifts/Prickly-Peak"
+    ],
+    "difficulty": "expert",
+    "status": "open",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": true,
+    "night": false
+  },
+  {
+    "name": "Saddleback Chute",
+    "lift": [
+      "/class/api/snowtooth/lifts/Prickly-Peak"
+    ],
+    "difficulty": "expert",
+    "status": "open",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": true,
+    "night": false
+  },
+  {
+    "name": "Omega Chute",
+    "lift": [
+      "/class/api/snowtooth/lifts/Prickly-Peak"
+    ],
+    "difficulty": "intermediate",
+    "status": "open",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": true,
+    "night": false
+  },
+  {
+    "name": "Adirondack Chute",
+    "lift": [
+      "/class/api/snowtooth/lifts/Prickly-Peak"
+    ],
+    "difficulty": "expert",
+    "status": "open",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": true,
+    "night": false
+  },
+  {
+    "name": "Chicken Out Traverse",
+    "lift": [
+      "/class/api/snowtooth/lifts/Prickly-Peak"
+    ],
+    "difficulty": "intermediate",
+    "status": "open",
+    "groomed": true,
+    "snowmaking": false,
+    "trees": false,
+    "night": false
   },
   {
     "name": "Blue Streak",
-    "lift": "Snowtooth Express",
+    "lift": [
+      "/class/api/snowtooth/lifts/Snowtooth-Express"
+    ],
     "difficulty": "advanced",
-    "status": "open"
+    "status": "open",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": false,
+    "night": false
   },
   {
     "name": "Hoya Saxa",
-    "lift": "Snowtooth Express",
+    "lift": [
+      "/class/api/snowtooth/lifts/Snowtooth-Express"
+    ],
     "difficulty": "advanced",
-    "status": "open"
+    "status": "open",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": true,
+    "night": false
   },
   {
     "name": "Michigan Ave",
-    "lift": "Snowtooth Express",
-    "difficulty": "advanced",
-    "status": "open"
+    "lift": [
+      "/class/api/snowtooth/lifts/Snowtooth-Express"
+    ],
+    "difficulty": "intermediate",
+    "status": "open",
+    "groomed": true,
+    "snowmaking": false,
+    "trees": false,
+    "night": false
   },
   {
     "name": "Parker Downhill",
-    "lift": "Snowtooth Express",
+    "lift": [
+      "/class/api/snowtooth/lifts/Snowtooth-Express"
+    ],
     "difficulty": "advanced",
-    "status": "open"
+    "status": "open",
+    "groomed": true,
+    "snowmaking": false,
+    "trees": false,
+    "night": false
+  },
+  {
+    "name": "Wiggle Waggle",
+    "lift": [
+      "/class/api/snowtooth/lifts/Snowtooth-Express"
+    ],
+    "difficulty": "beginner",
+    "status": "open",
+    "groomed": true,
+    "snowmaking": false,
+    "trees": false,
+    "night": false
+  },
+  {
+    "name": "Meow Face",
+    "lift": [
+      "/class/api/snowtooth/lifts/Snowtooth-Express"
+    ],
+    "difficulty": "intermediate",
+    "status": "open",
+    "groomed": true,
+    "snowmaking": false,
+    "trees": false,
+    "night": false
+  },
+  {
+    "name": "Golden Ticket",
+    "lift": [
+      "/class/api/snowtooth/lifts/Snowtooth-Express",
+      "/class/api/snowtooth/lifts/Summit"
+    ],
+    "difficulty": "expert",
+    "status": "open",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": true,
+    "night": false
   },
   {
     "name": "Summit Bowl",
-    "lift": "Summit",
+    "lift": [
+      "/class/api/snowtooth/lifts/Snowtooth-Express",
+      "/class/api/snowtooth/lifts/Summit"
+    ],
     "difficulty": "advanced",
-    "status": "open"
+    "status": "closed",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": true,
+    "night": false
   },
   {
-    "name": "Hanger Bowl",
-    "lift": "Summit",
-    "difficulty": "expert",
-    "status": "closed"
+    "name": "Hangar Bowl",
+    "lift": [
+      "/class/api/snowtooth/lifts/Summit"
+    ],
+    "difficulty": "intermediate",
+    "status": "closed",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": true,
+    "night": false
   },
   {
     "name": "Big Gully",
-    "lift": "Summit",
+    "lift": [
+      "/class/api/snowtooth/lifts/Summit"
+    ],
+    "difficulty": "expert",
+    "status": "closed",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": true,
+    "night": false
+  },
+  {
+    "name": "Bigger Gully",
+    "lift": [
+      "/class/api/snowtooth/lifts/Summit"
+    ],
+    "difficulty": "expert",
+    "status": "closed",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": true,
+    "night": false
+  },
+  {
+    "name": "Broadway Bowl",
+    "lift": [
+      "/class/api/snowtooth/lifts/Summit"
+    ],
+    "difficulty": "intermediate",
+    "status": "closed",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": false,
+    "night": false
+  },
+  {
+    "name": "Fish Bowl",
+    "lift": [
+      "/class/api/snowtooth/lifts/Summit"
+    ],
     "difficulty": "advanced",
-    "status": "open"
+    "status": "closed",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": true,
+    "night": false
+  },
+  {
+    "name": "Way Out",
+    "lift": [
+      "/class/api/snowtooth/lifts/Summit"
+    ],
+    "difficulty": "beginner",
+    "status": "closed",
+    "groomed": true,
+    "snowmaking": false,
+    "trees": false,
+    "night": false
   },
   {
     "name": "Buford",
-    "lift": "Wally's",
+    "lift": [
+      "/class/api/snowtooth/lifts/Wally's"
+    ],
     "difficulty": "beginner",
-    "status": "open"
+    "status": "closed",
+    "groomed": true,
+    "snowmaking": false,
+    "trees": false,
+    "night": true
   },
   {
     "name": "Slippy Stream",
-    "lift": "Wally's",
+    "lift": [
+      "/class/api/snowtooth/lifts/Wally's"
+    ],
     "difficulty": "beginner",
-    "status": "closed"
+    "status": "closed",
+    "groomed": true,
+    "snowmaking": false,
+    "trees": false,
+    "night": true
   },
   {
-    "name": "Thunder Gully",
-    "lift": "Wally's",
-    "difficulty": "advanced",
-    "status": "closed"
+    "name": "Thunder",
+    "lift": [
+      "/class/api/snowtooth/lifts/Wally's"
+    ],
+    "difficulty": "beginner",
+    "status": "closed",
+    "groomed": true,
+    "snowmaking": true,
+    "trees": false,
+    "night": true
   },
   {
     "name": "Peacock",
-    "lift": "Wally's",
+    "lift": [
+      "/class/api/snowtooth/lifts/Wally's"
+    ],
     "difficulty": "beginner",
-    "status": "open"
+    "status": "closed",
+    "groomed": true,
+    "snowmaking": true,
+    "trees": false,
+    "night": true
   },
   {
     "name": "Fun Run",
-    "lift": "Wally's",
+    "lift": [
+      "/class/api/snowtooth/lifts/Wally's"
+    ],
     "difficulty": "beginner",
-    "status": "open"
+    "status": "closed",
+    "groomed": true,
+    "snowmaking": true,
+    "trees": false,
+    "night": true
+  },
+  {
+    "name": "Sweet Treat",
+    "lift": [
+      "/class/api/snowtooth/lifts/Wally's"
+    ],
+    "difficulty": "beginner",
+    "status": "closed",
+    "groomed": true,
+    "snowmaking": true,
+    "trees": false,
+    "night": true
+  },
+  {
+    "name": "Stump Alley",
+    "lift": [
+      "/class/api/snowtooth/lifts/Wally's"
+    ],
+    "difficulty": "intermediate",
+    "status": "closed",
+    "groomed": true,
+    "snowmaking": true,
+    "trees": true,
+    "night": true
   },
   {
     "name": "Centennial",
-    "lift": "Western States",
+    "lift": [
+      "/class/api/snowtooth/lifts/Western-States"
+    ],
     "difficulty": "advanced",
-    "status": "closed"
+    "status": "closed",
+    "groomed": false,
+    "snowmaking": true,
+    "trees": true,
+    "night": false
+  },
+  {
+    "name": "Biennial",
+    "lift": [
+      "/class/api/snowtooth/lifts/Western-States"
+    ],
+    "difficulty": "advanced",
+    "status": "closed",
+    "groomed": false,
+    "snowmaking": true,
+    "trees": true,
+    "night": false
+  },
+  {
+    "name": "Millenial",
+    "lift": [
+      "/class/api/snowtooth/lifts/Western-States"
+    ],
+    "difficulty": "advanced",
+    "status": "closed",
+    "groomed": false,
+    "snowmaking": true,
+    "trees": true,
+    "night": false
+  },
+  {
+    "name": "Searcher",
+    "lift": [
+      "/class/api/snowtooth/lifts/Western-States"
+    ],
+    "difficulty": "intermediate",
+    "status": "closed",
+    "groomed": false,
+    "snowmaking": true,
+    "trees": true,
+    "night": false
   },
   {
     "name": "White Lightning",
-    "lift": "Western States",
+    "lift": [
+      "/class/api/snowtooth/lifts/Western-States"
+    ],
     "difficulty": "advanced",
-    "status": "closed"
+    "status": "closed",
+    "groomed": false,
+    "snowmaking": true,
+    "trees": true,
+    "night": false
   },
   {
-    "name": "Oatmeal's return",
-    "lift": "Western States",
-    "difficulty": "intermediate",
-    "status": "closed"
+    "name": "Richard's Return",
+    "lift": [
+      "/class/api/snowtooth/lifts/Western-States",
+      "/class/api/snowtooth/lifts/Whirlybird"
+    ],
+    "difficulty": "beginner",
+    "status": "closed",
+    "groomed": true,
+    "snowmaking": true,
+    "trees": true,
+    "night": false
   },
   {
-    "name": "Head Chutes gate A",
-    "lift": "Western States",
+    "name": "Head Chutes Gate A",
+    "lift": [
+      "/class/api/snowtooth/lifts/Western-States"
+    ],
     "difficulty": "expert",
-    "status": "closed"
+    "status": "closed",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": true,
+    "night": false
   },
   {
-    "name": "Head Chutes gate B",
-    "lift": "Western States",
+    "name": "Head Chutes Gate B",
+    "lift": [
+      "/class/api/snowtooth/lifts/Western-States"
+    ],
     "difficulty": "expert",
-    "status": "closed"
+    "status": "closed",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": true,
+    "night": false
   },
   {
-    "name": "Head Chutes gate C",
-    "lift": "Western States",
+    "name": "Head Chutes Gate C",
+    "lift": [
+      "/class/api/snowtooth/lifts/Western-States"
+    ],
     "difficulty": "expert",
-    "status": "closed"
+    "status": "closed",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": true,
+    "night": false
   },
   {
     "name": "Bird Glade",
-    "lift": "Whirlybird",
+    "lift": [
+      "/class/api/snowtooth/lifts/Whirlybird"
+    ],
     "difficulty": "expert",
-    "status": "closed"
+    "status": "closed",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": true,
+    "night": false
   },
   {
     "name": "Big Bird",
-    "lift": "Whirlybird",
-    "difficulty": "intermediate",
-    "status": "open"
+    "lift": [
+      "/class/api/snowtooth/lifts/Whirlybird"
+    ],
+    "difficulty": "expert",
+    "status": "closed",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": true,
+    "night": false
   },
   {
     "name": "Roller Park",
-    "lift": "Whirlybird",
+    "lift": [
+      "/class/api/snowtooth/lifts/Whirlybird"
+    ],
+    "difficulty": "expert",
+    "status": "closed",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": true,
+    "night": false
+  },
+  {
+    "name": "Owl Glade",
+    "lift": [
+      "/class/api/snowtooth/lifts/Whirlybird"
+    ],
+    "difficulty": "expert",
+    "status": "closed",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": true,
+    "night": false
+  },
+  {
+    "name": "Whippersnapper Ridge",
+    "lift": [
+      "/class/api/snowtooth/lifts/Whirlybird"
+    ],
+    "difficulty": "expert",
+    "status": "closed",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": true,
+    "night": false
+  },
+  {
+    "name": "Drop In",
+    "lift": [
+      "/class/api/snowtooth/lifts/Whirlybird"
+    ],
+    "difficulty": "expert",
+    "status": "closed",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": true,
+    "night": false
+  },
+  {
+    "name": "Mosh Pit",
+    "lift": [
+      "/class/api/snowtooth/lifts/Whirlybird"
+    ],
     "difficulty": "advanced",
-    "status": "open"
+    "status": "closed",
+    "groomed": false,
+    "snowmaking": false,
+    "trees": true,
+    "night": false
   }
 ]
