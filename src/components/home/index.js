@@ -20,17 +20,6 @@ export class HomePage extends Component {
         const { location } = this.props
         return (
             <div className="home-page">
-                <div style={{
-                    position: 'fixed',
-                    top: 0,
-                    right: 0,
-                    padding: '1em',
-                    color: 'black',
-                    backgroundColor: 'white',
-                    zIndex: 999999
-                }}>
-                {window.innerWidth} x {window.innerHeight}
-              </div>
                 <Rellax location={location}>
                     <Home route="/" />
                     <LearnReact route="/react" />
