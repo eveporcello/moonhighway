@@ -40,6 +40,70 @@ and tools associated with JavaScript build pipelines.
 
 <section class="mh-course">
   <header>
+    <h2>Test Driven Javascript</h2>
+  </header>
+  <div>
+    <img src="/img/logo/tdd.png" class="free" alt="" />
+    <div>
+      <h3>Length: 1 day</h3>
+      <p>
+      This course is designed for __developers__ and __engineers__ who have the basics
+      of JavaScript under their belts. This course covers how to write unit tests and
+      practice Test Driven Development (TDD) with JavaScript. Students gain hands on
+      experience with writing unit tests with vanilla javascript before exploring
+      the mocha and jest testing frameworks.
+      </p>
+    </div>
+    <div>
+      <h3>Topics</h3>
+      <ul>
+        <li>TDD Practice</li>
+        <li>Writing Tests</li>
+        <li>Testable Code</li>
+        <li>Flakey Tests</li>
+        <li>Assertions</li>
+        <li>Stubs vs. Mocks</li>
+        <li>Injecting Mocks</li>
+        <li>Async Testing</li>
+        <li>Testing HTTP Endpoints</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="mh-course">
+  <header>
+    <h2>Behavior Driven JavaScript</h2>
+  </header>
+  <div>
+    <img src="/img/logo/cd-tree.png" alt="" />
+    <div>
+      <h3>Length: 1 day</h3>
+      <p>
+      This course is designed for __developers__ and __engineers__ who have the basics
+      of JavaScript under their belts. This course covers how to use JavaScript to
+      incorporate integration testing for full stack browser applications. Students gain
+      hands on experience writing features and practicing Behavior Driven Development (BDD).
+      </p>
+    </div>
+    <div>
+      <h3>Topics</h3>
+      <ul>
+        <li>BDD Practice</li>
+        <li>Integration Testing</li>
+        <li>Mocha</li>
+        <li>Gherkin</li>
+        <li>Writing Features</li>
+        <li>Cucumber</li>
+        <li>Headless Browsers</li>
+        <li>Mocking Systems</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="mh-course">
+  <header>
     <h2>Webpack Pro</h2>
   </header>
   <div>
@@ -130,6 +194,39 @@ and tools associated with JavaScript build pipelines.
         <li>Travis CI</li>
         <li>Staging and Production</li>
         <li>Rolling Back</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="mh-course">
+  <header>
+    <h2>Engineering Onboarding</h2>
+  </header>
+  <div>
+    <img src="/img/logo/question-icon.png" class="free" alt="your logo here" />
+    <div>
+      <h3>Length: ? days</h3>
+      <p>
+      We can help design and deliver your onboarding program for __engineers__, __developers__,
+      __managers__, or __creatives__. As your organization grows, it is very important to keep
+      a uniform engineering culture. We can dive deep into your proprietary solutions and practices
+      to provide a hands on training curriculum for your incoming __technical professionals__.
+      </p>
+    </div>
+    <div>
+      <h3>Topics</h3>
+      <ul>
+        <li>Proprietary Procedures</li>
+        <li>Proprietary Practices</li>
+        <li>SCRUM, Kanban</li>
+        <li>Environment Setup</li>
+        <li>Proprietary Systems</li>
+        <li>Virtual Machines</li>
+        <li>Delivery Pipelines</li>
+        <li>Pull Requests</li>
+        <li>Staging and Production</li>
+        <li>Offline Data</li>
       </ul>
     </div>
   </div>
