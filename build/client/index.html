@@ -17,36 +17,15 @@
     <meta property="og:image" content="https://www.moonhighway.com/img/social.jpg" />
     <meta property="og:description" content="We develop and deliver cutting edge JavaScript training for technical professionals." />
     <style>
-        html, body {height: 100%;}
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #7ABCFF;
-        }
-        body > h1 { display: none; }
-        @media screen and (orientation: portrait) {
-            #react-container > img:first-child {
-                width: 65%;
-                margin: 7% 17.5%;
-            }
-        }
-        @media screen and (orientation: landscape) {
-            #react-container>img:first-child {
-                width: 50%;
-                margin: 8% 25%;
-            }
-        }
-        @media screen and (min-width: 1280px) {
-            #react-container>img:first-child {
-                width: 40%;
-                margin: 8% 30%;
-            }
-        }
+        body,html{height:100%}body{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;background-color:#7ABCFF;overflow:hidden}body>h1{display:none}div.loading{height:30px;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;margin:10px 0}div.loading>div{border:2px solid #fff;-ms-flex-preferred-size:20px;flex-basis:20px;margin:0 10px;-webkit-animation:waiting 3s ease-in-out alternate infinite;animation:waiting 3s ease-in-out alternate infinite}div.loading>div:nth-child(2){-webkit-animation-delay:1s;animation-delay:1s}div.loading>div:last-child{-webkit-animation-delay:2s;animation-delay:2s}@-webkit-keyframes waiting{0%,100%,40%,60%{background-color:transparent}50%,55%{background-color:#fff}}@keyframes waiting{0%,100%,40%,60%{background-color:transparent}50%,55%{background-color:#fff}}
     </style>
 </head>
 <body>
 <h1>Moon Highway</h1>
-<div id="react-container"><img src="/img/logo/logo.png" alt="Moon Highway Logo"/></div>
+<div id="react-container">
+  <img src="/img/logo/logo-sm.png" alt="Moon Highway Logo"/>
+  <div class="loading"><div></div><div></div><div></div></div>
+</div>
 <script src="/assets/bundle.min.js"></script>
 </body>
 </html>
