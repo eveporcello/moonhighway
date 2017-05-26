@@ -76,7 +76,7 @@ efficient HTML and CSS will help showcase your content in the best way possible.
     <h2>HTML5 Pro</h2>
   </header>
   <div>
-    <img src="/img/logo/html-tree.png" alt="" />
+    <img src="/img/logo/html-tree.png" alt="html5 pro logo" />
     <div>
       <h3>Length: 1 day</h3>
       <p>
@@ -173,6 +173,39 @@ efficient HTML and CSS will help showcase your content in the best way possible.
 
 <section class="mh-course">
   <header>
+    <h2>Responsive Design</h2>
+  </header>
+  <div>
+    <img src="/img/logo/responsive-css.png" class="free" alt="responsive css" />
+    <div>
+      <h3>Length: 1 day</h3>
+      <p>
+      This course is designed to teach __creatives__, __developers__, and __engineers__
+      who have a solid foundation in CSS how to construct responsive full-page layouts that
+      look good in all screen sizes and on all devices. First, this course covers how to make
+      design flexible with percentages, ems, and flexbox. Next, we move on to how to implement
+      media queries to target specific screen sizes or devices. Students build
+      responsive CSS layouts using the latest techniques.
+      </p>
+    </div>
+    <div>
+      <h3>Topics</h3>
+      <ul>
+        <li>Percentages and ems</li>
+        <li>Media Queries</li>
+        <li>Combining Media Queries</li>
+        <li>Flexbox</li>
+        <li>CSS Grid</li>
+        <li>Progressive Images</li>
+        <li>Devices</li>
+        <li>Mobile First</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="mh-course">
+  <header>
     <h2>CSS Animations</h2>
   </header>
   <div>
@@ -204,7 +237,7 @@ efficient HTML and CSS will help showcase your content in the best way possible.
 
 <section class="mh-course">
   <header>
-    <h2>Sass &amp; SCSS kickoff</h2>
+    <h2>Sass &amp; SCSS Kickoff</h2>
   </header>
   <div>
     <img src="/img/logo/sass-logo.png" class="free" alt="SASS logo icon" />
@@ -270,7 +303,7 @@ efficient HTML and CSS will help showcase your content in the best way possible.
     <h2>D3 Data Visualizations</h2>
   </header>
   <div>
-    <img src="/img/logo/d3.png" class="free" alt="" />
+    <img src="/img/logo/d3.png" class="free" alt="d3 logo" />
     <div>
       <h3>Length: 2 days</h3>
       <p>
@@ -281,7 +314,7 @@ efficient HTML and CSS will help showcase your content in the best way possible.
     <div>
       <h3>Topics</h3>
       <ul>
-        <li>Data and the Dom</li>
+        <li>Data and the DOM/li>
         <li>Loading Data</li>
         <li>Traversing Data</li>
         <li>SVG</li>
