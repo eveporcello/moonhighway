@@ -13,8 +13,7 @@ import '../../stylesheets/home.scss'
 export class HomePage extends Component {
 
     componentDidMount() {
-        document.getElementById('react-container').className = 'container-block fadeIn'
-        document.body.className = "clear-body"
+        document.getElementById('react-container').className = 'fadeIn'
     }
 
     render() {
