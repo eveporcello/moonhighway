@@ -20,11 +20,6 @@ body {
 
 }
 
-#react-container {
-  display: block;
-  flex-basis: 100%;
-}
-
 /* Hiding the scrollbar */
 
 html {
@@ -35,6 +30,16 @@ html {
 ::-webkit-scrollbar {
   width: 0;
   background: transparent;
+}
+
+.clear-body {
+  display: block;
+  overflow: auto;
+}
+
+.container-block {
+  display: block;
+  flex-basis: 100%;
 }
 
 .fadeIn {
