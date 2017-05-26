@@ -40,7 +40,7 @@ and tools associated with JavaScript build pipelines.
 
 <section class="mh-course">
   <header>
-    <h2>Test Driven Javascript</h2>
+    <h2>Test Driven JavaScript</h2>
   </header>
   <div>
     <img src="/img/logo/tdd.png" class="free" alt="" />
@@ -49,9 +49,9 @@ and tools associated with JavaScript build pipelines.
       <p>
       This course is designed for __developers__ and __engineers__ who have the basics
       of JavaScript under their belts. This course covers how to write unit tests and
-      practice Test Driven Development (TDD) with JavaScript. Students gain hands on
-      experience with writing unit tests with vanilla javascript before exploring
-      the mocha and jest testing frameworks.
+      practice Test Driven Development (TDD) with JavaScript. Students gain hands-on
+      experience with writing unit tests with vanilla JavaScript before exploring
+      the Mocha and Jest testing frameworks.
       </p>
     </div>
     <div>
@@ -60,7 +60,7 @@ and tools associated with JavaScript build pipelines.
         <li>TDD Practice</li>
         <li>Writing Tests</li>
         <li>Testable Code</li>
-        <li>Flakey Tests</li>
+        <li>Flaky Tests</li>
         <li>Assertions</li>
         <li>Stubs vs. Mocks</li>
         <li>Injecting Mocks</li>
@@ -76,7 +76,7 @@ and tools associated with JavaScript build pipelines.
     <h2>Behavior Driven JavaScript</h2>
   </header>
   <div>
-    <img src="/img/logo/cd-tree.png" alt="" />
+    <img src="/img/logo/cd-tree.png" alt="continuous delivery tree icon" />
     <div>
       <h3>Length: 1 day</h3>
       <p>
@@ -211,7 +211,7 @@ and tools associated with JavaScript build pipelines.
       We can help design and deliver your onboarding program for __engineers__, __developers__,
       __managers__, or __creatives__. As your organization grows, it is very important to keep
       a uniform engineering culture. We can dive deep into your proprietary solutions and practices
-      to provide a hands on training curriculum for your incoming __technical professionals__.
+      to provide a hands-on training curriculum for your incoming __technical professionals__.
       </p>
     </div>
     <div>
