@@ -76,7 +76,7 @@ efficient HTML and CSS will help showcase your content in the best way possible.
     <h2>HTML5 Pro</h2>
   </header>
   <div>
-    <img src="/img/logo/html-tree.png" alt="" />
+    <img src="/img/logo/html-tree.png" alt="html5 pro logo" />
     <div>
       <h3>Length: 1 day</h3>
       <p>
@@ -176,7 +176,7 @@ efficient HTML and CSS will help showcase your content in the best way possible.
     <h2>Responsive Design</h2>
   </header>
   <div>
-    <img src="/img/logo/responsive-css.png" class="free" alt="" />
+    <img src="/img/logo/responsive-css.png" class="free" alt="responsive css" />
     <div>
       <h3>Length: 1 day</h3>
       <p>
@@ -303,7 +303,7 @@ efficient HTML and CSS will help showcase your content in the best way possible.
     <h2>D3 Data Visualizations</h2>
   </header>
   <div>
-    <img src="/img/logo/d3.png" class="free" alt="" />
+    <img src="/img/logo/d3.png" class="free" alt="d3 logo" />
     <div>
       <h3>Length: 2 days</h3>
       <p>
@@ -314,7 +314,7 @@ efficient HTML and CSS will help showcase your content in the best way possible.
     <div>
       <h3>Topics</h3>
       <ul>
-        <li>Data and the Dom</li>
+        <li>Data and the DOM/li>
         <li>Loading Data</li>
         <li>Traversing Data</li>
         <li>SVG</li>
