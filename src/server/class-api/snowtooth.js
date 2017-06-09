@@ -81,4 +81,11 @@ router.get('/trails/lift/:name', function(req, res) {
     }));
 });
 
+router.get('/trails/difficulty/:difficulty', function(req, res) {
+    const skiLevel = new RegExp(req.params.difficulty.replace(/,/g, '|'))
+    res.json(trailData.filter(function(trail) {
+        return trail.difficulty.toLowerCase().match(skiLevel);
+    }));
+});
+
 module.exports = router;
