@@ -1,6 +1,8 @@
 import { GraphQLObjectType,
          GraphQLString,
          GraphQLList,
+         GraphQLInt,
+         GraphQLBoolean,
          GraphQLSchema } from 'graphql'
 import fetch from 'node-fetch'
 
@@ -14,6 +16,10 @@ function fetchLifts() {
     return snowtoothRequest('/lifts/')
 }
 
+// function fetchTrails() {
+//     return snowtoothRequest('/trails/')
+// }
+
 const LiftType = new GraphQLObjectType({
     name: 'Lift',
     description: 'A ski lift',
@@ -21,6 +27,50 @@ const LiftType = new GraphQLObjectType({
         name: {
             type: GraphQLString,
             resolve: lift => lift.name
+        },
+        type: {
+            type: GraphQLString,
+            resolve: lift => lift.type
+        },
+        capacity: {
+            type: GraphQLInt,
+            resolve: lift => lift.capacity
+        },
+        status: {
+            type: GraphQLString,
+            resolve: lift => lift.status
+        },
+        manufacturer: {
+            type: GraphQLString,
+            resolve: lift => lift.manufacturer
+        },
+        built: {
+            type: GraphQLInt,
+            resolve: lift => lift.built
+        },
+        summer: {
+            type: GraphQLBoolean,
+            resolve: lift => lift.summer
+        },
+        night: {
+            type: GraphQLBoolean,
+            resolve: lift => lift.night
+        },
+        elevation_gain: {
+            type: GraphQLInt,
+            resolve: lift => lift.elevation_gain
+        },
+        time: {
+            type: GraphQLString,
+            resolve: lift => lift.time
+        },
+        hours: {
+            type: GraphQLString,
+            resolve: lift => lift.hours
+        },
+        updated: {
+            type: GraphQLBoolean,
+            resolve: lift => lift.updated
         }
     })
 })
