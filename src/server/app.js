@@ -13,6 +13,9 @@ import {
     success, notFound, error, fileAssets, icon, sendContactMail
 } from './lib'
 
+import graphqlHTTP from 'express-graphql'
+import schema from './graphql/schema'
+
 // TODO: Incorporate Google Analytics for API's
 
 export default express()
@@ -60,4 +63,8 @@ export default express()
     })
     .post('/contact/send', sendContactMail)
     .use(fileAssets)
+    .use('/graphql', graphqlHTTP({
+        schema,
+        graphiql: true
+    }))
     .get('*', success)
