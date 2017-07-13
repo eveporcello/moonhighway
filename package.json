@@ -11,7 +11,9 @@
     "test": "./node_modules/.bin/babel-node ./node_modules/.bin/isparta cover ./node_modules/.bin/_mocha -- --require ./test/setup.js --require ./node_modules/ignore-styles --recursive",
     "shallow-test": "mocha --compilers js:babel-core/register --require ./test/setup.js --require ./node_modules/ignore-styles --recursive",
     "posttest": "npm run lint",
-    "coverage": "open ./coverage/lcov-report/index.html"
+    "coverage": "open ./coverage/lcov-report/index.html",
+    "prebackend": "webpack --config webpack.server.config --progress;",
+    "backend": "node ./build/server"
   },
   "repository": {
     "type": "git",

@@ -6,24 +6,6 @@ import { GraphQLObjectType,
          GraphQLSchema } from 'graphql'
 import fetch from 'node-fetch'
 
-const snowtoothAPI = 'https://www.moonhighway.com/class/api/snowtooth'
-
-function snowtoothRequest(route) {
-    return fetch(`${snowtoothAPI}${route}`).then(res => res.json())
-}
-
-function fetchLifts() {
-    return snowtoothRequest('/lifts/')
-}
-
-function fetchLift(url) {
-    return snowtoothRequest(url).then(json => json[0])
-}
-
-// function fetchTrails() {
-//     return snowtoothRequest('/trails/')
-// }
-
 const LiftType = new GraphQLObjectType({
     name: 'Lift',
     description: 'A ski lift at Snowtooth Mountain',
@@ -98,7 +80,20 @@ const QueryType = new GraphQLObjectType({
         allLifts: {
             type: new GraphQLList(LiftType),
             description: "All ski lifts at Snowtooth",
-            resolve: fetchLifts
+            args: {
+                status: {
+                    type: GraphQLString
+                }
+            },
+            resolve: (_, {status}) => {
+                var uri = 'http://localhost:3000/class/api/snowtooth'
+                if (status) {
+                    uri += `/lifts/status/${status}`
+                } else {
+                    uri += `/lifts`
+                }
+                return fetch(uri).then(r=>r.json())
+            }
         },
         lift: {
             type: LiftType,
@@ -106,12 +101,15 @@ const QueryType = new GraphQLObjectType({
             args: {
                 name: {
                     type: GraphQLString
-                },
-                status: {
-                    type: GraphQLString
                 }
             },
-            resolve: (_, args) => fetchLift(`/lifts/${args.status}`)
+            resolve: (_, {name}) => {
+                var uri = 'http://localhost:3000/class/api/snowtooth'
+                if (name) {
+                    uri += `/lifts/${name}`
+                }
+                return fetch(uri).then(r=>r.json()).then(lifts => lifts[0])
+            }
         }
     })
 })
