@@ -4,7 +4,13 @@ import { GraphQLObjectType,
          GraphQLInt,
          GraphQLBoolean,
          GraphQLSchema } from 'graphql'
-import fetch from 'node-fetch'
+
+import fetch from 'isomorphic-fetch'
+
+var host = (process.env.NODE_ENV === "production") ?
+    "https://www.moonhighway.com" : (process.env.NODE_ENV === "staging") ?
+        "http://staging-moonhighway.herokuapp.com" :
+        "http://localhost:3000"
 
 const LiftType = new GraphQLObjectType({
     name: 'Lift',
@@ -86,7 +92,7 @@ const QueryType = new GraphQLObjectType({
                 }
             },
             resolve: (_, {status}) => {
-                var uri = 'http://localhost:3000/class/api/snowtooth'
+                var uri = `${host}/class/api/snowtooth`
                 if (status) {
                     uri += `/lifts/status/${status}`
                 } else {
@@ -104,10 +110,11 @@ const QueryType = new GraphQLObjectType({
                 }
             },
             resolve: (_, {name}) => {
-                var uri = 'http://localhost:3000/class/api/snowtooth'
+                var uri = `${host}/class/api/snowtooth`
                 if (name) {
                     uri += `/lifts/${name}`
                 }
+                console.log(process.env.NODE_ENV)
                 return fetch(uri).then(r=>r.json()).then(lifts => lifts[0])
             }
         }
