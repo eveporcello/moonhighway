@@ -3,6 +3,9 @@
   "version": "0.5.0",
   "description": "Moon Highway | Instructor-Led Training for Software Engineers",
   "main": "./src/index.js",
+  "engines": {
+    "node": "7.3.0"
+  },
   "scripts": {
     "lint": "./node_modules/.bin/eslint .",
     "prestart": "./node_modules/.bin/webpack --config webpack.server.config --progress; ./node_modules/.bin/webpack --progress -p;",
@@ -11,7 +14,9 @@
     "test": "./node_modules/.bin/babel-node ./node_modules/.bin/isparta cover ./node_modules/.bin/_mocha -- --require ./test/setup.js --require ./node_modules/ignore-styles --recursive",
     "shallow-test": "mocha --compilers js:babel-core/register --require ./test/setup.js --require ./node_modules/ignore-styles --recursive",
     "posttest": "npm run lint",
-    "coverage": "open ./coverage/lcov-report/index.html"
+    "coverage": "open ./coverage/lcov-report/index.html",
+    "prebackend": "webpack --config webpack.server.config --progress;",
+    "backend": "node ./build/server"
   },
   "repository": {
     "type": "git",
@@ -38,13 +43,16 @@
     "cookie-parser": "^1.4.3",
     "cors": "^2.8.1",
     "express": "^4.14.0",
+    "express-graphql": "^0.6.6",
     "gmail-send": "^1.2.6",
+    "graphql": "^0.10.3",
     "hammerjs": "^2.0.8",
     "ignore-styles": "^4.0.0",
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.17.2",
     "marked": "^0.3.6",
     "morgan": "^1.7.0",
+    "node-fetch": "^1.7.1",
     "pic-loader": "0.0.1",
     "querystring": "^0.2.0",
     "react": "^15.3.0",
