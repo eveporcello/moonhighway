@@ -3,6 +3,9 @@
   "version": "0.5.0",
   "description": "Moon Highway | Instructor-Led Training for Software Engineers",
   "main": "./src/index.js",
+  "engines": {
+    "node": "7.3.0"
+  },
   "scripts": {
     "lint": "./node_modules/.bin/eslint .",
     "prestart": "./node_modules/.bin/webpack --config webpack.server.config --progress; ./node_modules/.bin/webpack --progress -p;",
