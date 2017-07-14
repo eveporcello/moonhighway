@@ -75,6 +75,22 @@ const QueryType = new GraphQLObjectType({
                 }
                 return fetch(uri).then(r=>r.json()).then(lifts => lifts[0])
             }
+        },
+        trail: {
+            type: TrailType,
+            description: "An individual ski trail at Snowtooth",
+            args: {
+                name: {
+                    type: GraphQLString
+                }
+            },
+            resolve: (_, { name }) => {
+                var uri = `${host}/class/api/snowtooth`
+                if (name) {
+                    uri += `/trails/${name}`
+                }
+                return fetch(uri).then(r=>r.json()).then(trails => trails[0])
+            }
         }
     })
 })
