@@ -63,7 +63,7 @@ export default express()
     })
     .post('/contact/send', sendContactMail)
     .use(fileAssets)
-    .use('/graphql', graphqlHTTP({
+    .use('/graphiql', graphqlHTTP({
         schema,
         graphiql: true
     }))
