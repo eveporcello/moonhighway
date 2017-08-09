@@ -49,7 +49,7 @@ router.get('/trails/:name', function (req, res) {
     res.json(trailData.filter(function (trail) {
         var str = trail.name.slice(0, searchString.length).toLowerCase();
         return str === searchString.toLowerCase();
-    }));
+    })[0]);
 });
 
 router.put('/trails/:name', function (req, res) {
@@ -78,7 +78,7 @@ router.get('/trails/status/:status', function(req, res) {
 router.get('/trails/lift/:name', function(req, res) {
     res.json(trailData.filter(function(trail) {
         return trail.lift.toLowerCase() === req.params.name.replace(/-/g, ' ').toLowerCase();
-    }));
+    })[0]);
 });
 
 router.get('/trails/difficulty/:difficulty', function(req, res) {

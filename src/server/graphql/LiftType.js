@@ -1,7 +1,15 @@
 import { GraphQLObjectType,
          GraphQLString,
          GraphQLInt,
-         GraphQLBoolean } from 'graphql'
+         GraphQLBoolean,
+         GraphQLList  } from 'graphql'
+
+import TrailType from './TrailType'
+
+var host = (process.env.NODE_ENV === "production") ?
+    "https://www.moonhighway.com" : (process.env.NODE_ENV === "staging") ?
+        "http://staging-moonhighway.herokuapp.com" :
+        "http://localhost:3000"
 
 const LiftType = new GraphQLObjectType({
     name: 'Lift',
@@ -66,6 +74,41 @@ const LiftType = new GraphQLObjectType({
             type: GraphQLString,
             description: "Time the lift status was updated/changed.",
             resolve: lift => lift.updated
+        },
+        trailConnection: {
+            type: new GraphQLList(TrailType),
+            description: "The trails off of this lift.",
+            args: {
+              status: {
+                type: GraphQLString
+              },
+              difficulty: {
+                type: GraphQLString
+              }
+            },
+            resolve: (lift, args) => {
+              return Promise.resolve(
+                Promise.all(
+                  lift.trails.map(url => fetch(host + url)
+                    .then(response => response.json())
+                  )).then(trails => {
+                      if(args.status) {
+                        return trails.filter(t => t.status === args.status)
+                      } else {
+                        return trails
+                      }
+                  }).then(filteredTrails => {
+                    if(args.difficulty) {
+                      return filteredTrails.filter(ft => ft.difficulty === args.difficulty)
+                    } else {
+                      return filteredTrails
+                    }
+
+                  }
+                  )
+                )
+            }
+
         }
     })
 })
