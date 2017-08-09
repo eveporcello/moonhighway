@@ -79,32 +79,32 @@ const LiftType = new GraphQLObjectType({
             type: new GraphQLList(TrailType),
             description: "The trails off of this lift.",
             args: {
-              status: {
-                type: GraphQLString
-              },
-              difficulty: {
-                type: GraphQLString
-              }
+                status: {
+                    type: GraphQLString
+                },
+                difficulty: {
+                    type: GraphQLString
+                }
             },
             resolve: (lift, args) => {
-              return Promise.resolve(
-                Promise.all(
-                  lift.trails.map(url => fetch(host + url)
-                    .then(response => response.json())
-                  )).then(trails => {
-                      if(args.status) {
-                        return trails.filter(t => t.status === args.status)
-                      } else {
-                        return trails
-                      }
-                  }).then(filteredTrails => {
-                    if(args.difficulty) {
-                      return filteredTrails.filter(ft => ft.difficulty === args.difficulty)
-                    } else {
-                      return filteredTrails
-                    }
+                return Promise.resolve(
+                  Promise.all(
+                    lift.trails.map(url => fetch(host + url)
+                               .then(response => response.json())
+                     )).then(trails => {
+                         if(args.status) {
+                             return trails.filter(t => t.status === args.status)
+                         } else {
+                             return trails
+                         }
+                     }).then(filteredTrails => {
+                         if(args.difficulty) {
+                             return filteredTrails.filter(ft => ft.difficulty === args.difficulty)
+                         } else {
+                             return filteredTrails
+                         }
 
-                  }
+                     }
                   )
                 )
             }

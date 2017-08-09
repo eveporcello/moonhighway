@@ -53,9 +53,9 @@ const TrailType = new GraphQLObjectType({
             type: new GraphQLList(LiftType),
             description: "The lifts that serve this trail",
             resolve: trail => {
-              return trail.lift.map(liftName => fetch(`${host}${liftName}`)
-                               .then(l => l.json())
-                               .then(json => json[0]))
+                return trail.lift.map(liftName => fetch(`${host}${liftName}`)
+                                 .then(l => l.json())
+                                 .then(json => json[0]))
             }
         }
     })
