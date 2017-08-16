@@ -89,7 +89,7 @@ const QueryType = new GraphQLObjectType({
                 if (name) {
                     uri += `/trails/${name}`
                 }
-                return fetch(uri).then(r=>r.json()).then(trails => trails[0])
+                return fetch(uri).then(r=>r.json())
             }
         }
     })

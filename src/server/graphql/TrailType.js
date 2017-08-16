@@ -1,6 +1,14 @@
 import { GraphQLObjectType,
          GraphQLString,
-         GraphQLBoolean } from 'graphql'
+         GraphQLBoolean,
+         GraphQLList } from 'graphql'
+
+import LiftType from './LiftType'
+
+var host = (process.env.NODE_ENV === "production") ?
+    "https://www.moonhighway.com" : (process.env.NODE_ENV === "staging") ?
+        "http://staging-moonhighway.herokuapp.com" :
+        "http://localhost:3000"
 
 const TrailType = new GraphQLObjectType({
     name: 'Trail',
@@ -40,8 +48,23 @@ const TrailType = new GraphQLObjectType({
             type: GraphQLBoolean,
             description: "Whether or not the trail has night skiing.",
             resolve: trail => trail.night
+        },
+        liftConnection: {
+            type: new GraphQLList(LiftType),
+            description: "The lifts that serve this trail",
+            resolve: trail => {
+                return trail.lift.map(liftName => fetch(`${host}${liftName}`)
+                                 .then(l => l.json())
+                                 .then(json => json[0]))
+            }
         }
     })
 })
+
+
+
+
+
+
 
 export default TrailType
