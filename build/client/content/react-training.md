@@ -241,34 +241,6 @@ Since its open-source release by Facebook in 2013, the React library has explode
   </div>
 </section>
 
-<section class="mh-course">
-  <header>
-    <h2>Coming Soon: React VR!</h2>
-  </header>
-  <div>
-    <img src="/img/logo/react-vr.png" alt="Virtual Reality Headset" />
-    <div>
-      <p>Virtual Reality is a hot topic in the world of JavaScript, and you can
-      build virtual reality apps with React VR. At present, we are dissecting the
-      React VR library to develop curriculum for __developers__, __engineers__,
-      __creatives__, and __managers__.</p>
-    </div>
-    <div>
-      <h3>Topics</h3>
-      <ul>
-        <li>VR Usability</li>
-        <li>3D Backgrounds</li>
-        <li>3D Videos</li>
-        <li>Creating Objects</li>
-        <li>Interacting with Objects</li>
-        <li>Creating Animations</li>
-        <li>Using Lighting</li>
-        <li>VR Accessibility</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
 ## Custom Curriculums
 Any of our classes can be customized to fit your specific needs. We can create
 the perfect React training course for your team. Our materials are designed to

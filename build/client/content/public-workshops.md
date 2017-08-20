@@ -26,17 +26,6 @@ Join us at a location near you for a public workshop. Learn best practices for b
 </div>
 <a href="https://ti.to/moon-highway/react-workshop-mn" target="_blank">Reserve Your Seat</a>
 </div>
-<div>
-<h2>Houston, TX</h2>
-<div>
-<h3>Intro to React</h3>
-<p>Tuesday, November 9, 2017</p>
-<h3>Intro to Redux</h3>
-<p>Wednesday, November 10, 2017</p>
-<p><i>Hosted by PROS</i></p>
-</div>
-<a href="https://ti.to/moon-highway/react-workshop-mn" target="_blank">Reserve Your Seat</a>
-</div>
 </section>
 
 
@@ -70,7 +59,8 @@ Join us at a location near you for a public workshop. Learn best practices for b
     <img src="/img/logo/redux.png" alt="Redux Kickoff Course Logo" />
       <div>
       <h3>Length: 1 day</h3>
-      <p>Kick off your React journey with the fundamentals. This course is designed for developers who have a background in JavaScript. With hands-on activities, you'll learn how to create components, work with props and state, and how to construct your applications using React.</p>
+      <p>Redux is a popular library that can be used in conjunction with React
+      to manage state in your application. This course is designed to introduce students to building applications with Redux with hands-on exercises and labs.</p>
       </div>
       <div>
       <h3>What You'll Learn</h3>
@@ -80,6 +70,7 @@ Join us at a location near you for a public workshop. Learn best practices for b
         <li>The Store</li>
         <li>State</li>
         <li>Middleware</li>
+        <React Redux</li>
         <li>Container Components</li>
       </ul>
       </div>
