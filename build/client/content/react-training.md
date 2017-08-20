@@ -67,7 +67,7 @@ Since its open-source release by Facebook in 2013, the React library has explode
       This course is based on our book: <a href="http://shop.oreilly.com/product/0636920049579.do" target="_blank">Learning React</a>.
       This course is designed for __developers__ and __engineers__ who already have a strong JavaScript background.
       Students learn how to construct applications with React and the ecosystem of related libraries. In class,
-      students use React and Redux to build and test the <a href="https://rawgit.com/MoonHighway/learning-react/master/chapter-09/color-organizer/dist/index.html" target="_blank">color organizer</a>. Before taking this class, students should have a strong understanding of ES6 and functional JavaScript.
+      students use React and Redux to build and test the <a href="https://rawgit.com/MoonHighway/learning-react/master/chapter-09/color-organizer/dist/index.html" target="_blank">color organizer</a>. 
       </p>
     </div>
     <div>
