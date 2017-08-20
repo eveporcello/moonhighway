@@ -198,6 +198,25 @@ article.internal-page {
 
   }
 
+  .course-box {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .course-box>div {
+    min-width: 300px;
+  }
+
+  .course-box>div>h2 {
+    padding-top: 10px;
+    text-shadow: 1px 1px 7px #7abcff;
+    color: #000;
+  }
+
+  .course-box>div>div {
+    line-height: 0.5;
+  }
+
   footer {
     position: relative;
     display: flex;
