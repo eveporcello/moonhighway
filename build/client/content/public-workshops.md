@@ -77,5 +77,6 @@ Join us at a location near you for a public workshop. Learn best practices for b
       </div>
 </section>
   <section>
+          <p>Courses are taught by [Alex Banks](https://www.twitter.com/moontahoe) and [Eve Porcello](https://www.twitter.com/eveporcello), the authors of O'Reilly's [Learning React](http://shop.oreilly.com/product/0636920049579.do). Each student will receive a copy of the book.</p>
           <p>Want to host a workshop at your office? We'd love to hear from you! In exchange for space, your students will receive discounted tickets. [Contact us](mailto:info@moonhighway.com) for more information.</p>
     </section>
