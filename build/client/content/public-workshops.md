@@ -15,17 +15,6 @@ Join us at a location near you for a public workshop. Learn best practices for b
 </div>
 <a href="https://ti.to/moon-highway/react-and-redux-workshop" target="_blank">Reserve Your Seat</a>
 </div>
-<div>
-<h2>Minneapolis, MN</h2>
-<div>
-<h3>Intro to React</h3>
-<p>Wednesday, November 1, 2017</p>
-<h3>Intro to Redux</h3>
-<p>Thursday, November 2, 2017</p>
-<p><i>Hosted by Prime Academy</i></p>
-</div>
-<a href="https://ti.to/moon-highway/react-workshop-mn" target="_blank">Reserve Your Seat</a>
-</div>
 </section>
 
 
