@@ -14,7 +14,7 @@ Since its open-source release by Facebook in 2013, the React library has explode
       This course is based on our book: <a href="http://shop.oreilly.com/product/0636920049579.do" target="_blank">Learning React</a>.
       This course is designed for __developers__ and __engineers__ who already have a strong JavaScript background.
       Students learn how to construct applications with React and the ecosystem of related libraries. In class,
-      students use React and Redux to build and test the <a href="https://rawgit.com/MoonHighway/learning-react/master/chapter-09/color-organizer/dist/index.html" target="_blank">color organizer</a>. Before taking this class, students should have a strong understanding of ES6 and functional JavaScript.
+      students use React and Redux to build and test the <a href="https://rawgit.com/MoonHighway/learning-react/master/chapter-09/color-organizer/dist/index.html" target="_blank">color organizer</a>.
       </p>
     </div>
     <div>
@@ -236,34 +236,6 @@ Since its open-source release by Facebook in 2013, the React library has explode
         <li>REST</li>
         <li>Web Services</li>
         <li>Universal Actions</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="mh-course">
-  <header>
-    <h2>Coming Soon: React VR!</h2>
-  </header>
-  <div>
-    <img src="/img/logo/react-vr.png" alt="Virtual Reality Headset" />
-    <div>
-      <p>Virtual Reality is a hot topic in the world of JavaScript, and you can
-      build virtual reality apps with React VR. At present, we are dissecting the
-      React VR library to develop curriculum for __developers__, __engineers__,
-      __creatives__, and __managers__.</p>
-    </div>
-    <div>
-      <h3>Topics</h3>
-      <ul>
-        <li>VR Usability</li>
-        <li>3D Backgrounds</li>
-        <li>3D Videos</li>
-        <li>Creating Objects</li>
-        <li>Interacting with Objects</li>
-        <li>Creating Animations</li>
-        <li>Using Lighting</li>
-        <li>VR Accessibility</li>
       </ul>
     </div>
   </div>

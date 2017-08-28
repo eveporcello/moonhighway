@@ -50,9 +50,7 @@ What Makes Us Unique
 ======================
 
 ## Experience
-Alex developed his first website in 1995 and started teaching full stack web development during the first dot com boom. We
-were writing JavaScript code before there was AJAX. We watched JavaScript as it matured over the years.
-Through all of it, we were in the classroom.
+Alex developed his first website in 1995 and started teaching full stack web development during the first dot com boom and wrote JavaScript code before there was AJAX. We've watched JavaScript as it has matured over the years. Through all of it, we've been in the classroom.
 
 ## Knowledge
 Instead of teaching every language, we focus specifically on JavaScript. We build our apps using JavaScript. Reducing our scope of courses to JavaScript allows us to dive deep
