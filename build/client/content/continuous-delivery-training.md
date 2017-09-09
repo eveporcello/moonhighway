@@ -201,7 +201,7 @@ and tools associated with JavaScript build pipelines.
 
 <section class="mh-course">
   <header>
-    <h2>Engineering Onboarding</h2>
+    <h2>Engineer Onboarding</h2>
   </header>
   <div>
     <img src="/img/logo/question-icon.png" class="free" alt="your logo here" />

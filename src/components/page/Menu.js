@@ -21,9 +21,6 @@ const links = [
           to="/info/continuous-delivery-training">Continuous Delivery Training</Link>,
     <Link key={5}
           activeClassName="selected"
-          to="/info/public-workshops">Public Workshops</Link>,
-    <Link key={6}
-          activeClassName="selected"
           to="/contact">Contact Us</Link>
 ]
 
