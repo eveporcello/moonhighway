@@ -33,7 +33,14 @@ module.exports = {
                 exclude: /(node_modules)/,
                 loader: 'json-loader'
             },
-            { test: /\.scss$/, loader: 'ignore-loader' }
+            {
+                test: /\.scss$/,
+                loader: 'ignore-loader'
+            },
+            {
+                test: /\.graphql?$/,
+                loader: 'raw-loader'
+            }
         ]
     }
 };

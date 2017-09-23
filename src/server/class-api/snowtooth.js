@@ -24,6 +24,9 @@ router.get('/lifts/:name', function (req, res) {
 router.put('/lifts/:name', function (req, res) {
     var liftName = req.params.name.replace(/-/g, ' ').toLowerCase(),
         oldStatus;
+
+    console.log('put request', liftName, req.body.status)
+
     liftData = liftData.map(function(lift) {
         if (lift.name.toLowerCase() === liftName) {
             oldStatus = lift.status;

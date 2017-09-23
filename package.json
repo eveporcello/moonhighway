@@ -4,7 +4,7 @@
   "description": "Moon Highway | Instructor-Led Training for Software Engineers",
   "main": "./src/index.js",
   "engines": {
-    "node": "7.3.0"
+    "node": "8.3.0"
   },
   "scripts": {
     "lint": "./node_modules/.bin/eslint .",
@@ -43,9 +43,10 @@
     "cookie-parser": "^1.4.3",
     "cors": "^2.8.1",
     "express": "^4.14.0",
-    "express-graphql": "^0.6.6",
+    "express-graphql": "^0.6.11",
     "gmail-send": "^1.2.6",
     "graphql": "^0.10.3",
+    "graphql-tools": "^1.2.3",
     "hammerjs": "^2.0.8",
     "ignore-styles": "^4.0.0",
     "isomorphic-fetch": "^2.2.1",
@@ -91,6 +92,7 @@
     "mocha": "^2.5.3",
     "node-sass": "^3.8.0",
     "optimize-css-assets-webpack-plugin": "^1.3.0",
+    "raw-loader": "^0.5.1",
     "react-addons-test-utils": "^15.3.0",
     "react-stateless-wrapper": "^1.0.7",
     "sass-loader": "^4.0.0",
