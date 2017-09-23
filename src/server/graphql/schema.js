@@ -40,6 +40,28 @@ const MutationType = new GraphQLObjectType({
                 }).then(res => res.json())
                   .catch(console.error)
             }
+        },
+        setTrailStatus: {
+            type: TrailType,
+            description: 'Change Trail Status',
+            args: {
+                name: {
+                    type: GraphQLString
+                },
+                status: {
+                    type: GraphQLString
+                }
+            },
+            resolve: (_, {name, status}) => {
+                return fetch(`${host}/class/api/snowtooth/trails/${name}`, {
+                    method: 'PUT',
+                    body: JSON.stringify({status}),
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
+                }).then(res => res.json())
+                  .catch(console.error)
+            }
         }
     })
 })

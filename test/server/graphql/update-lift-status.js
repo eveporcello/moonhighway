@@ -42,7 +42,28 @@ describe("Snowtooth Graphiql", () => {
                 .then(() => done())
                 .catch(done)
         })
-        it("Mutates trail status")
+        it("Mutates trail status", done => {
+            var mutation = `
+              mutation {
+                  setTrailStatus(name: "Golden Ticket", status: "closed") {
+                    name
+                    status
+                }
+              }`
+            var expectedResults = {
+                data: {
+                    setTrailStatus: {
+                        name: "Golden Ticket",
+                        status: "closed"
+                    }
+                }
+            }
+            fetch(`${url}/?query=${mutation}`, {method: "POST"})
+                .then(res => res.json())
+                .then(results => expect(results).to.deep.equal(expectedResults))
+                .then(() => done())
+                .catch(done)
+        })
     })
     describe("Subscriptions", () => {
         it("Can subscribe to lift status")
