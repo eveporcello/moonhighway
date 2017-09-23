@@ -14,7 +14,7 @@ import {
 } from './lib'
 
 import graphqlHTTP from 'express-graphql'
-import schema from './graphql/schema'
+import schema from './graphql-new/schema'
 
 // TODO: Incorporate Google Analytics for API's
 
